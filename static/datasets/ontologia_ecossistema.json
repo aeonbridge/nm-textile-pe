@@ -1,0 +1,798 @@
+{
+  "ontologia_ecossistema_textil_pernambuco": {
+    "metadata": {
+      "descricao": "Ontologia do ecossistema têxtil no estado de Pernambuco, abrangendo entidades, atributos e relações da cadeia de valor",
+      "versao": "1.0",
+      "data_criacao": "2025-05-28",
+      "autor": "Estudo Detalhado do Ecossistema Têxtil em Pernambuco"
+    },
+    "nos": [
+      {
+        "id": "n001",
+        "tipo": "territorio",
+        "nome": "Polo de Confecções do Agreste Pernambucano",
+        "atributos": {
+          "populacao_total": 966500,
+          "municipios": 10,
+          "faturamento_anual_milhoes": 7400,
+          "empregos_diretos": 250000,
+          "producao_anual_pecas": 800000000,
+          "ranking_nacional": 2,
+          "taxa_informalidade_media": 38.9,
+          "idh_medio": 0.642
+        }
+      },
+      {
+        "id": "n002",
+        "tipo": "municipio",
+        "nome": "Santa Cruz do Capibaribe",
+        "atributos": {
+          "populacao": 107500,
+          "empresas_formais": 1200,
+          "empresas_informais": 4800,
+          "taxa_informalidade": 39.8,
+          "empregos_diretos": 45000,
+          "faturamento_anual_milhoes": 1800,
+          "exportacao_percentual": 5,
+          "pib_per_capita": 12500,
+          "idh": 0.648,
+          "taxa_pobreza": 28.5,
+          "evasao_escolar": 32.5,
+          "trabalho_infantil": 18.7,
+          "acesso_internet": 65.3,
+          "mulheres_empreendedoras": 58.2,
+          "jovens_empreendedores": 42.5,
+          "investimento_inovacao_percentual": 2.8,
+          "empresas_com_ecommerce": 18.5,
+          "adocao_tecnologias_digitais": 35.2,
+          "marcas_proprias_percentual": 22.4
+        }
+      },
+      {
+        "id": "n003",
+        "tipo": "municipio",
+        "nome": "Caruaru",
+        "atributos": {
+          "populacao": 365000,
+          "empresas_formais": 2500,
+          "empresas_informais": 7500,
+          "taxa_informalidade": 23.9,
+          "empregos_diretos": 85000,
+          "faturamento_anual_milhoes": 2200,
+          "exportacao_percentual": 8,
+          "pib_per_capita": 18700,
+          "idh": 0.677,
+          "taxa_pobreza": 22.1,
+          "evasao_escolar": 24.8,
+          "trabalho_infantil": 12.5,
+          "acesso_internet": 72.8,
+          "mulheres_empreendedoras": 52.4,
+          "jovens_empreendedores": 38.2,
+          "investimento_inovacao_percentual": 4.2,
+          "empresas_com_ecommerce": 27.3,
+          "adocao_tecnologias_digitais": 48.6,
+          "marcas_proprias_percentual": 35.8
+        }
+      },
+      {
+        "id": "n004",
+        "tipo": "municipio",
+        "nome": "Toritama",
+        "atributos": {
+          "populacao": 44000,
+          "empresas_formais": 450,
+          "empresas_informais": 1550,
+          "taxa_informalidade": 57.3,
+          "empregos_diretos": 25000,
+          "faturamento_anual_milhoes": 1600,
+          "exportacao_percentual": 3,
+          "pib_per_capita": 14300,
+          "idh": 0.618,
+          "taxa_pobreza": 35.2,
+          "evasao_escolar": 38.7,
+          "trabalho_infantil": 24.3,
+          "acesso_internet": 58.7,
+          "mulheres_empreendedoras": 62.5,
+          "jovens_empreendedores": 48.7,
+          "investimento_inovacao_percentual": 1.5,
+          "empresas_com_ecommerce": 12.4,
+          "adocao_tecnologias_digitais": 28.7,
+          "marcas_proprias_percentual": 18.2,
+          "lavanderias_quantidade": 70,
+          "lavanderias_licenciadas_percentual": 28.6,
+          "especializacao": "jeans"
+        }
+      },
+      {
+        "id": "n005",
+        "tipo": "entidade_governamental",
+        "nome": "Secretaria de Desenvolvimento Econômico de Pernambuco",
+        "atributos": {
+          "sigla": "SDEC",
+          "nivel": "estadual",
+          "programas": ["Força Local", "Marco Pernambucano da Moda", "Missão Desenvolvimento"],
+          "investimento_anual_milhoes": 20,
+          "papel_principal": "formulação de políticas"
+        }
+      },
+      {
+        "id": "n006",
+        "tipo": "entidade_governamental",
+        "nome": "Agência de Desenvolvimento Econômico de Pernambuco",
+        "atributos": {
+          "sigla": "AD Diper",
+          "nivel": "estadual",
+          "vinculacao": "SDEC",
+          "investimento_historico_milhoes": 46,
+          "municipios_atendidos": 67,
+          "projetos_implementados": 203,
+          "papel_principal": "implementação de políticas"
+        }
+      },
+      {
+        "id": "n007",
+        "tipo": "entidade_representativa",
+        "nome": "Associação Comercial e Empresarial de Caruaru",
+        "atributos": {
+          "sigla": "ACIC",
+          "tipo": "associação empresarial",
+          "membros_aproximados": 1200,
+          "eventos_organizados": ["Rodada de Negócios da Moda Pernambucana"],
+          "papel_principal": "articulação comercial"
+        }
+      },
+      {
+        "id": "n008",
+        "tipo": "entidade_representativa",
+        "nome": "Núcleo Gestor da Cadeia Têxtil e de Confecções em Pernambuco",
+        "atributos": {
+          "sigla": "NTCPE",
+          "tipo": "organização social privada",
+          "ano_fundacao": 2012,
+          "papel_principal": "interlocução entre atores"
+        }
+      },
+      {
+        "id": "n009",
+        "tipo": "evento_comercial",
+        "nome": "Rodada de Negócios da Moda Pernambucana",
+        "atributos": {
+          "sigla": "RNMP",
+          "periodicidade": "semestral",
+          "anos_realizacao": 14,
+          "compradores_ultima_edicao": 500,
+          "pedidos_ultima_edicao": 3872,
+          "volume_negocios_milhoes": 22,
+          "organizador_principal": "ACIC"
+        }
+      },
+      {
+        "id": "n010",
+        "tipo": "espaco_comercial",
+        "nome": "Parque das Feiras",
+        "atributos": {
+          "localizacao": "Caruaru",
+          "area_hectares": 9,
+          "boxes_lojas": 1000,
+          "tipo": "centro comercial permanente"
+        }
+      },
+      {
+        "id": "n011",
+        "tipo": "espaco_comercial",
+        "nome": "Moda Center",
+        "atributos": {
+          "localizacao": "Santa Cruz do Capibaribe",
+          "boxes_lojas": 9000,
+          "area_m2": 120000,
+          "tipo": "centro comercial permanente"
+        }
+      },
+      {
+        "id": "n012",
+        "tipo": "espaco_comercial",
+        "nome": "Feira da Sulanca",
+        "atributos": {
+          "localizacao": "múltiplos municípios",
+          "periodicidade": "semanal",
+          "tipo": "feira tradicional",
+          "origem_historica": "anos 1950/1960"
+        }
+      },
+      {
+        "id": "n013",
+        "tipo": "programa_governamental",
+        "nome": "Força Local",
+        "atributos": {
+          "orgao_responsavel": "SDEC/AD Diper",
+          "investimento_milhoes": 20,
+          "periodo": "2018-2022",
+          "foco": "arranjos produtivos locais",
+          "objetivo_principal": "elevar patamar da produção local"
+        }
+      },
+      {
+        "id": "n014",
+        "tipo": "fundo",
+        "nome": "Fundo de Desenvolvimento da Cadeia Têxtil",
+        "atributos": {
+          "sigla": "Funtec",
+          "base_legal": "Lei Estadual nº 13.958/2009",
+          "arrecadacao_anual_milhares": 700,
+          "fonte_recursos": "0,27% do ICMS antecipado pelas indústrias",
+          "gestor": "NTCPE"
+        }
+      },
+      {
+        "id": "n015",
+        "tipo": "plataforma_digital",
+        "nome": "Plataforma B2B de E-commerce",
+        "atributos": {
+          "status": "em implementação",
+          "beneficiarios_iniciais": 120,
+          "beneficiarios_segunda_fase": 150,
+          "expectativa_ganho_milhoes": 40,
+          "periodo_expectativa": "12 meses",
+          "investimento_milhares": 290,
+          "financiadores": ["Estado (85%)", "ACIC (15%)"]
+        }
+      },
+      {
+        "id": "n016",
+        "tipo": "segmento_produtivo",
+        "nome": "Confecção de Jeans",
+        "atributos": {
+          "concentracao_principal": "Toritama",
+          "participacao_producao_nacional": 16,
+          "ranking_nacional": 2,
+          "lavanderias_associadas": 70,
+          "consumo_agua_m3_dia": 2800,
+          "efluentes_tratados_percentual": 22.5
+        }
+      },
+      {
+        "id": "n017",
+        "tipo": "segmento_produtivo",
+        "nome": "Moda Casual",
+        "atributos": {
+          "concentracao_principal": "Santa Cruz do Capibaribe",
+          "produtos": ["brim", "malharia", "vestuário casual"],
+          "facções_estimadas": 3000
+        }
+      },
+      {
+        "id": "n018",
+        "tipo": "segmento_produtivo",
+        "nome": "Moda Infantil",
+        "atributos": {
+          "concentracao_principal": "Caruaru",
+          "participacao_producao_polo": 15
+        }
+      },
+      {
+        "id": "n019",
+        "tipo": "segmento_produtivo",
+        "nome": "Lingerie",
+        "atributos": {
+          "concentracao_principal": "Caruaru",
+          "participacao_producao_polo": 8
+        }
+      },
+      {
+        "id": "n020",
+        "tipo": "unidade_produtiva",
+        "nome": "Facção de Costura",
+        "atributos": {
+          "quantidade_estimada": 10000,
+          "formalizacao_percentual": 20,
+          "localizacao_tipica": "residencial",
+          "trabalhadores_media": 3,
+          "lideranca_feminina_percentual": 60,
+          "jornada_media_horas": 12,
+          "renda_media_salarios_minimos": 1.2
+        }
+      },
+      {
+        "id": "n021",
+        "tipo": "unidade_produtiva",
+        "nome": "Lavanderia Industrial",
+        "atributos": {
+          "quantidade_total": 170,
+          "concentracao_toritama": 70,
+          "licenciamento_ambiental_percentual": 35,
+          "consumo_agua_medio_m3_dia": 40,
+          "tratamento_efluentes_percentual": 34.8
+        }
+      },
+      {
+        "id": "n022",
+        "tipo": "unidade_produtiva",
+        "nome": "Indústria de Médio Porte",
+        "atributos": {
+          "quantidade_estimada": 450,
+          "trabalhadores_media": 50,
+          "formalizacao_percentual": 95,
+          "adocao_tecnologias_percentual": 65,
+          "presenca_digital_percentual": 48
+        }
+      },
+      {
+        "id": "n023",
+        "tipo": "grupo_social",
+        "nome": "Costureiras Autônomas",
+        "atributos": {
+          "quantidade_estimada": 50000,
+          "genero_predominante": "feminino",
+          "renda_media_salario_minimo": 1,
+          "renda_abaixo_minimo_percentual": 38,
+          "jornada_media_horas": 12,
+          "formalizacao_percentual": 15,
+          "vulnerabilidade_social": "alta"
+        }
+      },
+      {
+        "id": "n024",
+        "tipo": "grupo_social",
+        "nome": "Jovens Empreendedores",
+        "atributos": {
+          "faixa_etaria": "18-25",
+          "quantidade_estimada": 15000,
+          "escolaridade_media_anos": 8,
+          "evasao_escolar_percentual": 45,
+          "acesso_tecnologia_percentual": 68,
+          "renda_media_salarios_minimos": 2.5
+        }
+      },
+      {
+        "id": "n025",
+        "tipo": "grupo_social",
+        "nome": "Trabalhadores Infantis",
+        "atributos": {
+          "faixa_etaria": "12-17",
+          "quantidade_estimada": 8000,
+          "evasao_escolar_percentual": 75,
+          "funcao_tipica": "ajudante/cassaco",
+          "vulnerabilidade_social": "extrema"
+        }
+      },
+      {
+        "id": "n026",
+        "tipo": "recurso_natural",
+        "nome": "Recursos Hídricos",
+        "atributos": {
+          "disponibilidade": "escassa",
+          "consumo_diario_m3": 10500,
+          "poluicao_indice_medio": 7.6,
+          "tratamento_efluentes_percentual": 34.8,
+          "reuso_agua_percentual": 18.0
+        }
+      },
+      {
+        "id": "n027",
+        "tipo": "instituicao_apoio",
+        "nome": "SEBRAE Pernambuco",
+        "atributos": {
+          "tipo": "apoio empresarial",
+          "foco": "micro e pequenas empresas",
+          "programas_setor_textil": 12,
+          "municipios_atendidos": 40
+        }
+      },
+      {
+        "id": "n028",
+        "tipo": "instituicao_apoio",
+        "nome": "SENAI Pernambuco",
+        "atributos": {
+          "tipo": "formação profissional",
+          "cursos_setor_textil": 15,
+          "alunos_anuais_setor": 3000,
+          "unidades_polo": 3
+        }
+      },
+      {
+        "id": "n029",
+        "tipo": "instituicao_apoio",
+        "nome": "Aliança Empreendedora",
+        "atributos": {
+          "tipo": "organização social",
+          "foco": "empreendedorismo inclusivo",
+          "projetos_setor_textil": 3,
+          "beneficiarios_diretos": 1500
+        }
+      },
+      {
+        "id": "n030",
+        "tipo": "instituicao_apoio",
+        "nome": "Instituto C&A",
+        "atributos": {
+          "tipo": "instituto empresarial",
+          "foco": "moda sustentável",
+          "projetos_setor_textil": 2,
+          "investimento_anual_milhares": 800
+        }
+      }
+    ],
+    "arestas": [
+      {
+        "id": "a001",
+        "origem": "n001",
+        "destino": "n002",
+        "tipo": "contem",
+        "atributos": {
+          "importancia_relativa": "alta",
+          "participacao_producao": 24.3,
+          "participacao_empregos": 18.0
+        }
+      },
+      {
+        "id": "a002",
+        "origem": "n001",
+        "destino": "n003",
+        "tipo": "contem",
+        "atributos": {
+          "importancia_relativa": "alta",
+          "participacao_producao": 29.7,
+          "participacao_empregos": 34.0
+        }
+      },
+      {
+        "id": "a003",
+        "origem": "n001",
+        "destino": "n004",
+        "tipo": "contem",
+        "atributos": {
+          "importancia_relativa": "alta",
+          "participacao_producao": 21.6,
+          "participacao_empregos": 10.0
+        }
+      },
+      {
+        "id": "a004",
+        "origem": "n005",
+        "destino": "n006",
+        "tipo": "coordena",
+        "atributos": {
+          "natureza_relacao": "hierárquica",
+          "intensidade": "alta"
+        }
+      },
+      {
+        "id": "a005",
+        "origem": "n005",
+        "destino": "n013",
+        "tipo": "implementa",
+        "atributos": {
+          "natureza_relacao": "política pública",
+          "intensidade": "alta"
+        }
+      },
+      {
+        "id": "a006",
+        "origem": "n006",
+        "destino": "n013",
+        "tipo": "executa",
+        "atributos": {
+          "natureza_relacao": "operacional",
+          "intensidade": "alta"
+        }
+      },
+      {
+        "id": "a007",
+        "origem": "n007",
+        "destino": "n009",
+        "tipo": "organiza",
+        "atributos": {
+          "natureza_relacao": "institucional",
+          "intensidade": "alta"
+        }
+      },
+      {
+        "id": "a008",
+        "origem": "n007",
+        "destino": "n015",
+        "tipo": "cofinancia",
+        "atributos": {
+          "natureza_relacao": "financeira",
+          "intensidade": "média",
+          "participacao_percentual": 15
+        }
+      },
+      {
+        "id": "a009",
+        "origem": "n006",
+        "destino": "n015",
+        "tipo": "cofinancia",
+        "atributos": {
+          "natureza_relacao": "financeira",
+          "intensidade": "alta",
+          "participacao_percentual": 85
+        }
+      },
+      {
+        "id": "a010",
+        "origem": "n008",
+        "destino": "n014",
+        "tipo": "gerencia",
+        "atributos": {
+          "natureza_relacao": "institucional",
+          "intensidade": "alta"
+        }
+      },
+      {
+        "id": "a011",
+        "origem": "n003",
+        "destino": "n010",
+        "tipo": "abriga",
+        "atributos": {
+          "natureza_relacao": "territorial",
+          "intensidade": "alta"
+        }
+      },
+      {
+        "id": "a012",
+        "origem": "n002",
+        "destino": "n011",
+        "tipo": "abriga",
+        "atributos": {
+          "natureza_relacao": "territorial",
+          "intensidade": "alta"
+        }
+      },
+      {
+        "id": "a013",
+        "origem": "n004",
+        "destino": "n016",
+        "tipo": "especializa",
+        "atributos": {
+          "natureza_relacao": "produtiva",
+          "intensidade": "alta",
+          "exclusividade": "média"
+        }
+      },
+      {
+        "id": "a014",
+        "origem": "n002",
+        "destino": "n017",
+        "tipo": "especializa",
+        "atributos": {
+          "natureza_relacao": "produtiva",
+          "intensidade": "alta",
+          "exclusividade": "baixa"
+        }
+      },
+      {
+        "id": "a015",
+        "origem": "n003",
+        "destino": "n018",
+        "tipo": "especializa",
+        "atributos": {
+          "natureza_relacao": "produtiva",
+          "intensidade": "média",
+          "exclusividade": "baixa"
+        }
+      },
+      {
+        "id": "a016",
+        "origem": "n003",
+        "destino": "n019",
+        "tipo": "especializa",
+        "atributos": {
+          "natureza_relacao": "produtiva",
+          "intensidade": "média",
+          "exclusividade": "baixa"
+        }
+      },
+      {
+        "id": "a017",
+        "origem": "n016",
+        "destino": "n021",
+        "tipo": "utiliza",
+        "atributos": {
+          "natureza_relacao": "produtiva",
+          "intensidade": "alta",
+          "dependencia": "alta"
+        }
+      },
+      {
+        "id": "a018",
+        "origem": "n021",
+        "destino": "n026",
+        "tipo": "consome",
+        "atributos": {
+          "natureza_relacao": "ambiental",
+          "intensidade": "alta",
+          "impacto": "negativo"
+        }
+      },
+      {
+        "id": "a019",
+        "origem": "n023",
+        "destino": "n020",
+        "tipo": "opera",
+        "atributos": {
+          "natureza_relacao": "produtiva",
+          "intensidade": "alta",
+          "dependencia": "alta"
+        }
+      },
+      {
+        "id": "a020",
+        "origem": "n025",
+        "destino": "n020",
+        "tipo": "trabalha_em",
+        "atributos": {
+          "natureza_relacao": "produtiva",
+          "intensidade": "média",
+          "legalidade": "ilegal"
+        }
+      },
+      {
+        "id": "a021",
+        "origem": "n024",
+        "destino": "n020",
+        "tipo": "gerencia",
+        "atributos": {
+          "natureza_relacao": "produtiva",
+          "intensidade": "média",
+          "formalidade": "baixa"
+        }
+      },
+      {
+        "id": "a022",
+        "origem": "n027",
+        "destino": "n024",
+        "tipo": "apoia",
+        "atributos": {
+          "natureza_relacao": "capacitação",
+          "intensidade": "média",
+          "alcance_percentual": 35
+        }
+      },
+      {
+        "id": "a023",
+        "origem": "n028",
+        "destino": "n023",
+        "tipo": "capacita",
+        "atributos": {
+          "natureza_relacao": "formação",
+          "intensidade": "baixa",
+          "alcance_percentual": 15
+        }
+      },
+      {
+        "id": "a024",
+        "origem": "n029",
+        "destino": "n023",
+        "tipo": "apoia",
+        "atributos": {
+          "natureza_relacao": "social",
+          "intensidade": "média",
+          "alcance_percentual": 3
+        }
+      },
+      {
+        "id": "a025",
+        "origem": "n030",
+        "destino": "n023",
+        "tipo": "apoia",
+        "atributos": {
+          "natureza_relacao": "social",
+          "intensidade": "média",
+          "alcance_percentual": 2
+        }
+      },
+      {
+        "id": "a026",
+        "origem": "n009",
+        "destino": "n015",
+        "tipo": "integra_com",
+        "atributos": {
+          "natureza_relacao": "digital",
+          "intensidade": "alta",
+          "status": "em implementação"
+        }
+      },
+      {
+        "id": "a027",
+        "origem": "n020",
+        "destino": "n022",
+        "tipo": "fornece_para",
+        "atributos": {
+          "natureza_relacao": "produtiva",
+          "intensidade": "alta",
+          "dependencia": "alta",
+          "poder_negociacao": "baixo"
+        }
+      },
+      {
+        "id": "a028",
+        "origem": "n022",
+        "destino": "n009",
+        "tipo": "participa_de",
+        "atributos": {
+          "natureza_relacao": "comercial",
+          "intensidade": "alta",
+          "frequencia": "semestral"
+        }
+      },
+      {
+        "id": "a029",
+        "origem": "n022",
+        "destino": "n015",
+        "tipo": "utiliza",
+        "atributos": {
+          "natureza_relacao": "digital",
+          "intensidade": "média",
+          "status": "em implementação"
+        }
+      },
+      {
+        "id": "a030",
+        "origem": "n020",
+        "destino": "n010",
+        "tipo": "comercializa_em",
+        "atributos": {
+          "natureza_relacao": "comercial",
+          "intensidade": "média",
+          "frequencia": "semanal"
+        }
+      },
+      {
+        "id": "a031",
+        "origem": "n020",
+        "destino": "n011",
+        "tipo": "comercializa_em",
+        "atributos": {
+          "natureza_relacao": "comercial",
+          "intensidade": "média",
+          "frequencia": "semanal"
+        }
+      },
+      {
+        "id": "a032",
+        "origem": "n020",
+        "destino": "n012",
+        "tipo": "comercializa_em",
+        "atributos": {
+          "natureza_relacao": "comercial",
+          "intensidade": "alta",
+          "frequencia": "semanal"
+        }
+      },
+      {
+        "id": "a033",
+        "origem": "n013",
+        "destino": "n001",
+        "tipo": "beneficia",
+        "atributos": {
+          "natureza_relacao": "política pública",
+          "intensidade": "média",
+          "abrangencia_percentual": 40
+        }
+      },
+      {
+        "id": "a034",
+        "origem": "n014",
+        "destino": "n001",
+        "tipo": "financia",
+        "atributos": {
+          "natureza_relacao": "financeira",
+          "intensidade": "baixa",
+          "abrangencia_percentual": 25
+        }
+      },
+      {
+        "id": "a035",
+        "origem": "n015",
+        "destino": "n001",
+        "tipo": "moderniza",
+        "atributos": {
+          "natureza_relacao": "digital",
+          "intensidade": "média",
+          "abrangencia_percentual": 15,
+          "status": "em implementação"
+        }
+      }
+    ]
+  }
+}

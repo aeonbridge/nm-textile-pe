@@ -1,0 +1,73 @@
+{
+  "ecosystem_network_ontology": {
+    "metadata": {
+      "description": "Ontology of key people in a specific ecosystem, including their contributions and relationships",
+      "version": "1.0",
+      "creation_date": "YYYY-MM-DD",
+      "author": "Author name or organization",
+      "language": "Language code (e.g., en, pt-BR, es)",
+      "generalization_scope": "Description of how this ontology structure can be applied to other contexts"
+    },
+    "nodes": [
+      {
+        "id": "p001",
+        "type": "person",
+        "name": "Person Full Name",
+        "position": "Current Professional Position",
+        "attributes": {
+          "profile_linkedin": "LinkedIn profile URL or 'not identified'",
+          "profile_instagram": "Instagram profile URL or 'not identified'",
+          "profile_photo": "URL to open profile photo or 'not available in open sources'",
+          "company": "Current company or organization",
+          "education": "Educational background",
+          "main_city": "Primary city of operation",
+          "state": "State/province",
+          "country": "Country",
+          "geolocation": {
+            "latitude": 0.00,
+            "longitude": 0.00
+          },
+          "activity_area": "Main professional field or sector",
+          "main_contribution": "Primary contribution to the ecosystem",
+          "relevance_degree": 0,
+          "leadership_type": "Type of leadership (e.g., Associative, Political, Technical)",
+          "impact_scale": "Scale of impact (municipal, regional, state, national, global)",
+          "relevant_quote": "Notable quote from this person (optional)",
+          "professional_history": "Brief professional trajectory (optional)",
+          "other_functions": "Additional roles or responsibilities (optional)",
+          "nickname": "Common nickname if applicable (optional)",
+          "institution": "Institutional affiliation if different from company (optional)",
+          "origin_city": "City of origin if different from main city (optional)",
+          "contextual_relevance": "Specific relevance to the ecosystem context (optional)",
+          "other_positions": "Additional positions held (optional)",
+          "recent_initiatives": "Recent projects or initiatives (optional)",
+          "relevance_to_context": "Specific relevance to the main context (optional)"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "e001",
+        "source": "p001",
+        "target": "p002",
+        "type": "relationship_type",
+        "attributes": {
+          "relationship_nature": "Nature of relationship (institutional, commercial, personal)",
+          "intensity": "Strength of relationship (low, medium, high)",
+          "context": "Context in which the relationship exists",
+          "evidence": "Evidence supporting this relationship",
+          "period": "Time period of the relationship (optional)",
+          "impact_direction": "Direction of influence (optional)"
+        }
+      }
+    ],
+    "clusters": [
+      {
+        "id": "c001",
+        "name": "Cluster Name",
+        "nodes": ["p001", "p002"],
+        "description": "Description of what connects these nodes"
+      }
+    ]
+  }
+}

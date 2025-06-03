@@ -1,0 +1,655 @@
+{
+  "ontologia_pessoas_ecossistema_textil_pernambuco": {
+    "metadata": {
+      "descricao": "Ontologia de pessoas-chave do ecossistema têxtil no estado de Pernambuco, abrangendo lideranças, suas contribuições e relações",
+      "versao": "1.0",
+      "data_criacao": "2025-05-31",
+      "autor": "Estudo Detalhado do Ecossistema Têxtil em Pernambuco"
+    },
+    "nos": [
+      {
+        "id": "p001",
+        "tipo": "pessoa",
+        "nome": "Bruno Bezerra",
+        "cargo": "Presidente da CDL Santa Cruz do Capibaribe",
+        "atributos": {
+          "perfil_linkedin": "https://br.linkedin.com/in/brunobezerrape",
+          "empresa": "B&F Empreendimentos Digitais Ltda",
+          "formacao": "FACAL",
+          "cidade_principal": "Santa Cruz do Capibaribe",
+          "area_atuacao": "Comércio e Empreendedorismo Digital",
+          "contribuicao_principal": "Liderança na modernização digital do comércio no polo têxtil",
+          "grau_relevancia": 9,
+          "tipo_lideranca": "Associativa e Empresarial",
+          "citacao_relevante": "Hoje temos no Polo de Confecções do Agreste Pernambucano um robusto ecossistema empreendedor cercado por péssimas estradas de todos os lados."
+        }
+      },
+      {
+        "id": "p002",
+        "tipo": "pessoa",
+        "nome": "Cláuston Pacas Silva",
+        "cargo": "Presidente da ACIC Caruaru",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "empresa": "CP Construção Civil",
+          "formacao": "Engenharia Civil (UPE) e Engenharia Mecânica (UFPE)",
+          "cidade_principal": "Caruaru",
+          "area_atuacao": "Construção Civil e Associativismo Empresarial",
+          "contribuicao_principal": "Articulação entre setor têxtil e outros setores econômicos em Caruaru",
+          "grau_relevancia": 8,
+          "tipo_lideranca": "Associativa e Empresarial",
+          "historico_profissional": "Fundador da CP Construção em 1987, associado à ACIC desde 2003, coordenador da Câmara Setorial da Construção Civil em três biênios (2006-2007, 2019-2020 e 2021-2022), vice-presidente para Assuntos da Indústria (2023-2024)"
+        }
+      },
+      {
+        "id": "p003",
+        "tipo": "pessoa",
+        "nome": "Valmir Ribeiro",
+        "cargo": "Presidente da Câmara Setorial Têxtil e de Confecções de Pernambuco",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "empresa": "Esporte Company",
+          "cidade_principal": "Santa Cruz do Capibaribe",
+          "area_atuacao": "Articulação Setorial e Políticas Públicas",
+          "contribuicao_principal": "Coordenação de políticas públicas para o setor têxtil em nível estadual",
+          "grau_relevancia": 9,
+          "tipo_lideranca": "Política e Setorial",
+          "outras_funcoes": "Conselheiro consultivo do Moda Center"
+        }
+      },
+      {
+        "id": "p004",
+        "tipo": "pessoa",
+        "nome": "Sídia Haiut",
+        "cargo": "Secretária Executiva de Políticas de Desenvolvimento Econômico do Estado",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "instituicao": "Secretaria de Desenvolvimento Econômico de Pernambuco (SDEC)",
+          "cidade_principal": "Recife",
+          "area_atuacao": "Políticas Públicas e Desenvolvimento Econômico",
+          "contribuicao_principal": "Implementação de políticas estaduais para o setor têxtil",
+          "grau_relevancia": 8,
+          "tipo_lideranca": "Governamental",
+          "historico_profissional": "Também atuou como Secretária Executiva de Atração de Investimentos e Estudos Econômicos"
+        }
+      },
+      {
+        "id": "p005",
+        "tipo": "pessoa",
+        "nome": "Gilson Belarmino",
+        "cargo": "Presidente da Associação Santacruzense de Contabilistas (ASCONT)",
+        "atributos": {
+          "perfil_linkedin": "https://br.linkedin.com/in/gilson-belarmino-4743a35a",
+          "cidade_principal": "Santa Cruz do Capibaribe",
+          "area_atuacao": "Contabilidade e Assessoria Empresarial",
+          "contribuicao_principal": "Suporte contábil e fiscal para empresas do polo têxtil",
+          "grau_relevancia": 7,
+          "tipo_lideranca": "Técnica e Associativa",
+          "historico_profissional": "Consultoria no departamento de contabilidade interno do Grupo Porfirío"
+        }
+      },
+      {
+        "id": "p006",
+        "tipo": "pessoa",
+        "nome": "Newton Montenegro",
+        "cargo": "Ex-Presidente da ACIC Caruaru (2023-2024)",
+        "atributos": {
+          "perfil_linkedin": "https://br.linkedin.com/in/newton-montenegro2023",
+          "empresa": "Original Equipamentos Reprográficos Ltda",
+          "cidade_principal": "Caruaru",
+          "area_atuacao": "Comércio e Serviços",
+          "contribuicao_principal": "Fortalecimento do associativismo empresarial em Caruaru",
+          "grau_relevancia": 7,
+          "tipo_lideranca": "Associativa e Empresarial",
+          "citacao_relevante": "A Rodada de Negócios da Moda Pernambucana é o projeto mais longevo do Polo de Confecções de Pernambuco"
+        }
+      },
+      {
+        "id": "p007",
+        "tipo": "pessoa",
+        "nome": "Ascânio José Morais de Melo França",
+        "cargo": "Vice-Presidente da ACIC Caruaru",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Caruaru",
+          "area_atuacao": "Associativismo Empresarial",
+          "contribuicao_principal": "Apoio à gestão associativa empresarial",
+          "grau_relevancia": 6,
+          "tipo_lideranca": "Associativa"
+        }
+      },
+      {
+        "id": "p008",
+        "tipo": "pessoa",
+        "nome": "Danielle Lago Bruno de Faria",
+        "cargo": "Vice-Presidente para Relações Institucionais da ACIC Caruaru",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Caruaru",
+          "area_atuacao": "Relações Institucionais",
+          "contribuicao_principal": "Articulação entre ACIC e outras instituições",
+          "grau_relevancia": 6,
+          "tipo_lideranca": "Associativa e Articuladora"
+        }
+      },
+      {
+        "id": "p009",
+        "tipo": "pessoa",
+        "nome": "Abel Severiano Malta Leite",
+        "cargo": "Vice-Presidente para Assuntos do Comércio da ACIC Caruaru",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Caruaru",
+          "area_atuacao": "Comércio",
+          "contribuicao_principal": "Representação dos interesses do comércio local",
+          "grau_relevancia": 6,
+          "tipo_lideranca": "Associativa e Setorial"
+        }
+      },
+      {
+        "id": "p010",
+        "tipo": "pessoa",
+        "nome": "Arnolfo Menezes Coelho",
+        "cargo": "Vice-Presidente para Assuntos de Serviços da ACIC Caruaru",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Caruaru",
+          "area_atuacao": "Serviços",
+          "contribuicao_principal": "Representação dos interesses do setor de serviços",
+          "grau_relevancia": 6,
+          "tipo_lideranca": "Associativa e Setorial"
+        }
+      },
+      {
+        "id": "p011",
+        "tipo": "pessoa",
+        "nome": "Fernando Francisco da Costa Filho",
+        "cargo": "Vice-Presidente para Assuntos da Indústria da ACIC Caruaru",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Caruaru",
+          "area_atuacao": "Indústria",
+          "contribuicao_principal": "Representação dos interesses da indústria local, incluindo o setor têxtil",
+          "grau_relevancia": 7,
+          "tipo_lideranca": "Associativa e Setorial"
+        }
+      },
+      {
+        "id": "p012",
+        "tipo": "pessoa",
+        "nome": "Shirley Kelly Monteiro Torres Oliveira",
+        "cargo": "Vice-Presidente para Assuntos de Câmara Setoriais e Núcleos Especiais da ACIC Caruaru",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Caruaru",
+          "area_atuacao": "Articulação Setorial",
+          "contribuicao_principal": "Coordenação de câmaras setoriais, incluindo a têxtil",
+          "grau_relevancia": 7,
+          "tipo_lideranca": "Associativa e Articuladora"
+        }
+      },
+      {
+        "id": "p013",
+        "tipo": "pessoa",
+        "nome": "Victor Hugo Guimarães Bezerra",
+        "cargo": "Diretor Administrativo da ACIC Caruaru",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Caruaru",
+          "area_atuacao": "Gestão Associativa",
+          "contribuicao_principal": "Administração da associação empresarial",
+          "grau_relevancia": 5,
+          "tipo_lideranca": "Associativa e Administrativa"
+        }
+      },
+      {
+        "id": "p014",
+        "tipo": "pessoa",
+        "nome": "Paulo César Valeriano Silva",
+        "cargo": "1º Diretor Financeiro da ACIC Caruaru",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Caruaru",
+          "area_atuacao": "Finanças Associativas",
+          "contribuicao_principal": "Gestão financeira da associação empresarial",
+          "grau_relevancia": 5,
+          "tipo_lideranca": "Associativa e Financeira"
+        }
+      },
+      {
+        "id": "p015",
+        "tipo": "pessoa",
+        "nome": "Geraldo Jorge da Silva R. Espíndola",
+        "cargo": "2º Diretor Financeiro da ACIC Caruaru",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Caruaru",
+          "area_atuacao": "Finanças Associativas",
+          "contribuicao_principal": "Apoio à gestão financeira da associação empresarial",
+          "grau_relevancia": 5,
+          "tipo_lideranca": "Associativa e Financeira"
+        }
+      },
+      {
+        "id": "p016",
+        "tipo": "pessoa",
+        "nome": "Ivania Porto",
+        "cargo": "Ex-Presidente da ACIC Caruaru",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Caruaru",
+          "area_atuacao": "Associativismo Empresarial",
+          "contribuicao_principal": "Liderança empresarial feminina no polo têxtil",
+          "grau_relevancia": 7,
+          "tipo_lideranca": "Associativa e Empresarial",
+          "citacao_relevante": "O setor têxtil está em constante evolução"
+        }
+      },
+      {
+        "id": "p017",
+        "tipo": "pessoa",
+        "nome": "José Gomes Filho",
+        "cargo": "Síndico do Moda Center Santa Cruz",
+        "atributos": {
+          "apelido": "Menininho",
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Santa Cruz do Capibaribe",
+          "area_atuacao": "Gestão de Centro Comercial",
+          "contribuicao_principal": "Administração do maior centro comercial atacadista do polo",
+          "grau_relevancia": 8,
+          "tipo_lideranca": "Empresarial e Administrativa"
+        }
+      },
+      {
+        "id": "p018",
+        "tipo": "pessoa",
+        "nome": "Douglas Costa",
+        "cargo": "Representante da Associação Comercial e Empresarial de Toritama (ACIT)",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Toritama",
+          "area_atuacao": "Associativismo Empresarial",
+          "contribuicao_principal": "Representação dos interesses empresariais de Toritama",
+          "grau_relevancia": 7,
+          "tipo_lideranca": "Associativa e Empresarial"
+        }
+      },
+      {
+        "id": "p019",
+        "tipo": "pessoa",
+        "nome": "Raquel Lyra",
+        "cargo": "Governadora de Pernambuco",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "Recife",
+          "cidade_origem": "Caruaru",
+          "area_atuacao": "Política e Governança",
+          "contribuicao_principal": "Implementação de políticas estaduais para desenvolvimento do polo têxtil",
+          "grau_relevancia": 9,
+          "tipo_lideranca": "Política e Governamental",
+          "relevancia_contextual": "Primeira governadora oriunda do Agreste Pernambucano, com conhecimento direto do polo têxtil"
+        }
+      },
+      {
+        "id": "p020",
+        "tipo": "pessoa",
+        "nome": "Wamberto Barbosa",
+        "cargo": "Representante do Setor Têxtil",
+        "atributos": {
+          "perfil_linkedin": "não identificado",
+          "cidade_principal": "não identificada",
+          "area_atuacao": "Setor Têxtil",
+          "contribuicao_principal": "Participação em debates sobre o setor têxtil",
+          "grau_relevancia": 6,
+          "tipo_lideranca": "Setorial"
+        }
+      }
+    ],
+    "arestas": [
+      {
+        "id": "a001",
+        "origem": "p001",
+        "destino": "p003",
+        "tipo": "colabora_com",
+        "atributos": {
+          "natureza_relacao": "institucional",
+          "intensidade": "alta",
+          "contexto": "Articulação de políticas para o polo têxtil",
+          "evidencia": "Assinatura conjunta em carta aberta em defesa do polo de confecções"
+        }
+      },
+      {
+        "id": "a002",
+        "origem": "p001",
+        "destino": "p005",
+        "tipo": "colabora_com",
+        "atributos": {
+          "natureza_relacao": "institucional",
+          "intensidade": "média",
+          "contexto": "Articulação entre comércio e contabilidade",
+          "evidencia": "Assinatura conjunta em carta aberta em defesa do polo de confecções"
+        }
+      },
+      {
+        "id": "a003",
+        "origem": "p001",
+        "destino": "p017",
+        "tipo": "colabora_com",
+        "atributos": {
+          "natureza_relacao": "comercial",
+          "intensidade": "alta",
+          "contexto": "Gestão comercial do polo",
+          "evidencia": "Articulação entre CDL e Moda Center"
+        }
+      },
+      {
+        "id": "a004",
+        "origem": "p002",
+        "destino": "p006",
+        "tipo": "sucede_a",
+        "atributos": {
+          "natureza_relacao": "institucional",
+          "intensidade": "alta",
+          "contexto": "Sucessão na presidência da ACIC",
+          "periodo": "2024-atual"
+        }
+      },
+      {
+        "id": "a005",
+        "origem": "p006",
+        "destino": "p016",
+        "tipo": "sucede_a",
+        "atributos": {
+          "natureza_relacao": "institucional",
+          "intensidade": "alta",
+          "contexto": "Sucessão na presidência da ACIC",
+          "periodo": "2023-2024"
+        }
+      },
+      {
+        "id": "a006",
+        "origem": "p002",
+        "destino": "p007",
+        "tipo": "lidera",
+        "atributos": {
+          "natureza_relacao": "hierárquica",
+          "intensidade": "alta",
+          "contexto": "Gestão da ACIC",
+          "periodo": "atual"
+        }
+      },
+      {
+        "id": "a007",
+        "origem": "p002",
+        "destino": "p008",
+        "tipo": "lidera",
+        "atributos": {
+          "natureza_relacao": "hierárquica",
+          "intensidade": "alta",
+          "contexto": "Gestão da ACIC",
+          "periodo": "atual"
+        }
+      },
+      {
+        "id": "a008",
+        "origem": "p002",
+        "destino": "p009",
+        "tipo": "lidera",
+        "atributos": {
+          "natureza_relacao": "hierárquica",
+          "intensidade": "alta",
+          "contexto": "Gestão da ACIC",
+          "periodo": "atual"
+        }
+      },
+      {
+        "id": "a009",
+        "origem": "p002",
+        "destino": "p010",
+        "tipo": "lidera",
+        "atributos": {
+          "natureza_relacao": "hierárquica",
+          "intensidade": "alta",
+          "contexto": "Gestão da ACIC",
+          "periodo": "atual"
+        }
+      },
+      {
+        "id": "a010",
+        "origem": "p002",
+        "destino": "p011",
+        "tipo": "lidera",
+        "atributos": {
+          "natureza_relacao": "hierárquica",
+          "intensidade": "alta",
+          "contexto": "Gestão da ACIC",
+          "periodo": "atual"
+        }
+      },
+      {
+        "id": "a011",
+        "origem": "p002",
+        "destino": "p012",
+        "tipo": "lidera",
+        "atributos": {
+          "natureza_relacao": "hierárquica",
+          "intensidade": "alta",
+          "contexto": "Gestão da ACIC",
+          "periodo": "atual"
+        }
+      },
+      {
+        "id": "a012",
+        "origem": "p002",
+        "destino": "p013",
+        "tipo": "lidera",
+        "atributos": {
+          "natureza_relacao": "hierárquica",
+          "intensidade": "alta",
+          "contexto": "Gestão da ACIC",
+          "periodo": "atual"
+        }
+      },
+      {
+        "id": "a013",
+        "origem": "p002",
+        "destino": "p014",
+        "tipo": "lidera",
+        "atributos": {
+          "natureza_relacao": "hierárquica",
+          "intensidade": "alta",
+          "contexto": "Gestão da ACIC",
+          "periodo": "atual"
+        }
+      },
+      {
+        "id": "a014",
+        "origem": "p002",
+        "destino": "p015",
+        "tipo": "lidera",
+        "atributos": {
+          "natureza_relacao": "hierárquica",
+          "intensidade": "alta",
+          "contexto": "Gestão da ACIC",
+          "periodo": "atual"
+        }
+      },
+      {
+        "id": "a015",
+        "origem": "p003",
+        "destino": "p004",
+        "tipo": "colabora_com",
+        "atributos": {
+          "natureza_relacao": "institucional",
+          "intensidade": "alta",
+          "contexto": "Implementação de políticas públicas para o setor têxtil",
+          "evidencia": "Reuniões da Câmara Setorial Têxtil"
+        }
+      },
+      {
+        "id": "a016",
+        "origem": "p003",
+        "destino": "p017",
+        "tipo": "aconselha",
+        "atributos": {
+          "natureza_relacao": "consultiva",
+          "intensidade": "média",
+          "contexto": "Gestão do Moda Center",
+          "evidencia": "Função de conselheiro consultivo"
+        }
+      },
+      {
+        "id": "a017",
+        "origem": "p004",
+        "destino": "p019",
+        "tipo": "reporta_a",
+        "atributos": {
+          "natureza_relacao": "hierárquica",
+          "intensidade": "alta",
+          "contexto": "Gestão governamental",
+          "evidencia": "Estrutura da Secretaria de Desenvolvimento Econômico"
+        }
+      },
+      {
+        "id": "a018",
+        "origem": "p006",
+        "destino": "p003",
+        "tipo": "colabora_com",
+        "atributos": {
+          "natureza_relacao": "institucional",
+          "intensidade": "média",
+          "contexto": "Articulação entre ACIC e Câmara Setorial",
+          "evidencia": "Participação em eventos conjuntos"
+        }
+      },
+      {
+        "id": "a019",
+        "origem": "p001",
+        "destino": "p019",
+        "tipo": "interage_com",
+        "atributos": {
+          "natureza_relacao": "institucional",
+          "intensidade": "média",
+          "contexto": "Apresentação de demandas do polo têxtil",
+          "evidencia": "Menções em entrevistas sobre expectativas com a governadora"
+        }
+      },
+      {
+        "id": "a020",
+        "origem": "p018",
+        "destino": "p001",
+        "tipo": "colabora_com",
+        "atributos": {
+          "natureza_relacao": "institucional",
+          "intensidade": "média",
+          "contexto": "Articulação entre cidades do polo",
+          "evidencia": "Participação em debates sobre o polo têxtil"
+        }
+      },
+      {
+        "id": "a021",
+        "origem": "p003",
+        "destino": "p020",
+        "tipo": "colabora_com",
+        "atributos": {
+          "natureza_relacao": "setorial",
+          "intensidade": "média",
+          "contexto": "Debates sobre o setor têxtil",
+          "evidencia": "Participação conjunta em eventos do setor"
+        }
+      },
+      {
+        "id": "a022",
+        "origem": "p012",
+        "destino": "p003",
+        "tipo": "colabora_com",
+        "atributos": {
+          "natureza_relacao": "setorial",
+          "intensidade": "alta",
+          "contexto": "Articulação entre câmaras setoriais",
+          "evidencia": "Funções complementares em câmaras setoriais"
+        }
+      },
+      {
+        "id": "a023",
+        "origem": "p011",
+        "destino": "p003",
+        "tipo": "colabora_com",
+        "atributos": {
+          "natureza_relacao": "setorial",
+          "intensidade": "alta",
+          "contexto": "Articulação entre indústria e câmara setorial",
+          "evidencia": "Representação da indústria têxtil"
+        }
+      },
+      {
+        "id": "a024",
+        "origem": "p001",
+        "destino": "p018",
+        "tipo": "colabora_com",
+        "atributos": {
+          "natureza_relacao": "institucional",
+          "intensidade": "média",
+          "contexto": "Articulação entre cidades do polo",
+          "evidencia": "Participação em iniciativas conjuntas do polo"
+        }
+      },
+      {
+        "id": "a025",
+        "origem": "p006",
+        "destino": "p001",
+        "tipo": "colabora_com",
+        "atributos": {
+          "natureza_relacao": "institucional",
+          "intensidade": "média",
+          "contexto": "Articulação entre cidades do polo",
+          "evidencia": "Participação em iniciativas conjuntas do polo"
+        }
+      }
+    ],
+    "clusters": [
+      {
+        "id": "c001",
+        "nome": "Lideranças Associativas",
+        "nos": ["p001", "p002", "p006", "p016", "p018"],
+        "descricao": "Presidentes e ex-presidentes de associações empresariais do polo"
+      },
+      {
+        "id": "c002",
+        "nome": "Lideranças Governamentais",
+        "nos": ["p004", "p019"],
+        "descricao": "Representantes do governo estadual com influência no setor têxtil"
+      },
+      {
+        "id": "c003",
+        "nome": "Lideranças Setoriais",
+        "nos": ["p003", "p011", "p012", "p020"],
+        "descricao": "Líderes de câmaras e representações setoriais específicas"
+      },
+      {
+        "id": "c004",
+        "nome": "Diretoria ACIC Caruaru",
+        "nos": ["p002", "p007", "p008", "p009", "p010", "p011", "p012", "p013", "p014", "p015"],
+        "descricao": "Membros da diretoria da Associação Comercial e Empresarial de Caruaru"
+      },
+      {
+        "id": "c005",
+        "nome": "Lideranças Santa Cruz do Capibaribe",
+        "nos": ["p001", "p005", "p017"],
+        "descricao": "Principais lideranças atuantes em Santa Cruz do Capibaribe"
+      },
+      {
+        "id": "c006",
+        "nome": "Lideranças Caruaru",
+        "nos": ["p002", "p006", "p016"],
+        "descricao": "Principais lideranças atuantes em Caruaru"
+      },
+      {
+        "id": "c007",
+        "nome": "Lideranças Toritama",
+        "nos": ["p018"],
+        "descricao": "Principais lideranças atuantes em Toritama"
+      }
+    ]
+  }
+}
