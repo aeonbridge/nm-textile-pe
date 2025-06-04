@@ -199,7 +199,7 @@ class RisksPage(Page):
 
 
         # Filtro por valor mínimo de risco
-        min_risk_value = st.sidebar.slider(
+        min_risk_value = st.slider(
             "Valor Mínimo de Risco:",
             min_value=1,
             max_value=25,
