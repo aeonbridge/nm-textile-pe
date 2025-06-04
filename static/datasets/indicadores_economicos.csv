@@ -1,6 +1,6 @@
-cidade,populacao,empresas_formais,empresas_informais,taxa_informalidade,empregos_diretos,faturamento_anual_milhoes,exportacao_percentual,pib_per_capita
-Santa Cruz do Capibaribe,107500,1200,4800,39.8,45000,1800,5,12500
-Caruaru,365000,2500,7500,23.9,85000,2200,8,18700
-Toritama,44000,450,1550,57.3,25000,1600,3,14300
+cidade,populacao,empresas_formais,empresas_informais,taxa_informalidade,empregos_diretos,faturamento_anual_milhoes,exportacao_percentual,pib_per_capita,ibge
+Santa Cruz do Capibaribe,107500,1200,480,39.8,45000,180,5,12500,https://cidades.ibge.gov.br/brasil/pe/santa-cruz-do-capibaribe/panorama
+Caruaru,365000,2500,7500,23.9,85000,2200,8,18700,https://cidades.ibge.gov.br/brasil/pe/caruaru/panorama
+Toritama,44000,450,1550,57.3,25000,160,3,14300,https://cidades.ibge.gov.br/brasil/pe/toritama/panorama
 Outros Municípios,450000,1850,5550,35.5,95000,1800,2,13200
 Total Polo,966500,6000,19400,38.9,250000,7400,4.5,14675

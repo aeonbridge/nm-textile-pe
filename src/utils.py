@@ -4,8 +4,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 import json
 import datetime
-import uuid
-import os
 from typing import Dict, Any, Optional, List
 from abc import ABC, abstractmethod
 
@@ -317,50 +315,6 @@ class ChartGenerator:
         )
 
         return fig
-
-
-
-
-class Analytics:
-    """Classe para gerenciar analytics"""
-
-    @staticmethod
-    def get_session_id() -> str:
-        """Obtém ou gera ID de sessão"""
-        if "session_id" not in st.session_state:
-            st.session_state.session_id = str(uuid.uuid4())
-        return st.session_state.session_id
-
-    @staticmethod
-    def log_event(event_type: str, event_data: Optional[Dict] = None, page: str = "unknown"):
-        """Registra evento de analytics"""
-        try:
-            session_id = Analytics.get_session_id()
-            timestamp = datetime.datetime.now().isoformat()
-
-            event = {
-                "session_id": session_id,
-                "timestamp": timestamp,
-                "event_type": event_type,
-                "page": page,
-                "data": event_data or {}
-            }
-
-            # Criar diretório se não existir
-            analytics_dir = "static/analytics"
-            os.makedirs(analytics_dir, exist_ok=True)
-
-            # Salvar evento
-            analytics_file = os.path.join(
-                analytics_dir,
-                f"analytics_{datetime.datetime.now().strftime('%Y%m%d')}.jsonl"
-            )
-            with open(analytics_file, "a", encoding='utf-8') as f:
-                f.write(json.dumps(event, ensure_ascii=False) + "\n")
-
-        except Exception as e:
-            # Falha silenciosa em analytics para não impactar UX
-            pass
 
 
 class FilterManager:

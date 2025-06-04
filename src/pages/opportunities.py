@@ -4,8 +4,10 @@ import plotly.express as px
 import plotly.graph_objects as go
 from typing import Dict, Any, List, Optional
 
-from src.utils import Page, Analytics, UIComponents, FilterManager, format_number, ChartGenerator
+from src.utils import Page, UIComponents, FilterManager, format_number, ChartGenerator
 from src.state import StateManager
+
+from src.nm.analytics import  Analytics
 
 
 class OpportunitiesPage(Page):
@@ -273,7 +275,6 @@ class OpportunitiesPage(Page):
                 ticktext=["Muito Baixo", "Baixo", "Médio", "Alto", "Muito Alto"]
             ),
             height=600,
-            annotations=annotations,
             showlegend=True
         )
 

@@ -4,10 +4,11 @@ import plotly.express as px
 import plotly.graph_objects as go
 from typing import Dict, Any
 
-from src.utils import (Page, ChartGenerator, Analytics, UIComponents, FilterManager, format_number, validate_data, \
+from src.utils import (Page, ChartGenerator, UIComponents, FilterManager, format_number, validate_data, \
                        get_cities_list, filter_data_by_cities)
 from src.state import StateManager, DashboardState
 
+from src.nm.analytics import  Analytics
 
 class OverviewPage(Page):
     """Página de Visão Geral do Ecossistema Têxtil"""
@@ -39,7 +40,7 @@ class OverviewPage(Page):
 
     def _render_global_filters(self, data: Dict[str, Any]):
         """Renderiza filtros globais"""
-        with st.expander("🎛️ Filtros Globais", expanded=False):
+        with st.expander("🎛️ Filtro cidades", expanded=False):
             col1, col2 = st.columns(2)
 
             with col1:
@@ -92,7 +93,7 @@ class OverviewPage(Page):
                 total_faturamento = df_econ[
                     'faturamento_anual_milhoes'].sum() if 'faturamento_anual_milhoes' in df_econ.columns else 0
                 UIComponents.create_metric_card(
-                    "Faturamento Anual",
+                    "Faturamento Anual (M)",
                     format_number(total_faturamento, "currency_millions")
                 )
 

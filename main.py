@@ -1,18 +1,23 @@
 import streamlit as st
 import sys
-import os
 from pathlib import Path
+
+from streamlit import sidebar
+
+from src.pages.geographic import GeographicPage
 
 # Adicionar o diretório src ao path
 sys.path.append(str(Path(__file__).parent / "src"))
 
-from src.utils import Analytics, DataLoader, add_custom_css
+from src.nm.analytics import Analytics
+from src.nm.data_loader import DataLoader
 from src.state import StateManager
 from src.pages.overview import OverviewPage
 from src.pages.indicators import IndicatorsPage
-from src.pages.network import NetworkPage
-# from pages.risks import RisksPage
+from src.pages.network_v2 import NetworkPageV2
+from src.pages.risks import RisksPage
 from src.pages.opportunities import OpportunitiesPage
+from src.nm.feedback import create_feedback_section
 
 # Configuração da página principal
 st.set_page_config(
@@ -35,9 +40,10 @@ class DashboardApp:
     def __init__(self):
         self.pages = {
             "🏠 Visão Geral": OverviewPage(),
+            #"🗺️ Visão Geográfica": GeographicPage(),
             "📊 Análise de Indicadores": IndicatorsPage(),
-            "🔄 Rede de Atores": NetworkPage(),
-            #"⚠️ Análise de Riscos": RisksPage(),
+            "🕸️  Rede de Agentes-chave": NetworkPageV2(),
+            "⚠️ Análise de Riscos": RisksPage(),
             "💡 Identificação de Oportunidades": OpportunitiesPage()
         }
         self.data = None
@@ -69,9 +75,7 @@ class DashboardApp:
 
         # Carregar JSONs
         json_files = [
-            'ontologia_ecossistema_textil_ptbr.json',
-            'textile_ecosystem_network_ontology.json',
-            'ontologia_pessoas_ecossistema.json'
+            'ontologia_ecossistema_textil_ptbr.json'
         ]
 
         for filename in json_files:
@@ -144,28 +148,32 @@ class DashboardApp:
         return pd.DataFrame()
 
     def render_sidebar(self):
-        """Renderiza a barra lateral de navegação"""
-        st.sidebar.title("🧭 Navegação")
+        with sidebar:
+            st.title("🧭 Navegação")
 
-        # Menu de páginas
-        selected_page = st.sidebar.selectbox(
-            "Selecione uma análise:",
-            options=list(self.pages.keys()),
-            index=0,
-            key="page_selector"
-        )
+            # Menu de páginas
+            selected_page = st.selectbox(
+                "Selecione uma análise:",
+                options=list(self.pages.keys()),
+                index=0,
+                key="page_selector"
+            )
 
-        # Registrar evento de navegação
-        Analytics.log_event("page_navigation", {
-            "page": selected_page,
-            "timestamp": str(pd.Timestamp.now())
-        })
+            create_feedback_section()
 
-        # Atualizar estado
-        state = StateManager.get_state()
-        state.active_page = selected_page
+            # Registrar evento de navegação
+            Analytics.log_event("page_navigation", {
+                "page": selected_page,
+                "timestamp": str(pd.Timestamp.now())
+            })
 
-        return selected_page
+            # Atualizar estado
+            state = StateManager.get_state()
+            state.active_page = selected_page
+
+
+
+            return selected_page
 
     def render_header(self):
         """Renderiza o cabeçalho principal"""
@@ -201,7 +209,8 @@ class DashboardApp:
                 st.exception(e)
 
         # Analytics na sidebar
-        self._render_analytics_sidebar()
+        if admin_mode:
+            self._render_analytics_sidebar()
 
     def _render_analytics_sidebar(self):
         """Renderiza estatísticas de uso na sidebar"""
@@ -226,6 +235,9 @@ class DashboardApp:
 
 if __name__ == "__main__":
     import pandas as pd
+
+    query_params = st.query_params
+    admin_mode = query_params.get("admin") == "on"
 
     app = DashboardApp()
     app.run()

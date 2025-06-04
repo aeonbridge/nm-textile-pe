@@ -5,8 +5,10 @@ import plotly.graph_objects as go
 import networkx as nx
 from typing import Dict, Any, List, Optional
 
-from src.utils import Page, Analytics, UIComponents, FilterManager, format_number
+from src.utils import Page, UIComponents, FilterManager, format_number
 from src.state import StateManager
+
+from src.nm.analytics import  Analytics
 
 
 class NetworkPage(Page):
