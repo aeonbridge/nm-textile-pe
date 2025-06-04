@@ -1,3 +1,6 @@
+import string
+import random
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -531,3 +534,9 @@ def create_priority_matrix_chart(df: pd.DataFrame, x_col: str, y_col: str, size_
     )
 
     return fig
+
+
+
+def generate_user_id(length=6):
+    characters = string.ascii_letters + string.digits  # a-zA-Z0-9
+    return ''.join(random.choices(characters, k=length))

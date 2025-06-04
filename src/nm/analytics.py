@@ -76,7 +76,9 @@ class Analytics:
                 "event_type": "generic",
                 "page": page,
                 "data": event_data,
-                "action": ""
+                "action": "",
+                "env" : st.secrets["ENV"],
+                "user_id": st.session_state.user_id,
             }
 
             # Insert into database

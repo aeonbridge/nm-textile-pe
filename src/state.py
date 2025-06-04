@@ -3,6 +3,7 @@ from typing import Dict, Any, Optional, List
 from dataclasses import dataclass, field
 from datetime import datetime, date
 import json
+from src.utils import (generate_user_id)
 
 
 @dataclass
@@ -31,6 +32,12 @@ class DashboardState:
     network_filters: Dict[str, Any] = field(default_factory=dict)
     risks_filters: Dict[str, Any] = field(default_factory=dict)
     opportunities_filters: Dict[str, Any] = field(default_factory=dict)
+
+    try:
+        if st.session_state.user_id is None:
+            st.session_state["user_id"] = generate_user_id()
+    except:
+        st.session_state["user_id"] = generate_user_id()
 
     def __post_init__(self):
         if self.session_start is None:

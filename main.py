@@ -4,8 +4,6 @@ from pathlib import Path
 
 from streamlit import sidebar
 
-from src.pages.geographic import GeographicPage
-
 # Adicionar o diretório src ao path
 sys.path.append(str(Path(__file__).parent / "src"))
 
