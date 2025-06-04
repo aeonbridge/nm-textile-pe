@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d8" for="edge" attr.name="context" attr.type="string" />
+  <key id="d7" for="edge" attr.name="intensity" attr.type="string" />
+  <key id="d6" for="edge" attr.name="relationship" attr.type="string" />
+  <key id="d5" for="node" attr.name="impact_scale" attr.type="string" />
+  <key id="d4" for="node" attr.name="relevance" attr.type="long" />
+  <key id="d3" for="node" attr.name="leadership_type" attr.type="string" />
+  <key id="d2" for="node" attr.name="city" attr.type="string" />
+  <key id="d1" for="node" attr.name="position" attr.type="string" />
+  <key id="d0" for="node" attr.name="name" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="p001">
+      <data key="d0">Bruno Bezerra</data>
+      <data key="d1">Presidente da CDL Santa Cruz do Capibaribe</data>
+      <data key="d2">Santa Cruz do Capibaribe</data>
+      <data key="d3">Associativa e Empresarial</data>
+      <data key="d4">9</data>
+      <data key="d5">regional</data>
+    </node>
+    <node id="p002">
+      <data key="d0">Cláuston Pacas Silva</data>
+      <data key="d1">Presidente da ACIC Caruaru</data>
+      <data key="d2">Caruaru</data>
+      <data key="d3">Associativa e Empresarial</data>
+      <data key="d4">8</data>
+      <data key="d5">regional</data>
+    </node>
+    <node id="p003">
+      <data key="d0">Valmir Ribeiro</data>
+      <data key="d1">Presidente da Câmara Setorial Têxtil e de Confecções de Pernambuco</data>
+      <data key="d2">Santa Cruz do Capibaribe</data>
+      <data key="d3">Política e Setorial</data>
+      <data key="d4">9</data>
+      <data key="d5">estadual</data>
+    </node>
+    <node id="p004">
+      <data key="d0">Sídia Haiut</data>
+      <data key="d1">Secretária Executiva de Políticas de Desenvolvimento Econômico do Estado</data>
+      <data key="d2">Recife</data>
+      <data key="d3">Governamental</data>
+      <data key="d4">8</data>
+      <data key="d5">estadual</data>
+    </node>
+    <node id="p0171">
+      <data key="d0">Tales Nery</data>
+      <data key="d1">Síndico do Moda Center Santa Cruz 2024-2026</data>
+      <data key="d2">Santa Cruz do Capibaribe</data>
+      <data key="d3">Empresarial e Administrativa</data>
+      <data key="d4">8</data>
+      <data key="d5">regional</data>
+    </node>
+    <node id="p017">
+      <data key="d0">José Gomes Filho</data>
+      <data key="d1">Ex-Síndico do Moda Center Santa Cruz</data>
+      <data key="d2">Santa Cruz do Capibaribe</data>
+      <data key="d3">Empresarial e Administrativa</data>
+      <data key="d4">8</data>
+      <data key="d5">regional</data>
+    </node>
+    <node id="p019">
+      <data key="d0">Raquel Lyra</data>
+      <data key="d1">Governadora de Pernambuco</data>
+      <data key="d2">Recife</data>
+      <data key="d3">Política e Governamental</data>
+      <data key="d4">9</data>
+      <data key="d5">estadual</data>
+    </node>
+    <node id="p021">
+      <data key="d0">Fernando Pimentel</data>
+      <data key="d1">Presidente Emérito da ABIT (Associação Brasileira da Indústria Têxtil e de Confecção)</data>
+      <data key="d2">São Paulo</data>
+      <data key="d3">Associativa e Setorial</data>
+      <data key="d4">9</data>
+      <data key="d5">nacional</data>
+    </node>
+    <node id="p0211">
+      <data key="d0">Ricardo Steinbruch</data>
+      <data key="d1">Presidente ABIT (Associação Brasileira da Indústria Têxtil e de Confecção)</data>
+      <data key="d2">São Paulo</data>
+      <data key="d3">Associativa e Setorial</data>
+      <data key="d4">9</data>
+      <data key="d5">nacional</data>
+    </node>
+    <node id="p022">
+      <data key="d0">Rafael Cervone</data>
+      <data key="d1">Presidente Emérito da ABIT e do Sinditêxtil-SP</data>
+      <data key="d2">São Paulo</data>
+      <data key="d3">Associativa e Empresarial</data>
+      <data key="d4">9</data>
+      <data key="d5">nacional</data>
+    </node>
+    <node id="p023">
+      <data key="d0">Julio Scudeler</data>
+      <data key="d1">Presidente do Sinditêxtil-SP</data>
+      <data key="d2">São Paulo</data>
+      <data key="d3">Associativa e Setorial</data>
+      <data key="d4">8</data>
+      <data key="d5">estadual</data>
+    </node>
+    <node id="p024">
+      <data key="d0">Ricardo Cappelli</data>
+      <data key="d1">Presidente da ABDI (Agência Brasileira de Desenvolvimento Industrial)</data>
+      <data key="d2">Brasília</data>
+      <data key="d3">Governamental</data>
+      <data key="d4">8</data>
+      <data key="d5">nacional</data>
+    </node>
+    <node id="p026">
+      <data key="d0">Luiz de Mendonça</data>
+      <data key="d1">Presidente da ITMF (Federação Internacional de Fabricantes Têxteis)</data>
+      <data key="d2">Zurique</data>
+      <data key="d3">Associativa e Global</data>
+      <data key="d4">9</data>
+      <data key="d5">global</data>
+    </node>
+    <edge source="p001" target="p003">
+      <data key="d6">collaborates_with</data>
+      <data key="d7">alta</data>
+      <data key="d8">Articulação de políticas para o polo têxtil</data>
+    </edge>
+    <edge source="p001" target="p017">
+      <data key="d6">collaborates_with</data>
+      <data key="d7">alta</data>
+      <data key="d8">Gestão comercial do polo</data>
+    </edge>
+    <edge source="p001" target="p0171">
+      <data key="d6">collaborates_with</data>
+      <data key="d7">alta</data>
+      <data key="d8">Gestão comercial do polo</data>
+    </edge>
+    <edge source="p001" target="p019">
+      <data key="d6">interacts_with</data>
+      <data key="d7">média</data>
+      <data key="d8">Apresentação de demandas do polo têxtil</data>
+    </edge>
+    <edge source="p001" target="p021">
+      <data key="d6">influences</data>
+      <data key="d7">média</data>
+      <data key="d8">Políticas nacionais afetando o comércio têxtil local</data>
+    </edge>
+    <edge source="p003" target="p004">
+      <data key="d6">collaborates_with</data>
+      <data key="d7">alta</data>
+      <data key="d8">Implementação de políticas públicas para o setor têxtil</data>
+    </edge>
+    <edge source="p003" target="p017">
+      <data key="d6">advises</data>
+      <data key="d7">média</data>
+      <data key="d8">Gestão do Moda Center</data>
+    </edge>
+    <edge source="p003" target="p0171">
+      <data key="d6">advises</data>
+      <data key="d7">média</data>
+      <data key="d8">Gestão do Moda Center</data>
+    </edge>
+    <edge source="p003" target="p021">
+      <data key="d6">influences</data>
+      <data key="d7">média</data>
+      <data key="d8">Políticas têxteis nacionais afetando Pernambuco</data>
+    </edge>
+    <edge source="p003" target="p019">
+      <data key="d6">supports</data>
+      <data key="d7">alta</data>
+      <data key="d8">Apoio estadual para iniciativas setoriais</data>
+    </edge>
+    <edge source="p004" target="p019">
+      <data key="d6">reports_to</data>
+      <data key="d7">alta</data>
+      <data key="d8">Gestão governamental</data>
+    </edge>
+    <edge source="p019" target="p024">
+      <data key="d6">collaborates_with</data>
+      <data key="d7">média</data>
+      <data key="d8">Políticas de desenvolvimento federal e estadual</data>
+    </edge>
+    <edge source="p021" target="p022">
+      <data key="d6">advises</data>
+      <data key="d7">alta</data>
+      <data key="d8">Liderança e continuidade da ABIT</data>
+    </edge>
+    <edge source="p021" target="p024">
+      <data key="d6">collaborates_with</data>
+      <data key="d7">alta</data>
+      <data key="d8">Iniciativas de desenvolvimento industrial para o setor têxtil</data>
+    </edge>
+    <edge source="p021" target="p026">
+      <data key="d6">influences</data>
+      <data key="d7">média</data>
+      <data key="d8">Tendências e políticas globais da indústria têxtil</data>
+    </edge>
+    <edge source="p022" target="p023">
+      <data key="d6">collaborates_with</data>
+      <data key="d7">alta</data>
+      <data key="d8">Representação da indústria têxtil de São Paulo</data>
+    </edge>
+    <edge source="p022" target="p026">
+      <data key="d6">represents_in</data>
+      <data key="d7">alta</data>
+      <data key="d8">Representação internacional da indústria têxtil brasileira</data>
+    </edge>
+  </graph>
+</graphml>

@@ -1,0 +1,339 @@
+{"session_id": "debb3106-bf04-4968-acba-d6d53b1118cd", "timestamp": "2025-06-04T00:00:35.436763", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "debb3106-bf04-4968-acba-d6d53b1118cd", "timestamp": "2025-06-04T00:00:35.458887", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🔄 Rede de Atores v2", "timestamp": "2025-06-04 00:00:35.458256"}}
+{"session_id": "debb3106-bf04-4968-acba-d6d53b1118cd", "timestamp": "2025-06-04T00:00:35.470744", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
+{"session_id": "debb3106-bf04-4968-acba-d6d53b1118cd", "timestamp": "2025-06-04T00:00:40.789423", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "debb3106-bf04-4968-acba-d6d53b1118cd", "timestamp": "2025-06-04T00:00:40.812873", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🔄 Rede de Atores v2", "timestamp": "2025-06-04 00:00:40.812380"}}
+{"session_id": "debb3106-bf04-4968-acba-d6d53b1118cd", "timestamp": "2025-06-04T00:00:40.825144", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:05.095429", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:05.107727", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:01:05.107548"}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:05.115610", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:07.475056", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:07.502969", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🔄 Rede de Atores v2", "timestamp": "2025-06-04 00:01:07.502550"}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:07.514180", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:14.227375", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:14.248287", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🔄 Rede de Atores v2", "timestamp": "2025-06-04 00:01:14.247849"}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:14.260737", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:18.262228", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:18.282230", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🔄 Rede de Atores v2", "timestamp": "2025-06-04 00:01:18.281825"}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:18.294531", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:19.071305", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:19.085357", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🔄 Rede de Atores v2", "timestamp": "2025-06-04 00:01:19.085043"}}
+{"session_id": "5cee0e83-c3a2-46f2-b648-4fd26b72caf6", "timestamp": "2025-06-04T00:01:19.093911", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
+{"session_id": "da453c5d-b3ec-4e9f-b802-5d24b6febe4b", "timestamp": "2025-06-04T00:02:27.984314", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "da453c5d-b3ec-4e9f-b802-5d24b6febe4b", "timestamp": "2025-06-04T00:02:27.995715", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:02:27.995513"}}
+{"session_id": "da453c5d-b3ec-4e9f-b802-5d24b6febe4b", "timestamp": "2025-06-04T00:02:28.005333", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "da453c5d-b3ec-4e9f-b802-5d24b6febe4b", "timestamp": "2025-06-04T00:02:29.891347", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "da453c5d-b3ec-4e9f-b802-5d24b6febe4b", "timestamp": "2025-06-04T00:02:29.912168", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🔄 Rede de Atores", "timestamp": "2025-06-04 00:02:29.911778"}}
+{"session_id": "da453c5d-b3ec-4e9f-b802-5d24b6febe4b", "timestamp": "2025-06-04T00:02:29.925125", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
+{"session_id": "da453c5d-b3ec-4e9f-b802-5d24b6febe4b", "timestamp": "2025-06-04T00:02:37.419401", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "da453c5d-b3ec-4e9f-b802-5d24b6febe4b", "timestamp": "2025-06-04T00:02:37.442783", "event_type": "page_navigation", "page": "unknown", "data": {"page": "💡 Identificação de Oportunidades", "timestamp": "2025-06-04 00:02:37.442335"}}
+{"session_id": "da453c5d-b3ec-4e9f-b802-5d24b6febe4b", "timestamp": "2025-06-04T00:02:37.454199", "event_type": "page_view", "page": "unknown", "data": {"page": "opportunities"}}
+{"session_id": "59e344a6-a8a3-4285-8fcb-825666b01e14", "timestamp": "2025-06-04T00:03:48.821329", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "59e344a6-a8a3-4285-8fcb-825666b01e14", "timestamp": "2025-06-04T00:03:48.832083", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:03:48.831912"}}
+{"session_id": "59e344a6-a8a3-4285-8fcb-825666b01e14", "timestamp": "2025-06-04T00:03:48.840530", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "59e344a6-a8a3-4285-8fcb-825666b01e14", "timestamp": "2025-06-04T00:03:52.252633", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "59e344a6-a8a3-4285-8fcb-825666b01e14", "timestamp": "2025-06-04T00:03:52.277931", "event_type": "page_navigation", "page": "unknown", "data": {"page": "💡 Identificação de Oportunidades", "timestamp": "2025-06-04 00:03:52.277524"}}
+{"session_id": "59e344a6-a8a3-4285-8fcb-825666b01e14", "timestamp": "2025-06-04T00:03:52.289210", "event_type": "page_view", "page": "unknown", "data": {"page": "opportunities"}}
+{"session_id": "59e344a6-a8a3-4285-8fcb-825666b01e14", "timestamp": "2025-06-04T00:05:43.681004", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "59e344a6-a8a3-4285-8fcb-825666b01e14", "timestamp": "2025-06-04T00:05:43.709968", "event_type": "page_navigation", "page": "unknown", "data": {"page": "💡 Identificação de Oportunidades", "timestamp": "2025-06-04 00:05:43.709466"}}
+{"session_id": "59e344a6-a8a3-4285-8fcb-825666b01e14", "timestamp": "2025-06-04T00:05:43.737901", "event_type": "page_view", "page": "unknown", "data": {"page": "opportunities"}}
+{"session_id": "59e344a6-a8a3-4285-8fcb-825666b01e14", "timestamp": "2025-06-04T00:05:50.590009", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "59e344a6-a8a3-4285-8fcb-825666b01e14", "timestamp": "2025-06-04T00:05:50.612537", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:05:50.612261"}}
+{"session_id": "59e344a6-a8a3-4285-8fcb-825666b01e14", "timestamp": "2025-06-04T00:05:50.621965", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "1c3daa3e-0fc4-4eb3-a157-a2d4eac69e5f", "timestamp": "2025-06-04T00:06:42.694231", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "1c3daa3e-0fc4-4eb3-a157-a2d4eac69e5f", "timestamp": "2025-06-04T00:06:42.706567", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:06:42.706337"}}
+{"session_id": "1c3daa3e-0fc4-4eb3-a157-a2d4eac69e5f", "timestamp": "2025-06-04T00:06:42.714151", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "1fcd7a59-2fa3-4bbd-a2bb-162d6e537c1b", "timestamp": "2025-06-04T00:07:44.795186", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "1fcd7a59-2fa3-4bbd-a2bb-162d6e537c1b", "timestamp": "2025-06-04T00:07:44.808008", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:07:44.807789"}}
+{"session_id": "1fcd7a59-2fa3-4bbd-a2bb-162d6e537c1b", "timestamp": "2025-06-04T00:07:44.823471", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "7b0b3af8-b2eb-4590-ba7d-d72fb5e00b60", "timestamp": "2025-06-04T00:09:57.109229", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "7b0b3af8-b2eb-4590-ba7d-d72fb5e00b60", "timestamp": "2025-06-04T00:09:57.139156", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:09:57.138958"}}
+{"session_id": "7b0b3af8-b2eb-4590-ba7d-d72fb5e00b60", "timestamp": "2025-06-04T00:09:57.147615", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "a61f71fa-88c5-4dc3-b04b-55337bcfd6e6", "timestamp": "2025-06-04T00:11:15.775732", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5a812521-0d66-4347-8eea-eade4f0ba304", "timestamp": "2025-06-04T00:11:51.347460", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5a812521-0d66-4347-8eea-eade4f0ba304", "timestamp": "2025-06-04T00:11:51.359091", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:11:51.358916"}}
+{"session_id": "5a812521-0d66-4347-8eea-eade4f0ba304", "timestamp": "2025-06-04T00:11:51.367454", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:13:32.533575", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:13:32.564575", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:13:32.564389"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:13:32.573960", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:12.768287", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:12.802610", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:15:12.802346"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:12.814512", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:13.258629", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:13.290452", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:15:13.290165"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:13.299133", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:13.611582", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:13.644760", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:15:13.644501"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:13.653153", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:14.084724", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:14.115697", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:15:14.115395"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:14.124545", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:14.336790", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:14.417860", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:15:14.417600"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:14.426600", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:14.839985", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:14.872011", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:15:14.871714"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:14.880088", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:19.741035", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:19.809918", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🔄 Rede de Atores", "timestamp": "2025-06-04 00:15:19.808699"}}
+{"session_id": "97f493ae-9477-4691-a0c0-56662aa56d4a", "timestamp": "2025-06-04T00:15:19.821014", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
+{"session_id": "a48906ae-8a59-4fd1-8bcc-05af09a4b74b", "timestamp": "2025-06-04T00:17:17.093191", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "a48906ae-8a59-4fd1-8bcc-05af09a4b74b", "timestamp": "2025-06-04T00:17:17.129374", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:17:17.129124"}}
+{"session_id": "a48906ae-8a59-4fd1-8bcc-05af09a4b74b", "timestamp": "2025-06-04T00:17:17.138222", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "f06da3db-3ce0-46b1-9ce4-3e46abef6574", "timestamp": "2025-06-04T00:17:27.747179", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "f06da3db-3ce0-46b1-9ce4-3e46abef6574", "timestamp": "2025-06-04T00:17:27.779952", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:17:27.779749"}}
+{"session_id": "f06da3db-3ce0-46b1-9ce4-3e46abef6574", "timestamp": "2025-06-04T00:17:27.788451", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "f06da3db-3ce0-46b1-9ce4-3e46abef6574", "timestamp": "2025-06-04T00:17:41.026580", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "f06da3db-3ce0-46b1-9ce4-3e46abef6574", "timestamp": "2025-06-04T00:17:41.091006", "event_type": "page_navigation", "page": "unknown", "data": {"page": "📊 Análise de Indicadores", "timestamp": "2025-06-04 00:17:41.090366"}}
+{"session_id": "f06da3db-3ce0-46b1-9ce4-3e46abef6574", "timestamp": "2025-06-04T00:17:41.105243", "event_type": "page_view", "page": "unknown", "data": {"page": "indicators"}}
+{"session_id": "f06da3db-3ce0-46b1-9ce4-3e46abef6574", "timestamp": "2025-06-04T00:17:52.057647", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "f06da3db-3ce0-46b1-9ce4-3e46abef6574", "timestamp": "2025-06-04T00:17:52.109893", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🔄 Rede de Atores", "timestamp": "2025-06-04 00:17:52.109571"}}
+{"session_id": "f06da3db-3ce0-46b1-9ce4-3e46abef6574", "timestamp": "2025-06-04T00:17:52.120345", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
+{"session_id": "2f571551-dc5e-4acc-96c2-045b0a161aed", "timestamp": "2025-06-04T00:18:15.462288", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "2f571551-dc5e-4acc-96c2-045b0a161aed", "timestamp": "2025-06-04T00:18:15.492575", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:18:15.492408"}}
+{"session_id": "2f571551-dc5e-4acc-96c2-045b0a161aed", "timestamp": "2025-06-04T00:18:15.501284", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "2f571551-dc5e-4acc-96c2-045b0a161aed", "timestamp": "2025-06-04T00:18:17.488296", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "2f571551-dc5e-4acc-96c2-045b0a161aed", "timestamp": "2025-06-04T00:18:17.538465", "event_type": "page_navigation", "page": "unknown", "data": {"page": "📊 Análise de Indicadores", "timestamp": "2025-06-04 00:18:17.538113"}}
+{"session_id": "2f571551-dc5e-4acc-96c2-045b0a161aed", "timestamp": "2025-06-04T00:18:17.548789", "event_type": "page_view", "page": "unknown", "data": {"page": "indicators"}}
+{"session_id": "2f571551-dc5e-4acc-96c2-045b0a161aed", "timestamp": "2025-06-04T00:18:25.634060", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "2f571551-dc5e-4acc-96c2-045b0a161aed", "timestamp": "2025-06-04T00:18:25.685922", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🔄 Rede de Atores", "timestamp": "2025-06-04 00:18:25.685580"}}
+{"session_id": "2f571551-dc5e-4acc-96c2-045b0a161aed", "timestamp": "2025-06-04T00:18:25.695767", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
+{"session_id": "8d65cf8c-bb9d-439b-bf11-afc8eb2037fa", "timestamp": "2025-06-04T00:18:53.768628", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "8d65cf8c-bb9d-439b-bf11-afc8eb2037fa", "timestamp": "2025-06-04T00:18:53.795941", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:18:53.795762"}}
+{"session_id": "8d65cf8c-bb9d-439b-bf11-afc8eb2037fa", "timestamp": "2025-06-04T00:18:53.804122", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "8d65cf8c-bb9d-439b-bf11-afc8eb2037fa", "timestamp": "2025-06-04T00:18:58.730922", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "8d65cf8c-bb9d-439b-bf11-afc8eb2037fa", "timestamp": "2025-06-04T00:18:58.777877", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🔄 Rede de Agentes", "timestamp": "2025-06-04 00:18:58.777188"}}
+{"session_id": "8d65cf8c-bb9d-439b-bf11-afc8eb2037fa", "timestamp": "2025-06-04T00:18:58.798911", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:19:11.108821", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:19:11.136912", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:19:11.136724"}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:19:11.145493", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:19:17.220272", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:19:17.290695", "event_type": "page_navigation", "page": "unknown", "data": {"page": "📊 Análise de Indicadores", "timestamp": "2025-06-04 00:19:17.289804"}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:19:17.304596", "event_type": "page_view", "page": "unknown", "data": {"page": "indicators"}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:19:19.336201", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:19:19.365195", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🔄 Rede de Agentes-chave", "timestamp": "2025-06-04 00:19:19.364935"}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:19:19.376733", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:19:22.411081", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:19:22.459588", "event_type": "page_navigation", "page": "unknown", "data": {"page": "💡 Identificação de Oportunidades", "timestamp": "2025-06-04 00:19:22.459242"}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:19:22.469485", "event_type": "page_view", "page": "unknown", "data": {"page": "opportunities"}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:21:15.303939", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:21:15.367616", "event_type": "page_navigation", "page": "unknown", "data": {"page": "💡 Identificação de Oportunidades", "timestamp": "2025-06-04 00:21:15.367296"}}
+{"session_id": "c3e4ea1c-063e-4d50-b570-856f31c48cf4", "timestamp": "2025-06-04T00:21:15.377650", "event_type": "page_view", "page": "unknown", "data": {"page": "opportunities"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:25:31.000600", "event_type": "page_load", "page": "An\u00e1lise de Riscos", "data": {"page": "An\u00e1lise de Riscos"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:25:31.138693", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_matrix"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:25:31.225388", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:25:31.231193", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "priority_risks", "count": 10}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:25:31.247473", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_heatmap"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:25:31.248040", "event_type": "sort_data", "page": "An\u00e1lise de Riscos", "data": {"sort_by": "valor_risco", "ascending": false}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:25:31.251852", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "risk_table", "rows": 20}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:05.814467", "event_type": "page_load", "page": "An\u00e1lise de Riscos", "data": {"page": "An\u00e1lise de Riscos"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:05.838010", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_matrix"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:05.857137", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:05.863396", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "priority_risks", "count": 10}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:05.876534", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_heatmap"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:05.877270", "event_type": "sort_data", "page": "An\u00e1lise de Riscos", "data": {"sort_by": "categoria", "ascending": false}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:05.878509", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "risk_table", "rows": 20}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.290419", "event_type": "page_load", "page": "An\u00e1lise de Riscos", "data": {"page": "An\u00e1lise de Riscos"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.302254", "event_type": "filter_applied", "page": "An\u00e1lise de Riscos", "data": {"filter_type": "min_risk_value", "value": 12}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.318661", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_matrix"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.340843", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.350075", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "priority_risks", "count": 10}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.365984", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_heatmap"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.367238", "event_type": "sort_data", "page": "An\u00e1lise de Riscos", "data": {"sort_by": "categoria", "ascending": false}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.368618", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "risk_table", "rows": 18}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.676312", "event_type": "page_load", "page": "An\u00e1lise de Riscos", "data": {"page": "An\u00e1lise de Riscos"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.683375", "event_type": "filter_applied", "page": "An\u00e1lise de Riscos", "data": {"filter_type": "min_risk_value", "value": 16}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.696743", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_matrix"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.718647", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.725944", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "priority_risks", "count": 8}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.741968", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_heatmap"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.742959", "event_type": "sort_data", "page": "An\u00e1lise de Riscos", "data": {"sort_by": "categoria", "ascending": false}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:25.744586", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "risk_table", "rows": 8}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:27.346032", "event_type": "page_load", "page": "An\u00e1lise de Riscos", "data": {"page": "An\u00e1lise de Riscos"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:27.354828", "event_type": "filter_applied", "page": "An\u00e1lise de Riscos", "data": {"filter_type": "min_risk_value", "value": 18}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:27.368904", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_matrix"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:27.392210", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:27.400274", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "priority_risks", "count": 8}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:27.416479", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_heatmap"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:27.417332", "event_type": "sort_data", "page": "An\u00e1lise de Riscos", "data": {"sort_by": "categoria", "ascending": false}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:27.418857", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "risk_table", "rows": 8}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:28.075562", "event_type": "page_load", "page": "An\u00e1lise de Riscos", "data": {"page": "An\u00e1lise de Riscos"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:28.088607", "event_type": "filter_applied", "page": "An\u00e1lise de Riscos", "data": {"filter_type": "min_risk_value", "value": 19}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:28.102068", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_matrix"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:28.124440", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:28.131020", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "priority_risks", "count": 8}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:28.147142", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_heatmap"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:28.148312", "event_type": "sort_data", "page": "An\u00e1lise de Riscos", "data": {"sort_by": "categoria", "ascending": false}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:28.150223", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "risk_table", "rows": 8}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:28.963801", "event_type": "page_load", "page": "An\u00e1lise de Riscos", "data": {"page": "An\u00e1lise de Riscos"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:28.971093", "event_type": "filter_applied", "page": "An\u00e1lise de Riscos", "data": {"filter_type": "min_risk_value", "value": 20}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:28.984952", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_matrix"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:29.006332", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:29.013533", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "priority_risks", "count": 8}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:29.029791", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_heatmap"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:29.030689", "event_type": "sort_data", "page": "An\u00e1lise de Riscos", "data": {"sort_by": "categoria", "ascending": false}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:26:29.032013", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "risk_table", "rows": 8}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:27:36.200532", "event_type": "page_load", "page": "An\u00e1lise de Riscos", "data": {"page": "An\u00e1lise de Riscos"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:27:36.216752", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_matrix"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:27:36.238127", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:27:36.248685", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "priority_risks", "count": 8}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:27:36.263179", "event_type": "view_visualization", "page": "An\u00e1lise de Riscos", "data": {"chart_type": "risk_heatmap"}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:27:36.264040", "event_type": "sort_data", "page": "An\u00e1lise de Riscos", "data": {"sort_by": "categoria", "ascending": true}}
+{"session_id": "1132d4fd-f226-44c8-893e-b3bce795499c", "timestamp": "2025-06-04T00:27:36.265244", "event_type": "view_data", "page": "An\u00e1lise de Riscos", "data": {"data_type": "risk_table", "rows": 8}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:48.624734", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:48.654975", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:46:48.654745"}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:48.666927", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:50.998792", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:51.043036", "event_type": "page_navigation", "page": "unknown", "data": {"page": "⚠️ Análise de Riscos", "timestamp": "2025-06-04 00:46:51.042766"}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:51.051286", "event_type": "page_view", "page": "unknown", "data": {"page": "risks"}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:51.267464", "event_type": "risks-view_visualization", "page": "unknown", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:51.420011", "event_type": "priority_risks", "page": "unknown", "data": {"count": 10}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:56.513179", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:56.566122", "event_type": "page_navigation", "page": "unknown", "data": {"page": "⚠️ Análise de Riscos", "timestamp": "2025-06-04 00:46:56.565826"}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:56.579687", "event_type": "page_view", "page": "unknown", "data": {"page": "risks"}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:56.808474", "event_type": "risks-view_visualization", "page": "unknown", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:56.968038", "event_type": "priority_risks", "page": "unknown", "data": {"count": 10}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:57.139063", "event_type": "export_data", "page": "unknown", "data": {"risk_report": "markdown"}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:58.688319", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:58.733266", "event_type": "page_navigation", "page": "unknown", "data": {"page": "⚠️ Análise de Riscos", "timestamp": "2025-06-04 00:46:58.732951"}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:58.743541", "event_type": "page_view", "page": "unknown", "data": {"page": "risks"}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:58.946650", "event_type": "risks-view_visualization", "page": "unknown", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:59.099217", "event_type": "priority_risks", "page": "unknown", "data": {"count": 10}}
+{"session_id": "f4abd896-2fe0-4ad1-94aa-8b16116ca984", "timestamp": "2025-06-04T00:46:59.241588", "event_type": "export_data", "page": "unknown", "data": {"risks": "20rows"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:47:47.977523", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:47:48.006981", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:47:48.006784"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:47:48.017090", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:47:52.587552", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:47:52.627726", "event_type": "page_navigation", "page": "unknown", "data": {"page": "⚠️ Análise de Riscos", "timestamp": "2025-06-04 00:47:52.627437"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:47:52.639613", "event_type": "page_view", "page": "unknown", "data": {"page": "risks"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:47:52.967174", "event_type": "risks-view_visualization", "page": "unknown", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:47:53.196274", "event_type": "priority_risks", "page": "unknown", "data": {"count": 10}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:11.663001", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:11.712394", "event_type": "page_navigation", "page": "unknown", "data": {"page": "💡 Identificação de Oportunidades", "timestamp": "2025-06-04 00:48:11.711960"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:11.721989", "event_type": "page_view", "page": "unknown", "data": {"page": "opportunities"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:29.887098", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:29.938265", "event_type": "page_navigation", "page": "unknown", "data": {"page": "⚠️ Análise de Riscos", "timestamp": "2025-06-04 00:48:29.937853"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:29.948448", "event_type": "page_view", "page": "unknown", "data": {"page": "risks"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:30.167856", "event_type": "risks-view_visualization", "page": "unknown", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:30.324278", "event_type": "priority_risks", "page": "unknown", "data": {"count": 10}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:32.002174", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:32.069518", "event_type": "page_navigation", "page": "unknown", "data": {"page": "💡 Identificação de Oportunidades", "timestamp": "2025-06-04 00:48:32.069206"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:32.081854", "event_type": "page_view", "page": "unknown", "data": {"page": "opportunities"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:43.622144", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:43.671667", "event_type": "page_navigation", "page": "unknown", "data": {"page": "⚠️ Análise de Riscos", "timestamp": "2025-06-04 00:48:43.671337"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:43.684343", "event_type": "page_view", "page": "unknown", "data": {"page": "risks"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:43.908193", "event_type": "risks-view_visualization", "page": "unknown", "data": {"chart_type": "risk_by_category"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:44.065106", "event_type": "priority_risks", "page": "unknown", "data": {"count": 10}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:53.918245", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:53.982983", "event_type": "page_navigation", "page": "unknown", "data": {"page": "📊 Análise de Indicadores", "timestamp": "2025-06-04 00:48:53.981609"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:48:53.999486", "event_type": "page_view", "page": "unknown", "data": {"page": "indicators"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:02.999720", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:03.040727", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:49:03.040398"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:03.049704", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:29.029303", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:29.096936", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:49:29.096022"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:29.107719", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:30.424843", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:30.473551", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:49:30.473038"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:30.484000", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:34.048728", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:34.099667", "event_type": "page_navigation", "page": "unknown", "data": {"page": "📊 Análise de Indicadores", "timestamp": "2025-06-04 00:49:34.099324"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:34.108621", "event_type": "page_view", "page": "unknown", "data": {"page": "indicators"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:43.356121", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:43.408126", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:49:43.407769"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:43.418957", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:48.244821", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:48.296004", "event_type": "page_navigation", "page": "unknown", "data": {"page": "📊 Análise de Indicadores", "timestamp": "2025-06-04 00:49:48.295657"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:48.305587", "event_type": "page_view", "page": "unknown", "data": {"page": "indicators"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:54.685511", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:54.751404", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:49:54.751099"}}
+{"session_id": "5d5c7de3-7e4d-4496-b78b-593dc52bc095", "timestamp": "2025-06-04T00:49:54.763750", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "75da99b5-17a6-4fc3-be4f-43b74d247997", "timestamp": "2025-06-04T00:50:22.838666", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "75da99b5-17a6-4fc3-be4f-43b74d247997", "timestamp": "2025-06-04T00:50:22.867302", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 00:50:22.867072"}}
+{"session_id": "75da99b5-17a6-4fc3-be4f-43b74d247997", "timestamp": "2025-06-04T00:50:22.876097", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "3a0d11c9-91c7-4d51-b03a-61af2e00ce80", "timestamp": "2025-06-04T01:19:10.937884", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "3a0d11c9-91c7-4d51-b03a-61af2e00ce80", "timestamp": "2025-06-04T01:19:10.968599", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 01:19:10.968359"}}
+{"session_id": "3a0d11c9-91c7-4d51-b03a-61af2e00ce80", "timestamp": "2025-06-04T01:19:11.040857", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "3a0d11c9-91c7-4d51-b03a-61af2e00ce80", "timestamp": "2025-06-04T01:19:14.855802", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "3a0d11c9-91c7-4d51-b03a-61af2e00ce80", "timestamp": "2025-06-04T01:19:14.888256", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🗺️ Visão Geográfica", "timestamp": "2025-06-04 01:19:14.887958"}}
+{"session_id": "3a0d11c9-91c7-4d51-b03a-61af2e00ce80", "timestamp": "2025-06-04T01:19:14.914287", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "3a0d11c9-91c7-4d51-b03a-61af2e00ce80", "timestamp": "2025-06-04T01:19:18.440566", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "3a0d11c9-91c7-4d51-b03a-61af2e00ce80", "timestamp": "2025-06-04T01:19:18.488737", "event_type": "page_navigation", "page": "unknown", "data": {"page": "📊 Análise de Indicadores", "timestamp": "2025-06-04 01:19:18.488407"}}
+{"session_id": "3a0d11c9-91c7-4d51-b03a-61af2e00ce80", "timestamp": "2025-06-04T01:19:18.498262", "event_type": "page_view", "page": "unknown", "data": {"page": "indicators"}}
+{"session_id": "3a0d11c9-91c7-4d51-b03a-61af2e00ce80", "timestamp": "2025-06-04T01:19:21.049764", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "3a0d11c9-91c7-4d51-b03a-61af2e00ce80", "timestamp": "2025-06-04T01:19:21.099470", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🗺️ Visão Geográfica", "timestamp": "2025-06-04 01:19:21.099102"}}
+{"session_id": "3a0d11c9-91c7-4d51-b03a-61af2e00ce80", "timestamp": "2025-06-04T01:19:21.109898", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "859b4e71-8151-4e73-af87-10ae3ddd11c0", "timestamp": "2025-06-04T01:21:04.802090", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "859b4e71-8151-4e73-af87-10ae3ddd11c0", "timestamp": "2025-06-04T01:21:04.835514", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 01:21:04.835265"}}
+{"session_id": "859b4e71-8151-4e73-af87-10ae3ddd11c0", "timestamp": "2025-06-04T01:21:04.845506", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "859b4e71-8151-4e73-af87-10ae3ddd11c0", "timestamp": "2025-06-04T01:21:07.202777", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "859b4e71-8151-4e73-af87-10ae3ddd11c0", "timestamp": "2025-06-04T01:21:07.247543", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🗺️ Visão Geográfica", "timestamp": "2025-06-04 01:21:07.247213"}}
+{"session_id": "859b4e71-8151-4e73-af87-10ae3ddd11c0", "timestamp": "2025-06-04T01:21:07.256893", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "8277d3d1-31fd-42c9-a617-61b981481aab", "timestamp": "2025-06-04T01:21:53.434597", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "8277d3d1-31fd-42c9-a617-61b981481aab", "timestamp": "2025-06-04T01:21:53.464658", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 01:21:53.464455"}}
+{"session_id": "8277d3d1-31fd-42c9-a617-61b981481aab", "timestamp": "2025-06-04T01:21:53.472785", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "8277d3d1-31fd-42c9-a617-61b981481aab", "timestamp": "2025-06-04T01:21:56.148796", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "8277d3d1-31fd-42c9-a617-61b981481aab", "timestamp": "2025-06-04T01:21:56.187411", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🗺️ Visão Geográfica", "timestamp": "2025-06-04 01:21:56.187130"}}
+{"session_id": "8277d3d1-31fd-42c9-a617-61b981481aab", "timestamp": "2025-06-04T01:21:56.196794", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "8a95d1e0-2d1a-4097-8f74-042e076d62d2", "timestamp": "2025-06-04T01:22:32.779043", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "8a95d1e0-2d1a-4097-8f74-042e076d62d2", "timestamp": "2025-06-04T01:22:32.809102", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 01:22:32.808941"}}
+{"session_id": "8a95d1e0-2d1a-4097-8f74-042e076d62d2", "timestamp": "2025-06-04T01:22:32.817947", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "8a95d1e0-2d1a-4097-8f74-042e076d62d2", "timestamp": "2025-06-04T01:22:36.961058", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "8a95d1e0-2d1a-4097-8f74-042e076d62d2", "timestamp": "2025-06-04T01:22:37.029986", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🗺️ Visão Geográfica", "timestamp": "2025-06-04 01:22:37.029690"}}
+{"session_id": "8a95d1e0-2d1a-4097-8f74-042e076d62d2", "timestamp": "2025-06-04T01:22:37.041359", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "6780ae80-123e-431b-aadb-cd4ce68c8921", "timestamp": "2025-06-04T01:22:46.646712", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "6780ae80-123e-431b-aadb-cd4ce68c8921", "timestamp": "2025-06-04T01:22:46.677340", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 01:22:46.677131"}}
+{"session_id": "6780ae80-123e-431b-aadb-cd4ce68c8921", "timestamp": "2025-06-04T01:22:46.685045", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "6780ae80-123e-431b-aadb-cd4ce68c8921", "timestamp": "2025-06-04T01:22:48.634738", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "6780ae80-123e-431b-aadb-cd4ce68c8921", "timestamp": "2025-06-04T01:22:48.686838", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🗺️ Visão Geográfica", "timestamp": "2025-06-04 01:22:48.686432"}}
+{"session_id": "6780ae80-123e-431b-aadb-cd4ce68c8921", "timestamp": "2025-06-04T01:22:48.697258", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "e7ae1fb7-0756-4aa8-9eee-f14c8e385fd1", "timestamp": "2025-06-04T01:23:56.940210", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "e7ae1fb7-0756-4aa8-9eee-f14c8e385fd1", "timestamp": "2025-06-04T01:23:56.971837", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 01:23:56.971670"}}
+{"session_id": "e7ae1fb7-0756-4aa8-9eee-f14c8e385fd1", "timestamp": "2025-06-04T01:23:56.981110", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "e7ae1fb7-0756-4aa8-9eee-f14c8e385fd1", "timestamp": "2025-06-04T01:23:59.099690", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "e7ae1fb7-0756-4aa8-9eee-f14c8e385fd1", "timestamp": "2025-06-04T01:23:59.151806", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🗺️ Visão Geográfica", "timestamp": "2025-06-04 01:23:59.151472"}}
+{"session_id": "e7ae1fb7-0756-4aa8-9eee-f14c8e385fd1", "timestamp": "2025-06-04T01:23:59.162008", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "bca1fd0f-a0b2-4128-8f31-46b018f189d4", "timestamp": "2025-06-04T01:26:03.207890", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "bca1fd0f-a0b2-4128-8f31-46b018f189d4", "timestamp": "2025-06-04T01:26:03.236826", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 01:26:03.236619"}}
+{"session_id": "bca1fd0f-a0b2-4128-8f31-46b018f189d4", "timestamp": "2025-06-04T01:26:03.247699", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "bca1fd0f-a0b2-4128-8f31-46b018f189d4", "timestamp": "2025-06-04T01:26:06.421607", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "bca1fd0f-a0b2-4128-8f31-46b018f189d4", "timestamp": "2025-06-04T01:26:06.470964", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🗺️ Visão Geográfica", "timestamp": "2025-06-04 01:26:06.469951"}}
+{"session_id": "bca1fd0f-a0b2-4128-8f31-46b018f189d4", "timestamp": "2025-06-04T01:26:06.488746", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:26:52.483487", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:26:52.510433", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 01:26:52.510272"}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:26:52.519141", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:26:55.998149", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:26:56.064813", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🗺️ Visão Geográfica", "timestamp": "2025-06-04 01:26:56.064189"}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:26:56.075309", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:27:01.480338", "event_type": "filter_applied", "page": "unknown", "data": {"filter_type": "cities", "selected": ["Santa Cruz do Capibaribe", "Caruaru", "Toritama"]}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:27:01.488745", "event_type": "filter_applied", "page": "unknown", "data": {"filter_type": "map_indicator", "selected": "Faturamento Anual (Milhões)"}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:27:41.306201", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:27:41.359502", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🗺️ Visão Geográfica", "timestamp": "2025-06-04 01:27:41.359122"}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:27:41.372116", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:27:41.392812", "event_type": "filter_applied", "page": "unknown", "data": {"filter_type": "cities", "selected": ["Santa Cruz do Capibaribe", "Caruaru", "Toritama"]}}
+{"session_id": "452d7549-9041-43ed-a757-0a9a4bc54a24", "timestamp": "2025-06-04T01:27:41.398604", "event_type": "filter_applied", "page": "unknown", "data": {"filter_type": "map_indicator", "selected": "Empresas Formais"}}
+{"session_id": "26afb593-b2a8-48ff-8675-eb353f1853d2", "timestamp": "2025-06-04T01:31:51.276567", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "26afb593-b2a8-48ff-8675-eb353f1853d2", "timestamp": "2025-06-04T01:31:51.305706", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 01:31:51.305522"}}
+{"session_id": "26afb593-b2a8-48ff-8675-eb353f1853d2", "timestamp": "2025-06-04T01:31:51.314659", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "26afb593-b2a8-48ff-8675-eb353f1853d2", "timestamp": "2025-06-04T01:33:21.728677", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "26afb593-b2a8-48ff-8675-eb353f1853d2", "timestamp": "2025-06-04T01:33:21.769659", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🗺️ Visão Geográfica", "timestamp": "2025-06-04 01:33:21.769171"}}
+{"session_id": "26afb593-b2a8-48ff-8675-eb353f1853d2", "timestamp": "2025-06-04T01:33:21.785616", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "26afb593-b2a8-48ff-8675-eb353f1853d2", "timestamp": "2025-06-04T01:33:21.803390", "event_type": "filter_applied", "page": "unknown", "data": {"filter_type": "cities", "selected": ["Santa Cruz do Capibaribe", "Caruaru", "Toritama"]}}
+{"session_id": "26afb593-b2a8-48ff-8675-eb353f1853d2", "timestamp": "2025-06-04T01:33:21.809732", "event_type": "filter_applied", "page": "unknown", "data": {"filter_type": "map_indicator", "selected": "Faturamento Anual (Milhões)"}}
+{"session_id": "b53d09b3-d3dc-4368-8667-953537cffbcf", "timestamp": "2025-06-04T01:36:32.291644", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "b53d09b3-d3dc-4368-8667-953537cffbcf", "timestamp": "2025-06-04T01:36:32.324423", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 01:36:32.324196"}}
+{"session_id": "b53d09b3-d3dc-4368-8667-953537cffbcf", "timestamp": "2025-06-04T01:36:32.334445", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "b53d09b3-d3dc-4368-8667-953537cffbcf", "timestamp": "2025-06-04T01:36:40.812143", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "b53d09b3-d3dc-4368-8667-953537cffbcf", "timestamp": "2025-06-04T01:36:40.858411", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🗺️ Visão Geográfica", "timestamp": "2025-06-04 01:36:40.858036"}}
+{"session_id": "b53d09b3-d3dc-4368-8667-953537cffbcf", "timestamp": "2025-06-04T01:36:40.869641", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "b53d09b3-d3dc-4368-8667-953537cffbcf", "timestamp": "2025-06-04T01:36:40.887088", "event_type": "filter_applied", "page": "unknown", "data": {"filter_type": "cities", "selected": ["Santa Cruz do Capibaribe", "Caruaru", "Toritama"]}}
+{"session_id": "b53d09b3-d3dc-4368-8667-953537cffbcf", "timestamp": "2025-06-04T01:36:40.893639", "event_type": "filter_applied", "page": "unknown", "data": {"filter_type": "map_indicator", "selected": "Faturamento Anual (Milhões)"}}
+{"session_id": "30ddf860-6c13-4803-8ed7-254112318ea7", "timestamp": "2025-06-04T01:37:10.603536", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "30ddf860-6c13-4803-8ed7-254112318ea7", "timestamp": "2025-06-04T01:37:10.632769", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🏠 Visão Geral", "timestamp": "2025-06-04 01:37:10.632570"}}
+{"session_id": "30ddf860-6c13-4803-8ed7-254112318ea7", "timestamp": "2025-06-04T01:37:10.642049", "event_type": "page_view", "page": "unknown", "data": {"page": "overview"}}
+{"session_id": "30ddf860-6c13-4803-8ed7-254112318ea7", "timestamp": "2025-06-04T01:37:12.536280", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "30ddf860-6c13-4803-8ed7-254112318ea7", "timestamp": "2025-06-04T01:37:12.587725", "event_type": "page_navigation", "page": "unknown", "data": {"page": "📊 Análise de Indicadores", "timestamp": "2025-06-04 01:37:12.587359"}}
+{"session_id": "30ddf860-6c13-4803-8ed7-254112318ea7", "timestamp": "2025-06-04T01:37:12.599557", "event_type": "page_view", "page": "unknown", "data": {"page": "indicators"}}
+{"session_id": "30ddf860-6c13-4803-8ed7-254112318ea7", "timestamp": "2025-06-04T01:37:14.209407", "event_type": "app_start", "page": "unknown", "data": {}}
+{"session_id": "30ddf860-6c13-4803-8ed7-254112318ea7", "timestamp": "2025-06-04T01:37:14.259983", "event_type": "page_navigation", "page": "unknown", "data": {"page": "🕸️  Rede de Agentes-chave", "timestamp": "2025-06-04 01:37:14.258806"}}
+{"session_id": "30ddf860-6c13-4803-8ed7-254112318ea7", "timestamp": "2025-06-04T01:37:14.269984", "event_type": "page_view", "page": "unknown", "data": {"page": "network"}}
