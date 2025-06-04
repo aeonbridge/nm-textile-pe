@@ -506,6 +506,27 @@ class EcosystemNetworkRenderer:
         # st.title("🕸️ Rede do Ecossistema")
         st.markdown("Visualização Iterativo dos atores-chave dentro da rede do ecossistema")
 
+        with st.expander("📊 Estatísticas da rede"):
+            stats = self.get_network_statistics()
+
+            # Create columns for metrics
+            stat_cols = st.columns(5)
+            with stat_cols[0]:
+                st.metric("Total de pessoas", stats.get('num_nodes', 0))
+            with stat_cols[1]:
+                st.metric("Total de conexões", stats.get('num_edges', 0))
+            with stat_cols[2]:
+                st.metric("Densidade da rede", f"{stats.get('density', 0):.3f}")
+            with stat_cols[3]:
+                st.metric("Coeficiente de clusterização", f"{stats.get('avg_clustering', 0):.3f}")
+            with stat_cols[4]:
+                st.metric("Quantidade de clusters", stats.get('num_clusters', 0))
+
+            self.render_network_stats()
+            self.render_network_analysis()
+            # Análise de relevância
+        self._render_relevance_analysis(self.ontology_data.get("nodes"))
+
         #st.divider()
 
         # Sidebar controls
@@ -568,24 +589,7 @@ class EcosystemNetworkRenderer:
                     if 'customdata' in point:
                         st.session_state.selected_node = point['customdata']
 
-            # Display network statistics at the top
-            st.subheader("📊 Estatísticas da rede")
-            stats = self.get_network_statistics()
 
-            # Create columns for metrics
-            stat_cols = st.columns(5)
-            with stat_cols[0]:
-                st.metric("Total de pessoas", stats.get('num_nodes', 0))
-            with stat_cols[1]:
-                st.metric("Total de conexões", stats.get('num_edges', 0))
-            with stat_cols[2]:
-                st.metric("Densidade da rede", f"{stats.get('density', 0):.3f}")
-            with stat_cols[3]:
-                st.metric("Coeficiente de clusterização", f"{stats.get('avg_clustering', 0):.3f}")
-            with stat_cols[4]:
-                st.metric("Quantidade de clusters", stats.get('num_clusters', 0))
-
-            self.render_network_stats()
             # with stat_cols[5]:
             #     if 'most_central_actor' in stats:
             #         actor_id, centrality = stats['most_central_actor']
@@ -595,7 +599,6 @@ class EcosystemNetworkRenderer:
             #                   f"{centrality:.3f}")
             #     else:
             #         st.metric("Ator mais central", "N/A", "0.000")
-            self.render_network_analysis()
         with col_detail:
             # self.render_filter_actor_details()
             self.create_detail_panel(filter_cluster)
@@ -752,7 +755,7 @@ class EcosystemNetworkRenderer:
 
     def render_network_analysis(self):
         """Renderiza análise da rede"""
-        st.subheader("📊 Análise da Rede")
+        # st.subheader("📊 Análise da Rede")
 
         actors_data = self.ontology_data.get('nodes')
 
@@ -782,9 +785,6 @@ class EcosystemNetworkRenderer:
                     labels={'x': 'Cidade', 'y': 'Número de Atores'}
                 )
                 st.plotly_chart(fig, use_container_width=True)
-
-        # Análise de relevância
-        self._render_relevance_analysis(actors_data)
 
     def render_network_stats(self):
         actors_data = self.ontology_data.get('nodes')

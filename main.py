@@ -145,6 +145,19 @@ class DashboardApp:
 
         return pd.DataFrame()
 
+    def render_header(self):
+        """Renderiza o cabeçalho principal"""
+        st.markdown('<h1 class="main-header">📊 Dashboard Ecossistema Têxtil de Pernambuco</h1>',
+                    unsafe_allow_html=True)
+
+        # Informações contextuais
+        st.markdown("""
+        <div class="insight-box">
+        <strong>💡 Sobre este Dashboard:</strong> Ferramenta interativa para apoiar stakeholders 
+        na compreensão do ambiente, análise de tendências e tomada de decisão no ecossistema têxtil de Pernambuco.
+        </div>
+        """, unsafe_allow_html=True)
+
     def render_sidebar(self):
         with sidebar:
             st.title("🧭 Navegação")
@@ -156,6 +169,8 @@ class DashboardApp:
                 index=0,
                 key="page_selector"
             )
+
+            self.render_header()
 
             create_feedback_section()
 
@@ -173,18 +188,7 @@ class DashboardApp:
 
             return selected_page
 
-    def render_header(self):
-        """Renderiza o cabeçalho principal"""
-        st.markdown('<h1 class="main-header">📊 Dashboard Ecossistema Têxtil de Pernambuco</h1>',
-                    unsafe_allow_html=True)
 
-        # Informações contextuais
-        st.markdown("""
-        <div class="insight-box">
-        <strong>💡 Sobre este Dashboard:</strong> Ferramenta interativa para apoiar stakeholders 
-        na compreensão do ambiente, análise de tendências e tomada de decisão no ecossistema têxtil de Pernambuco.
-        </div>
-        """, unsafe_allow_html=True)
 
     def run(self):
         """Executa a aplicação principal"""
@@ -192,7 +196,7 @@ class DashboardApp:
         Analytics.log_event("app_start")
 
         # Renderizar interface
-        self.render_header()
+        #self.render_header()
         selected_page = self.render_sidebar()
 
         # Carregar dados
