@@ -165,7 +165,7 @@ class EcosystemNetworkRenderer:
                        layout_type: str = 'spring',
                        color_by: str = 'impact_scale',
                        node_size_by: str = 'relevance_degree',
-                       show_edge_labels: bool = False,
+                       show_edge_labels: bool = True,
                        filter_by_cluster: Optional[str] = None,
                        width: int = 1000,
                        height: int = 800) -> go.Figure:

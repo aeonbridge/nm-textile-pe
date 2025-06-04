@@ -5,6 +5,10 @@ from typing import Dict, Any, Optional, List
 import json
 import datetime
 
+from streamlit import runtime
+from streamlit.runtime.scriptrunner import get_script_run_ctx
+
+
 try:
     from supabase import create_client, Client
     SUPABASE_AVAILABLE = True
@@ -21,6 +25,23 @@ class Analytics:
         if "session_id" not in st.session_state:
             st.session_state.session_id = str(uuid.uuid4())
         return st.session_state.session_id
+
+
+    @staticmethod
+    def get_remote_ip() -> str:
+        """Get remote ip."""
+        try:
+            ctx = get_script_run_ctx()
+            if ctx is None:
+                return None
+
+            session_info = runtime.get_instance().get_client(ctx.session_id)
+            if session_info is None:
+                return None
+        except Exception as e:
+            return None
+
+        return session_info.request.remote_ip
 
     @staticmethod
     def log_event(event_type: str, event_data: Optional[Dict] = None, page: str = "unknown"):
@@ -79,6 +100,7 @@ class Analytics:
                 "action": "",
                 "env" : st.secrets["ENV"],
                 "user_id": st.session_state.user_id,
+                "ip": Analytics.get_remote_ip(),
             }
 
             # Insert into database

@@ -18,7 +18,7 @@ class GeographicPage(Page):
 
     def render(self, data: Dict[str, Any]):
         """Renderiza a página de visão geral"""
-        Analytics.log_event("page_view", {"page": "overview"})
+        Analytics.log_event("page_view", {"page": "geographic"})
         StateManager.increment_page_view("Visão Geral")
 
         st.markdown('<h2 class="page-header">🏠 Visão Geral do Ecossistema Têxtil</h2>',
