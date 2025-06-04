@@ -411,10 +411,10 @@ class EcosystemNetworkRenderer:
             instagram = attributes.get('profile_instagram')
 
             if linkedin and linkedin != "não identificado":
-                st.html(f"<a href={linkedin} target=_blank><img src=/app/static/imgs/lkd.png width=20 height=20></a>")
+                st.html(f"<a href={linkedin} target=_blank><img src=app/static/imgs/lkd.png width=20 height=20></a>")
 
             if instagram and instagram != "não identificado":
-                st.html(f"<a href={instagram} target=_blank><img src=/app/static/imgs/ig.png width=20 height=20></a>")
+                st.html(f"<a href={instagram} target=_blank><img src=app/static/imgs/ig.png width=20 height=20></a>")
 
         # Informações principais
         attrs = attributes
