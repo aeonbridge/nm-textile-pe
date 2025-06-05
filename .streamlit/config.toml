@@ -293,8 +293,6 @@ enableStaticServing = true
 # https://mapbox.com. It's free (for moderate usage levels)!
 
 # Default: ""
-token = "sk.eyJ1IjoiYWVvbmJyaWRnZSIsImEiOiJjbWJnbnloZGUwMHR5MmlvbGhpcDR6ZW9tIn0._ISEz5vbTvb11CyjGiHp0Q"
-
 [theme]
 primaryColor = "#bb5a38"
 backgroundColor = "#f4f3ed"
