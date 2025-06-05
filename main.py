@@ -1,7 +1,7 @@
 import streamlit as st
 import sys
 from pathlib import Path
-
+import pandas as pd
 from streamlit import sidebar
 
 # Adicionar o diretório src ao path
@@ -211,6 +211,8 @@ class DashboardApp:
                 st.exception(e)
 
         # Analytics na sidebar
+        query_params = st.query_params
+        admin_mode = query_params.get("admin") == "on"
         if admin_mode:
             self._render_analytics_sidebar()
 
@@ -236,16 +238,11 @@ class DashboardApp:
 
 
 if __name__ == "__main__":
-    import pandas as pd
-
     try:
         if st.session_state.user_id is None:
             st.session_state["user_id"] = Analytics.generate_user_id()
     except:
         st.session_state["user_id"] = Analytics.generate_user_id()
-
-    query_params = st.query_params
-    admin_mode = query_params.get("admin") == "on"
 
     app = DashboardApp()
     app.run()
