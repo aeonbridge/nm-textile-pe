@@ -4,6 +4,8 @@ import os
 from typing import Dict, Any, Optional, List
 import json
 import datetime
+import string
+import random
 
 from streamlit import runtime
 from streamlit.runtime.scriptrunner import get_script_run_ctx
@@ -113,3 +115,9 @@ class Analytics:
         except Exception as e:
             print(f"Erro ao salvar no Supabase: {str(e)}")
             return False
+
+    @staticmethod
+    def generate_user_id(length=6):
+        characters = string.ascii_letters + string.digits  # a-zA-Z0-9
+        return ''.join(random.choices(characters, k=length))
+

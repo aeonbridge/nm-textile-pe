@@ -238,6 +238,12 @@ class DashboardApp:
 if __name__ == "__main__":
     import pandas as pd
 
+    try:
+        if st.session_state.user_id is None:
+            st.session_state["user_id"] = Analytics.generate_user_id()
+    except:
+        st.session_state["user_id"] = Analytics.generate_user_id()
+
     query_params = st.query_params
     admin_mode = query_params.get("admin") == "on"
 
