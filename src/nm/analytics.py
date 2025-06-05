@@ -113,7 +113,7 @@ class Analytics:
             else:
                 return False
         except Exception as e:
-            print(f"Erro ao salvar no Supabase: {str(e)}")
+            print(f"{datetime.datetime.now().isoformat()} - Erro ao salvar no Supabase: {str(e)}")
             return False
 
     @staticmethod
