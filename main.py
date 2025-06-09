@@ -12,6 +12,8 @@ from src.nm.data_loader import DataLoader
 from src.state import StateManager
 from src.pages.overview import OverviewPage
 from src.pages.indicators import IndicatorsPage
+from src.pages.geographic_mapbox import GeographicMapboxPage
+from src.pages.interactive_analysis import InteractiveAnalysisPage
 from src.pages.network_v2 import NetworkPageV2
 from src.pages.risks import RisksPage
 from src.pages.opportunities import OpportunitiesPage
@@ -38,7 +40,8 @@ class DashboardApp:
     def __init__(self):
         self.pages = {
             "🏠 Visão Geral": OverviewPage(),
-            #"🗺️ Visão Geográfica": GeographicPage(),
+            "🗺️ Análise Geográfica": GeographicMapboxPage(),
+            "🚀 Laboratório Interativo": InteractiveAnalysisPage(),
             "📊 Análise de Indicadores": IndicatorsPage(),
             "🕸️  Rede de Agentes-chave": NetworkPageV2(),
             "⚠️ Análise de Riscos": RisksPage(),
