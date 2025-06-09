@@ -39,13 +39,13 @@ class DashboardApp:
 
     def __init__(self):
         self.pages = {
-            "🏠 Visão Geral": OverviewPage(),
-            "🗺️ Análise Geográfica": GeographicMapboxPage(),
+            "🕸️  Rede de Agentes-chave": NetworkPageV2(),
             "🚀 Laboratório Interativo": InteractiveAnalysisPage(),
             "📊 Análise de Indicadores": IndicatorsPage(),
-            "🕸️  Rede de Agentes-chave": NetworkPageV2(),
             "⚠️ Análise de Riscos": RisksPage(),
-            "💡 Identificação de Oportunidades": OpportunitiesPage()
+            "💡 Identificação de Oportunidades": OpportunitiesPage(),
+            "🏠 Visão Geral": OverviewPage(),
+            "🗺️ Análise Geográfica": GeographicMapboxPage(),
         }
         self.data = None
 
