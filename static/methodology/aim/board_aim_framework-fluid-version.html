@@ -218,35 +218,50 @@
 
         .timeline-track {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: clamp(10px, 1.5vw, 20px);
             background: #f7fafc;
             border-radius: clamp(8px, 1vw, 12px);
-            padding: clamp(15px, 2vw, 25px);
+            padding: clamp(20px, 3vw, 30px);
             position: relative;
+            min-height: 120px;
+            overflow-x: auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: clamp(60px, 8vw, 80px);
+            right: clamp(60px, 8vw, 80px);
+            height: 4px;
+            background: linear-gradient(90deg, #e53e3e, #dd6b20, #d69e2e, #38a169, #3182ce, #805ad5, #d53f8c);
+            border-radius: 2px;
+            z-index: 1;
         }
 
         .timeline-phase {
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            z-index: 2;
             flex: 1;
-            min-width: 80px;
+            min-width: clamp(80px, 12vw, 120px);
         }
 
         .timeline-circle {
-            width: clamp(30px, 4vw, 40px);
-            height: clamp(30px, 4vw, 40px);
+            width: clamp(50px, 6vw, 60px);
+            height: clamp(50px, 6vw, 60px);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-weight: 600;
-            margin-bottom: clamp(6px, 0.8vw, 10px);
-            font-size: clamp(0.8rem, 1.2vw, 1rem);
+            font-weight: 700;
+            margin-bottom: clamp(8px, 1vw, 12px);
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border: 3px solid white;
         }
 
         .timeline-label {
@@ -260,6 +275,13 @@
         .timeline-duration {
             font-size: clamp(0.6rem, 0.9vw, 0.75rem);
             color: #718096;
+            text-align: center;
+        }
+
+        .timeline-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
 
@@ -373,17 +395,31 @@
             .timeline-track {
                 flex-direction: column;
                 gap: clamp(15px, 2vw, 25px);
+                min-height: auto;
+            }
+            
+            .timeline-line {
+                display: none;
             }
             
             .timeline-phase {
                 flex-direction: row;
-                justify-content: center;
-                gap: clamp(10px, 1.5vw, 15px);
+                justify-content: flex-start;
+                gap: clamp(15px, 2vw, 20px);
+                width: 100%;
+                text-align: left;
             }
             
             .timeline-circle {
                 margin-bottom: 0;
-                margin-right: clamp(8px, 1vw, 10px);
+                margin-right: 0;
+                flex-shrink: 0;
+            }
+            
+            .timeline-content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
 
@@ -644,6 +680,66 @@
                 </ul>
             </div>
         </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline-section">
+            <div class="timeline">
+                <h3>📅 Cronograma Integrado - 17 Meses</h3>
+                <div class="timeline-track">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #e53e3e;">1</div>
+                        <div class="timeline-content">
+                            <div class="timeline-label">Contextualize</div>
+                            <div class="timeline-duration">2 meses</div>
+                        </div>
+                    </div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #dd6b20;">2</div>
+                        <div class="timeline-content">
+                            <div class="timeline-label">Model</div>
+                            <div class="timeline-duration">1.5 mês</div>
+                        </div>
+                    </div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #d69e2e;">3</div>
+                        <div class="timeline-content">
+                            <div class="timeline-label">Design</div>
+                            <div class="timeline-duration">2 meses</div>
+                        </div>
+                    </div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #38a169;">4</div>
+                        <div class="timeline-content">
+                            <div class="timeline-label">Intervene</div>
+                            <div class="timeline-duration">8 meses</div>
+                        </div>
+                    </div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #3182ce;">5</div>
+                        <div class="timeline-content">
+                            <div class="timeline-label">Analyze</div>
+                            <div class="timeline-duration">1.5 mês</div>
+                        </div>
+                    </div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #805ad5;">6</div>
+                        <div class="timeline-content">
+                            <div class="timeline-label">Adapt</div>
+                            <div class="timeline-duration">1 mês</div>
+                        </div>
+                    </div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #d53f8c;">7</div>
+                        <div class="timeline-content">
+                            <div class="timeline-label">Conclude</div>
+                            <div class="timeline-duration">1 mês</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Side panels -->
         <div class="side-panels">
@@ -695,49 +791,7 @@
             </div>
         </div>
 
-        <!-- Timeline -->
-        <div class="timeline-section">
-            <div class="timeline">
-                <h3>📅 Cronograma Integrado - 17 Meses</h3>
-                <div class="timeline-track">
-                    <div class="timeline-phase">
-                        <div class="timeline-circle" style="background: #e53e3e;">1</div>
-                        <div class="timeline-label">Contextualize</div>
-                        <div class="timeline-duration">2 meses</div>
-                    </div>
-                    <div class="timeline-phase">
-                        <div class="timeline-circle" style="background: #dd6b20;">2</div>
-                        <div class="timeline-label">Model</div>
-                        <div class="timeline-duration">1.5 mês</div>
-                    </div>
-                    <div class="timeline-phase">
-                        <div class="timeline-circle" style="background: #d69e2e;">3</div>
-                        <div class="timeline-label">Design</div>
-                        <div class="timeline-duration">2 meses</div>
-                    </div>
-                    <div class="timeline-phase">
-                        <div class="timeline-circle" style="background: #38a169;">4</div>
-                        <div class="timeline-label">Intervene</div>
-                        <div class="timeline-duration">8 meses</div>
-                    </div>
-                    <div class="timeline-phase">
-                        <div class="timeline-circle" style="background: #3182ce;">5</div>
-                        <div class="timeline-label">Analyze</div>
-                        <div class="timeline-duration">1.5 mês</div>
-                    </div>
-                    <div class="timeline-phase">
-                        <div class="timeline-circle" style="background: #805ad5;">6</div>
-                        <div class="timeline-label">Adapt</div>
-                        <div class="timeline-duration">1 mês</div>
-                    </div>
-                    <div class="timeline-phase">
-                        <div class="timeline-circle" style="background: #d53f8c;">7</div>
-                        <div class="timeline-label">Conclude</div>
-                        <div class="timeline-duration">1 mês</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
         <!-- Bottom sections -->
         <div class="bottom-sections">
