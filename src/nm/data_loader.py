@@ -32,3 +32,17 @@ class DataLoader:
         except Exception as e:
             st.error(f"Erro ao carregar {filepath}: {str(e)}")
             return None
+
+    @staticmethod
+    @st.cache_data
+    def load_html(filepath: str, encoding: str = 'utf-8') -> str:
+        """Carrega arquivo JSON com tratamento de erro"""
+        try:
+            with open(filepath, 'r', encoding=encoding) as f:
+                return f.read()
+        except FileNotFoundError:
+            st.warning(f"Arquivo {filepath} não encontrado")
+            return None
+        except Exception as e:
+            st.error(f"Erro ao carregar {filepath}: {str(e)}")
+            return None

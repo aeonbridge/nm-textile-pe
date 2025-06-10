@@ -2,7 +2,7 @@
 
 ## Estrutura do Projeto
 
-```
+``` 
 dashboard_textil_pe/
 ├── main.py                          # Aplicação principal
 ├── src/                            # Código fonte

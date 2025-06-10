@@ -1,6 +1,6 @@
 import streamlit as st
-from typing import Dict, Any, List, Optional
-from src.utils import Page, UIComponents, FilterManager, format_number
+from typing import Dict, Any
+from src.utils import Page
 from src.state import StateManager
 from src.nm.people_network import EcosystemNetworkRenderer
 

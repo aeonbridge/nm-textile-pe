@@ -24,4 +24,4 @@
 11. [Ontologia do Ecossistema (JSON)](../datasets/ontologia_ecossistema.json)
 
 ## Checklist de Tarefas
-12. [Lista de Tarefas](todo.md)
+12. [Lista de Tarefas](tech/todo.md)

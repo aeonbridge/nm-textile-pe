@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIM Framework - APL Têxtil Pernambuco (Fluid Version)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8f9fa;
+            width: 100%;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        .fluid-container {
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: clamp(20px, 3vw, 40px);
+            display: flex;
+            flex-direction: column;
+            gap: clamp(20px, 3vw, 40px);
+        }
+
+        .board-title {
+            color: white;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-align: center;
+            margin-bottom: clamp(20px, 3vw, 40px);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: clamp(15px, 2vw, 30px);
+            width: 100%;
+        }
+
+        .phase-container {
+            background: white;
+            border-radius: clamp(12px, 1vw, 16px);
+            padding: clamp(16px, 2vw, 24px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: clamp(2px, 0.3vw, 3px) solid;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 400px;
+            break-inside: avoid;
+        }
+
+        .phase-container:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .phase-header {
+            font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+            font-weight: 700;
+            margin-bottom: clamp(12px, 1.5vw, 20px);
+            text-align: center;
+            padding: clamp(8px, 1vw, 12px);
+            border-radius: clamp(6px, 0.8vw, 10px);
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .phase-content {
+            font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+            line-height: 1.5;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .phase-content h4 {
+            font-weight: 600;
+            margin: clamp(8px, 1vw, 12px) 0 clamp(6px, 0.8vw, 8px) 0;
+            color: #2d3748;
+            font-size: clamp(0.8rem, 1.3vw, 1rem);
+        }
+
+        .phase-content ul {
+            margin-left: clamp(12px, 1.5vw, 20px);
+            margin-bottom: clamp(8px, 1vw, 12px);
+        }
+
+        .phase-content li {
+            margin-bottom: clamp(3px, 0.5vw, 6px);
+            color: #4a5568;
+        }
+
+        /* Phase Colors */
+        .phase-1 { border-color: #e53e3e; }
+        .phase-1 .phase-header { background: #e53e3e; }
+
+        .phase-2 { border-color: #dd6b20; }
+        .phase-2 .phase-header { background: #dd6b20; }
+
+        .phase-3 { border-color: #d69e2e; }
+        .phase-3 .phase-header { background: #d69e2e; }
+
+        .phase-4 { border-color: #38a169; }
+        .phase-4 .phase-header { background: #38a169; }
+
+        .phase-5 { border-color: #3182ce; }
+        .phase-5 .phase-header { background: #3182ce; }
+
+        .phase-6 { border-color: #805ad5; }
+        .phase-6 .phase-header { background: #805ad5; }
+
+        .phase-7 { border-color: #d53f8c; }
+        .phase-7 .phase-header { background: #d53f8c; }
+
+        /* Side panels - responsive grid */
+        .side-panels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: clamp(15px, 2vw, 30px);
+            margin-top: clamp(20px, 3vw, 40px);
+        }
+
+        .side-panel {
+            border-radius: clamp(12px, 1vw, 16px);
+            padding: clamp(16px, 2vw, 24px);
+            color: white;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cdl-strategy {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .kpi-dashboard {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow-y: auto;
+        }
+
+        .side-panel h3 {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-weight: 700;
+            margin-bottom: clamp(12px, 1.5vw, 20px);
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+
+        .cdl-layers {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(8px, 1vw, 12px);
+        }
+
+        .cdl-layer {
+            background: rgba(255,255,255,0.2);
+            padding: clamp(8px, 1vw, 12px);
+            border-radius: clamp(6px, 0.8vw, 8px);
+            backdrop-filter: blur(10px);
+        }
+
+        .cdl-layer h4 {
+            font-weight: 600;
+            margin-bottom: clamp(4px, 0.5vw, 8px);
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+        }
+
+
+        .kpi-category {
+            background: rgba(255,255,255,0.15);
+            padding: clamp(12px, 1.5vw, 16px);
+            border-radius: clamp(8px, 1vw, 12px);
+            margin-bottom: clamp(12px, 1.5vw, 16px);
+            backdrop-filter: blur(10px);
+        }
+
+        .kpi-category h4 {
+            font-weight: 600;
+            margin-bottom: clamp(8px, 1vw, 12px);
+            font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+        }
+
+        .kpi-item {
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            margin-bottom: clamp(4px, 0.5vw, 6px);
+            padding-left: clamp(6px, 0.8vw, 8px);
+            border-left: 2px solid rgba(255,255,255,0.4);
+        }
+
+        /* Timeline - horizontal responsive */
+        .timeline-section {
+            margin-top: clamp(20px, 3vw, 40px);
+        }
+
+        .timeline {
+            background: white;
+            border-radius: clamp(12px, 1vw, 16px);
+            padding: clamp(16px, 2vw, 24px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .timeline h3 {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-weight: 700;
+            margin-bottom: clamp(15px, 2vw, 25px);
+            text-align: center;
+            color: #2d3748;
+        }
+
+        .timeline-track {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: clamp(10px, 1.5vw, 20px);
+            background: #f7fafc;
+            border-radius: clamp(8px, 1vw, 12px);
+            padding: clamp(15px, 2vw, 25px);
+            position: relative;
+        }
+
+        .timeline-phase {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            min-width: 80px;
+        }
+
+        .timeline-circle {
+            width: clamp(30px, 4vw, 40px);
+            height: clamp(30px, 4vw, 40px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            margin-bottom: clamp(6px, 0.8vw, 10px);
+            font-size: clamp(0.8rem, 1.2vw, 1rem);
+        }
+
+        .timeline-label {
+            font-size: clamp(0.7rem, 1vw, 0.85rem);
+            font-weight: 600;
+            text-align: center;
+            color: #4a5568;
+            margin-bottom: clamp(2px, 0.3vw, 4px);
+        }
+
+        .timeline-duration {
+            font-size: clamp(0.6rem, 0.9vw, 0.75rem);
+            color: #718096;
+            text-align: center;
+        }
+
+
+        /* Bottom sections - responsive grid */
+        .bottom-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: clamp(15px, 2vw, 30px);
+            margin-top: clamp(20px, 3vw, 40px);
+        }
+
+        .bottom-panel {
+            border-radius: clamp(12px, 1vw, 16px);
+            padding: clamp(16px, 2vw, 24px);
+            color: white;
+            min-height: 250px;
+        }
+
+        .resources {
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+        }
+
+        .outcomes {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+        }
+
+        .bottom-panel h3 {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-weight: 700;
+            margin-bottom: clamp(15px, 2vw, 25px);
+            text-align: center;
+        }
+
+        .resources-grid, .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: clamp(10px, 1.5vw, 20px);
+        }
+
+        .resource-section, .outcome-section {
+            background: rgba(255,255,255,0.15);
+            padding: clamp(12px, 1.5vw, 16px);
+            border-radius: clamp(8px, 1vw, 12px);
+            backdrop-filter: blur(10px);
+        }
+
+        .resource-section h4, .outcome-section h4 {
+            font-weight: 600;
+            margin-bottom: clamp(8px, 1vw, 12px);
+            font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+        }
+
+        .resource-item, .outcome-item {
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            margin-bottom: clamp(3px, 0.4vw, 5px);
+        }
+
+        /* Footer info */
+        .footer-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: clamp(15px, 2vw, 30px);
+            margin-top: clamp(20px, 3vw, 40px);
+        }
+
+        .info-card {
+            background: white;
+            border-radius: clamp(8px, 1vw, 12px);
+            padding: clamp(12px, 1.5vw, 20px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .info-card h4 {
+            margin-bottom: clamp(8px, 1vw, 12px);
+            color: #2d3748;
+            font-weight: 600;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+        }
+
+        .info-card div {
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            line-height: 1.4;
+            color: #4a5568;
+        }
+
+        .highlight-card {
+            background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 100%);
+            color: #2d3748;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+            grid-column: 1 / -1;
+            margin-bottom: clamp(10px, 1.5vw, 20px);
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .side-panels {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-track {
+                flex-direction: column;
+                gap: clamp(15px, 2vw, 25px);
+            }
+            
+            .timeline-phase {
+                flex-direction: row;
+                justify-content: center;
+                gap: clamp(10px, 1.5vw, 15px);
+            }
+            
+            .timeline-circle {
+                margin-bottom: 0;
+                margin-right: clamp(8px, 1vw, 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .fluid-container {
+                padding: 15px;
+                gap: 15px;
+            }
+            
+            .footer-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fluid-container">
+        <h1 class="board-title">Metodologia AIM + Framework Organic Lens | APL Têxtil Pernambuco</h1>
+        
+        <div class="main-content">
+            <!-- Phase 1: Contextualize & Frame -->
+        <div class="phase-container phase-1">
+            <div class="phase-header">FASE 1: CONTEXTUALIZE & FRAME</div>
+            <div class="phase-content">
+                <h4>🎯 Entrada via CDL Regional</h4>
+                <ul>
+                    <li>Workshop alinhamento CDL (2 dias)</li>
+                    <li>Identificação 5-7 empresários-chave</li>
+                    <li>Protocolo apresentação pesquisa</li>
+                </ul>
+                
+                <h4>🗺️ Mapeamento Contextual</h4>
+                <ul>
+                    <li>Entrevistas agentes indicados (1h30)</li>
+                    <li>Análise infraestrutura figital</li>
+                    <li>Redes sociais/organizacionais</li>
+                </ul>
+                
+                <h4>📊 Objetivos SMART-er</h4>
+                <ul>
+                    <li>20-30 insights validados</li>
+                    <li>15-20 agentes-chave engajados</li>
+                    <li>12 meses de cronograma</li>
+                </ul>
+                
+                <h4>📋 Outputs</h4>
+                <ul>
+                    <li>Mapa agentes validado</li>
+                    <li>Análise contextual co-construída</li>
+                    <li>Protocolo ético aprovado</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Phase 2: Model & Hypothesize -->
+        <div class="phase-container phase-2">
+            <div class="phase-header">FASE 2: MODEL & HYPOTHESIZE</div>
+            <div class="phase-content">
+                <h4>🕸️ Modelo de Rede</h4>
+                <ul>
+                    <li>Mapeamento relações agentes</li>
+                    <li>Fluxos informação/influência</li>
+                    <li>Gatekeepers e conectores</li>
+                </ul>
+                
+                <h4>💡 Modelo de Insights</h4>
+                <ul>
+                    <li>Framework captura via workshops</li>
+                    <li>Sistema categorização temática</li>
+                    <li>Validação colaborativa</li>
+                </ul>
+                
+                <h4>🔬 Hipóteses Focadas</h4>
+                <ul>
+                    <li>H1: Workshops → insights acionáveis</li>
+                    <li>H2: Validação cruzada (+40% qualidade)</li>
+                    <li>H3: Co-criação (>70% endorsement)</li>
+                    <li>H4: CDL → acesso agentes-chave</li>
+                </ul>
+                
+                <h4>📋 Outputs</h4>
+                <ul>
+                    <li>Modelos conceituais validados</li>
+                    <li>Hipóteses testáveis</li>
+                    <li>Métricas específicas</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Phase 3: Design & Plan -->
+        <div class="phase-container phase-3">
+            <div class="phase-header">FASE 3: DESIGN & PLAN</div>
+            <div class="phase-content">
+                <h4>🛠️ Plataforma Organic Lens</h4>
+                <ul>
+                    <li>Discover: Workshops + digital</li>
+                    <li>Define: Priorização IFV</li>
+                    <li>Develop: Co-criação insights</li>
+                    <li>Deliver: Validação participativa</li>
+                </ul>
+                
+                <h4>🎪 Metodologia Workshops</h4>
+                <ul>
+                    <li>Presencial + ferramentas digitais</li>
+                    <li>Roteiros por stakeholder</li>
+                    <li>Facilitação adaptada</li>
+                </ul>
+                
+                <h4>📊 KPIs de Insights</h4>
+                <ul>
+                    <li>Qualidade: Novidade, Acionabilidade</li>
+                    <li>Processo: Eficiência, Diversidade</li>
+                    <li>Validação: Endorsement, Consenso</li>
+                </ul>
+                
+                <h4>📋 Outputs</h4>
+                <ul>
+                    <li>Metodologia detalhada</li>
+                    <li>KPIs específicos</li>
+                    <li>Protocolo ético adaptado</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Phase 4: Intervene & Observe -->
+        <div class="phase-container phase-4">
+            <div class="phase-header">FASE 4: INTERVENE & OBSERVE</div>
+            <div class="phase-content">
+                <h4>🚀 Implementação Faseada</h4>
+                <ul>
+                    <li>Piloto (1-4m): 3 workshops CDL</li>
+                    <li>Expansão (5-8m): 6 workshops rede</li>
+                    <li>Teste e refinamento contínuo</li>
+                </ul>
+                
+                <h4>👁️ Observação Estruturada</h4>
+                <ul>
+                    <li>Logs participação/engajamento</li>
+                    <li>Dinâmicas de grupo</li>
+                    <li>Feedback facilitadores</li>
+                </ul>
+                
+                <h4>📊 Dados de Qualidade</h4>
+                <ul>
+                    <li>Painéis especialistas</li>
+                    <li>Consistência validadores</li>
+                    <li>Evolução insights</li>
+                </ul>
+                
+                <h4>📋 Outputs</h4>
+                <ul>
+                    <li>20-30 insights validados</li>
+                    <li>Dataset rico processo</li>
+                    <li>Avaliação metodológica</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Phase 5: Analyze & Evaluate -->
+        <div class="phase-container phase-5">
+            <div class="phase-header">FASE 5: ANALYZE & EVALUATE</div>
+            <div class="phase-content">
+                <h4>🎯 Eficácia Metodológica</h4>
+                <ul>
+                    <li>Taxa geração vs. meta</li>
+                    <li>Score qualidade média</li>
+                    <li>Diversidade temática</li>
+                </ul>
+                
+                <h4>⚡ Eficiência Processo</h4>
+                <ul>
+                    <li>Custo por insight</li>
+                    <li>Tempo geração/validação</li>
+                    <li>Taxa aproveitamento</li>
+                </ul>
+                
+                <h4>👥 Impacto nos Agentes</h4>
+                <ul>
+                    <li>Satisfação participantes</li>
+                    <li>Percepção de valor</li>
+                    <li>Intenção uso futuro</li>
+                </ul>
+                
+                <h4>📋 Outputs</h4>
+                <ul>
+                    <li>Relatório vs. hipóteses</li>
+                    <li>Avaliação eficácia</li>
+                    <li>Síntese achados</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Phase 6: Adapt & Theorize -->
+        <div class="phase-container phase-6">
+            <div class="phase-header">FASE 6: ADAPT & THEORIZE</div>
+            <div class="phase-content">
+                <h4>🔧 Refinamento</h4>
+                <ul>
+                    <li>Calibração metodológica</li>
+                    <li>Padrões de sucesso</li>
+                    <li>Heurísticas aplicação</li>
+                </ul>
+                
+                <h4>🧠 Contribuições</h4>
+                <ul>
+                    <li>Princípios design workshops</li>
+                    <li>Modelo validação participativa</li>
+                    <li>Framework KPIs colaborativos</li>
+                </ul>
+                
+                <h4>🔍 Insights Meta-Nível</h4>
+                <ul>
+                    <li>Padrões por stakeholder</li>
+                    <li>Dinâmicas apropriação</li>
+                    <li>Fatores críticos sucesso</li>
+                </ul>
+                
+                <h4>📋 Outputs</h4>
+                <ul>
+                    <li>Metodologia refinada</li>
+                    <li>Framework teórico</li>
+                    <li>Diretrizes replicação</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Phase 7: Iterate or Conclude -->
+        <div class="phase-container phase-7">
+            <div class="phase-header">FASE 7: ITERATE OR CONCLUDE</div>
+            <div class="phase-content">
+                <h4>🎯 Decisão Estratégica</h4>
+                <ul>
+                    <li>Cenário 1: Iterar implementação</li>
+                    <li>Cenário 2: Concluir + disseminar</li>
+                    <li>Baseada em evidências</li>
+                </ul>
+                
+                <h4>📚 Atividades Conclusão</h4>
+                <ul>
+                    <li>Workshop síntese agentes</li>
+                    <li>Relatório executivo CDL</li>
+                    <li>Artigos científicos</li>
+                </ul>
+                
+                <h4>🔄 Sustentabilidade</h4>
+                <ul>
+                    <li>Transferência agentes locais</li>
+                    <li>Preparação replicação</li>
+                    <li>Rede engajada continuidade</li>
+                </ul>
+                
+                <h4>📋 Outputs</h4>
+                <ul>
+                    <li>Decisão fundamentada</li>
+                    <li>Banco insights validados</li>
+                    <li>Metodologia replicável</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Side panels -->
+        <div class="side-panels">
+            <!-- CDL Strategy -->
+            <div class="side-panel cdl-strategy">
+                <h3>🏢 Estratégia CDL Regional</h3>
+                <div class="cdl-layers">
+                    <div class="cdl-layer">
+                        <h4>1ª Camada - CDL Âncora</h4>
+                        <p>Gateway legitimidade institucional + rede empresarial</p>
+                    </div>
+                    <div class="cdl-layer">
+                        <h4>2ª Camada - Empresários-Chave</h4>
+                        <p>5-7 líderes indicados + redes relacionamento</p>
+                    </div>
+                    <div class="cdl-layer">
+                        <h4>3ª Camada - Expansão Controlada</h4>
+                        <p>Stakeholders institucionais + agentes técnicos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KPI Dashboard -->
+            <div class="side-panel kpi-dashboard">
+                <h3>📊 Dashboard KPIs - Insights</h3>
+                
+                <div class="kpi-category">
+                    <h4>🎯 Métricas de Qualidade</h4>
+                    <div class="kpi-item">• Novidade: >40% insights inéditos</div>
+                    <div class="kpi-item">• Acionabilidade: >70% com passos práticos</div>
+                    <div class="kpi-item">• Consensualidade: Score >3.5/5</div>
+                    <div class="kpi-item">• Robustez: >80% mantidos pós-validação</div>
+                </div>
+
+                <div class="kpi-category">
+                    <h4>⚡ Métricas de Processo</h4>
+                    <div class="kpi-item">• Eficiência: Insights/hora workshop</div>
+                    <div class="kpi-item">• Diversidade: % representação por segmento</div>
+                    <div class="kpi-item">• Engajamento: >80% participação ativa</div>
+                </div>
+
+                <div class="kpi-category">
+                    <h4>💫 Métricas de Impacto</h4>
+                    <div class="kpi-item">• Apropriação: >60% uso pós-workshop</div>
+                    <div class="kpi-item">• Endorsement: % agentes que endossam</div>
+                    <div class="kpi-item">• Expansão: Novos stakeholders orgânicos</div>
+                    <div class="kpi-item">• Sustentabilidade: Disposição iterações</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline-section">
+            <div class="timeline">
+                <h3>📅 Cronograma Integrado - 17 Meses</h3>
+                <div class="timeline-track">
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #e53e3e;">1</div>
+                        <div class="timeline-label">Contextualize</div>
+                        <div class="timeline-duration">2 meses</div>
+                    </div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #dd6b20;">2</div>
+                        <div class="timeline-label">Model</div>
+                        <div class="timeline-duration">1.5 mês</div>
+                    </div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #d69e2e;">3</div>
+                        <div class="timeline-label">Design</div>
+                        <div class="timeline-duration">2 meses</div>
+                    </div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #38a169;">4</div>
+                        <div class="timeline-label">Intervene</div>
+                        <div class="timeline-duration">8 meses</div>
+                    </div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #3182ce;">5</div>
+                        <div class="timeline-label">Analyze</div>
+                        <div class="timeline-duration">1.5 mês</div>
+                    </div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #805ad5;">6</div>
+                        <div class="timeline-label">Adapt</div>
+                        <div class="timeline-duration">1 mês</div>
+                    </div>
+                    <div class="timeline-phase">
+                        <div class="timeline-circle" style="background: #d53f8c;">7</div>
+                        <div class="timeline-label">Conclude</div>
+                        <div class="timeline-duration">1 mês</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom sections -->
+        <div class="bottom-sections">
+            <!-- Resources -->
+            <div class="bottom-panel resources">
+                <h3>🎯 Recursos & Parcerias</h3>
+                <div class="resources-grid">
+                    <div class="resource-section">
+                        <h4>👥 Equipe Especializada</h4>
+                        <div class="resource-item">• 1 Coordenador senior sistemas sociotécnicos</div>
+                        <div class="resource-item">• 2 Facilitadores design thinking</div>
+                        <div class="resource-item">• 1 Analista dados qualitativos</div>
+                        <div class="resource-item">• 1 Pesquisador júnior campo</div>
+                    </div>
+                    <div class="resource-section">
+                        <h4>🤝 Parcerias Estratégicas</h4>
+                        <div class="resource-item">• CDL Regional (âncora acesso)</div>
+                        <div class="resource-item">• SEBRAE-PE (apoio metodológico)</div>
+                        <div class="resource-item">• UFPE (supervisão acadêmica)</div>
+                        <div class="resource-item">• NTCPE (validação setorial)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expected Outcomes -->
+            <div class="bottom-panel outcomes">
+                <h3>🎯 Resultados Esperados</h3>
+                <div class="outcomes-grid">
+                    <div class="outcome-section">
+                        <h4>💡 Insights Validados</h4>
+                        <div class="outcome-item">• 20-30 insights únicos documentados</div>
+                        <div class="outcome-item">• >70% com alta acionabilidade</div>
+                        <div class="outcome-item">• >60% apropriação pelos agentes</div>
+                        <div class="outcome-item">• Banco conhecimento sistematizado</div>
+                    </div>
+                    <div class="outcome-section">
+                        <h4>🔬 Contribuições Metodológicas</h4>
+                        <div class="outcome-item">• Framework replicável validado</div>
+                        <div class="outcome-item">• KPIs específicos para insights</div>
+                        <div class="outcome-item">• Modelo entrada via agentes-chave</div>
+                        <div class="outcome-item">• Diretrizes aplicação outros APLs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer info -->
+        <div class="footer-info">
+            <div class="highlight-card">
+                🚀 Meta Principal: 20-30 Insights Validados com >70% de Acionabilidade
+            </div>
+            
+            <div class="info-card">
+                <h4>📋 Legenda das Fases</h4>
+                <div>
+                    <div>🔴 Fase 1-3: Preparação e Design</div>
+                    <div>🟢 Fase 4: Implementação (8 meses)</div>
+                    <div>🔵 Fase 5-6: Análise e Refinamento</div>
+                    <div>🟣 Fase 7: Decisão e Continuidade</div>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <h4>🎯 Critérios de Sucesso</h4>
+                <div>
+                    <div>✅ 20-30 insights únicos e validados</div>
+                    <div>✅ >80% engajamento dos agentes-chave</div>
+                    <div>✅ >70% insights com alta acionabilidade</div>
+                    <div>✅ Metodologia replicável documentada</div>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <h4>⚠️ Mitigação de Riscos</h4>
+                <div>
+                    <div>🛡️ CDL como legitimador institucional</div>
+                    <div>🛡️ Validação cruzada entre stakeholders</div>
+                    <div>🛡️ Protocolo ético co-construído</div>
+                    <div>🛡️ Iteração baseada em feedback contínuo</div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Add interactive hover effects
+            document.addEventListener('DOMContentLoaded', function() {
+                const phases = document.querySelectorAll('.phase-container');
+                
+                phases.forEach(phase => {
+                    phase.addEventListener('mouseenter', function() {
+                        this.style.zIndex = '10';
+                    });
+                    
+                    phase.addEventListener('mouseleave', function() {
+                        this.style.zIndex = '1';
+                    });
+                });
+
+                // Add click to focus functionality
+                phases.forEach(phase => {
+                    phase.addEventListener('click', function() {
+                        phases.forEach(p => p.style.opacity = '0.3');
+                        this.style.opacity = '1';
+                        this.style.transform = 'translateY(-8px) scale(1.05)';
+                        
+                        setTimeout(() => {
+                            phases.forEach(p => p.style.opacity = '1');
+                            this.style.transform = 'translateY(-4px) scale(1.02)';
+                        }, 3000);
+                    });
+                });
+
+                // Responsive timeline adjustment
+                function adjustTimeline() {
+                    const timeline = document.querySelector('.timeline-track');
+                    if (timeline) {
+                        if (window.innerWidth <= 768) {
+                            timeline.style.flexDirection = 'column';
+                        } else {
+                            timeline.style.flexDirection = 'row';
+                        }
+                    }
+                }
+
+                window.addEventListener('resize', adjustTimeline);
+                adjustTimeline();
+            });
+        </script>
+    </div>
+</body>
+</html>

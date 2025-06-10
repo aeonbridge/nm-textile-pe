@@ -4,7 +4,7 @@
 
 ### Fase 1: Contextualização e Pesquisa
 - [x] Realizar pesquisa contextual sobre o ecossistema têxtil em Pernambuco
-- [x] Coletar dados históricos e atuais do setor têxtil no estado
+- [x] Coletar dados _históricos_ e atuais do setor têxtil no estado
 - [x] Identificar principais polos têxteis (Santa Cruz do Capibaribe, Caruaru e Toritama)
 - [x] Levantar informações sobre infraestrutura física, digital e social
 - [x] Pesquisar políticas públicas e incentivos para o setor
