@@ -8,3 +8,4 @@ streamlit_folium~=0.25.0
 st_supabase_connection==2.0.1
 supabase==2.15.2
 scipy
+authlib
