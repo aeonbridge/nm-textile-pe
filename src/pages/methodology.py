@@ -3,9 +3,9 @@ import streamlit.components.v1 as components
 from typing import Dict, Any
 
 from src.nm.analytics import  Analytics
-from src.nm.comments import CommentsManager
 from src.utils.page_utils import (Page)
 from src.state import StateManager
+from src.utils.cards import render_comments_section
 
 
 class MethodologyPage(Page):
@@ -19,6 +19,26 @@ class MethodologyPage(Page):
 
         components.html(methodology_content, height=1000, scrolling=True)
         
-        # Add comment section
-        st.markdown("---")
-        CommentsManager.render_comment_section("methodology_framework", "methodology")
+        # Add centralized comment section for methodology items with hierarchical structure
+        methodology_items = {
+            "Framework Metodológico": {
+                "fase_1": "Fase 1: Contextualize & Frame",
+                "fase_2": "Fase 2: Model & Hypothesize", 
+                "fase_3": "Fase 3: Assess & Define",
+                "fase_4": "Fase 4: Implement & Monitor",
+                "fase_5": "Fase 5: Analyze & Refine",
+                "fase_6": "Fase 6: Validate & Adjust",
+                "fase_7": "Fase 7: Decide & Continue"
+            },
+            "Dashboard": {
+                "metricas_qualidade": "Métricas de Qualidade",
+                "metricas_processo": "Métricas de Processo",
+                "indicadores_performance": "Indicadores de Performance",
+                "analise_rede": "Análise de Rede"
+            },
+            "Análise Metodológica": "Análise Metodológica",
+            "Implementação": "Implementação",
+            "Validação": "Validação"
+        }
+        
+        render_comments_section(methodology_items, "methodology")

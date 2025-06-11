@@ -28,6 +28,21 @@ class Analytics:
             st.session_state.session_id = str(uuid.uuid4())
         return st.session_state.session_id
 
+    @staticmethod
+    def get_user_identifier() -> str:
+        """Obtém identificador do usuário - preferencialmente email do Google Auth"""
+        try:
+            # Try to get user email from Google authentication
+            if hasattr(st, 'user') and st.user.is_logged_in and st.user.email:
+                return st.user.email
+        except:
+            pass
+        
+        # Fallback to session-based user_id
+        if "user_id" not in st.session_state:
+            st.session_state.user_id = Analytics.generate_user_id()
+        return st.session_state.user_id
+
 
     @staticmethod
     def get_remote_ip() -> str:
@@ -50,10 +65,12 @@ class Analytics:
         """Registra evento de analytics"""
         try:
             session_id = Analytics.get_session_id()
+            user_identifier = Analytics.get_user_identifier()
             timestamp = datetime.datetime.now().isoformat()
 
             event = {
                 "session_id": session_id,
+                "user_identifier": user_identifier,
                 "timestamp": timestamp,
                 "event_type": event_type,
                 "page": page,
@@ -94,14 +111,14 @@ class Analytics:
             )
             data_to_insert = {
                 "source": "textile-pe",
-                "session_id": str(uuid.uuid4()),
+                "session_id": Analytics.get_session_id(),
                 "timestamp": datetime.datetime.now().isoformat(),
-                "event_type": "generic",
+                "event_type": event_data.get("event_type", "generic") if event_data else "generic",
                 "page": page,
                 "data": event_data,
                 "action": "",
                 "env" : st.secrets["ENV"],
-                "user_id": st.session_state.user_id,
+                "user_id": Analytics.get_user_identifier(),
                 "ip": Analytics.get_remote_ip(),
             }
 

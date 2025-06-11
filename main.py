@@ -21,8 +21,12 @@ from src.pages.network_v2 import NetworkPageV2
 from src.pages.risks import RisksPage
 from src.pages.opportunities import OpportunitiesPage
 from src.nm.feedback import create_feedback_section
+from src.auth import require_authentication, AuthManager
 
-# Configuração da página principal
+# IMPORTANTE: Verificar autenticação antes de qualquer configuração
+require_authentication()
+
+# Configuração da página principal (só executa se autenticado)
 st.set_page_config(
     page_title="Dashboard Ecossistema Têxtil PE",
     page_icon="📊",
@@ -171,6 +175,11 @@ class DashboardApp:
         </div>
         """, unsafe_allow_html=True)
 
+    def render_user_profile(self):
+        """Renderiza o perfil do usuário no topo da página"""
+        # Renderizar o perfil do usuário
+        AuthManager.render_logout_button()
+
     def render_sidebar(self):
         with sidebar:
             st.title("🧭 Navegação")
@@ -197,8 +206,6 @@ class DashboardApp:
             state = StateManager.get_state()
             state.active_page = selected_page
 
-
-
             return selected_page
 
 
@@ -207,6 +214,9 @@ class DashboardApp:
         """Executa a aplicação principal"""
         # Registrar carregamento da página
         Analytics.log_event("app_start")
+
+        # Renderizar perfil do usuário no topo
+        self.render_user_profile()
 
         # Renderizar interface
         #self.render_header()
@@ -251,8 +261,9 @@ class DashboardApp:
 
 
 if __name__ == "__main__":
+    # Initialize user identifier (will use email if authenticated, fallback to generated ID)
     try:
-        if st.session_state.user_id is None:
+        if "user_id" not in st.session_state:
             st.session_state["user_id"] = Analytics.generate_user_id()
     except:
         st.session_state["user_id"] = Analytics.generate_user_id()
