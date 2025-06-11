@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from typing import Dict, Any
 
-from src.utils import (Page, ChartGenerator, UIComponents, FilterManager, format_number, validate_data, \
+from src.utils.page_utils import (Page, ChartGenerator, UIComponents, FilterManager, format_number, validate_data, \
                        get_cities_list, filter_data_by_cities)
 from src.state import StateManager, DashboardState
 

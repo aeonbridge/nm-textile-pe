@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from typing import Dict, Any, List, Optional
 
-from src.utils import Page, UIComponents, FilterManager, format_number, ChartGenerator
+from src.utils.page_utils import Page, UIComponents, FilterManager, format_number, ChartGenerator
 from src.state import StateManager
 
 from src.nm.analytics import  Analytics

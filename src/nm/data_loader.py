@@ -35,7 +35,7 @@ class DataLoader:
 
     @staticmethod
     @st.cache_data
-    def load_html(filepath: str, encoding: str = 'utf-8') -> str:
+    def load_file(filepath: str, encoding: str = 'utf-8') -> str:
         """Carrega arquivo JSON com tratamento de erro"""
         try:
             with open(filepath, 'r', encoding=encoding) as f:

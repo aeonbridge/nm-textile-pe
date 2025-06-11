@@ -3,7 +3,7 @@ from typing import Dict, Any, Optional, List
 from dataclasses import dataclass, field
 from datetime import datetime, date
 import json
-from src.utils import (generate_user_id)
+from src.utils.page_utils import (generate_user_id)
 
 
 @dataclass

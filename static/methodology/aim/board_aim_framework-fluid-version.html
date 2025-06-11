@@ -61,11 +61,15 @@
             padding: clamp(16px, 2vw, 24px);
             box-shadow: 0 8px 32px rgba(0,0,0,0.1);
             border: clamp(2px, 0.3vw, 3px) solid;
-            transition: all 0.3s ease;
+            transition: all 0.6s ease;
             display: flex;
             flex-direction: column;
-            min-height: 400px;
+            min-height: 600px;
             break-inside: avoid;
+            position: relative;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
 
         .phase-container:hover {
@@ -106,6 +110,280 @@
         .phase-content li {
             margin-bottom: clamp(3px, 0.5vw, 6px);
             color: #4a5568;
+        }
+
+        /* Card flip effect */
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: left;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            min-height: inherit;
+        }
+
+        .card-flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            background: #f8f9fa;
+            padding: clamp(16px, 2vw, 24px);
+        }
+
+        /* Comments system */
+        .comments-section {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .comments-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: clamp(16px, 2vw, 20px);
+            padding-bottom: clamp(8px, 1vw, 12px);
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .comments-title {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .close-comments {
+            background: #e53e3e;
+            color: white;
+            border: none;
+            padding: clamp(6px, 1vw, 8px) clamp(12px, 1.5vw, 16px);
+            border-radius: clamp(4px, 0.5vw, 6px);
+            cursor: pointer;
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            transition: background 0.3s ease;
+        }
+
+        .close-comments:hover {
+            background: #c53030;
+        }
+
+        .comments-list {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: clamp(16px, 2vw, 20px);
+            max-height: 200px;
+        }
+
+        .comment-item {
+            background: white;
+            padding: clamp(8px, 1vw, 12px);
+            margin-bottom: clamp(8px, 1vw, 10px);
+            border-radius: clamp(4px, 0.5vw, 6px);
+            border-left: 3px solid #4299e1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comment-meta {
+            font-size: clamp(0.6rem, 0.8vw, 0.7rem);
+            color: #718096;
+            margin-bottom: clamp(4px, 0.5vw, 6px);
+        }
+
+        .comment-text {
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            color: #2d3748;
+            line-height: 1.4;
+        }
+
+        .comment-form {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(8px, 1vw, 12px);
+        }
+
+        .comment-input {
+            resize: vertical;
+            min-height: clamp(60px, 8vh, 80px);
+            padding: clamp(8px, 1vw, 12px);
+            border: 2px solid #e2e8f0;
+            border-radius: clamp(4px, 0.5vw, 6px);
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .comment-input:focus {
+            outline: none;
+            border-color: #4299e1;
+        }
+
+        .comment-submit {
+            background: #38a169;
+            color: white;
+            border: none;
+            padding: clamp(8px, 1vw, 12px);
+            border-radius: clamp(4px, 0.5vw, 6px);
+            cursor: pointer;
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .comment-submit:hover {
+            background: #2f855a;
+        }
+
+        .no-comments {
+            text-align: center;
+            color: #718096;
+            font-style: italic;
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            padding: clamp(20px, 3vw, 30px);
+        }
+
+        /* Comment indicator */
+        .comment-indicator {
+            position: absolute;
+            top: clamp(8px, 1vw, 12px);
+            right: clamp(8px, 1vw, 12px);
+            background: #4299e1;
+            color: white;
+            border-radius: 50%;
+            width: clamp(20px, 2.5vw, 24px);
+            height: clamp(20px, 2.5vw, 24px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(0.6rem, 0.8vw, 0.7rem);
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .has-comments .comment-indicator {
+            opacity: 1;
+        }
+
+        /* Interactive hints and effects */
+        .click-hint {
+            position: absolute;
+            bottom: clamp(8px, 1vw, 12px);
+            right: clamp(8px, 1vw, 12px);
+            background: rgba(66, 153, 225, 0.9);
+            color: white;
+            padding: clamp(4px, 0.6vw, 6px) clamp(8px, 1vw, 10px);
+            border-radius: clamp(12px, 1.5vw, 16px);
+            font-size: clamp(0.6rem, 0.8vw, 0.7rem);
+            font-weight: 500;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 5;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .phase-container:hover .click-hint {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Pulse animation for comment indicator */
+        @keyframes commentPulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(66, 153, 225, 0.7); }
+            50% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(66, 153, 225, 0.3); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(66, 153, 225, 0); }
+        }
+
+        .has-comments .comment-indicator {
+            animation: commentPulse 2s infinite;
+        }
+
+        /* Glow effect on hover */
+        .phase-container:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15), 0 0 20px rgba(66, 153, 225, 0.3);
+        }
+
+        /* Interactive cursor and subtle border animation */
+        .phase-container {
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phase-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(66, 153, 225, 0.1), transparent);
+            transition: left 0.6s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .phase-container:hover::before {
+            left: 100%;
+        }
+
+        /* Ensure content stays above the shimmer effect */
+        .card-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Enhanced hover state for better UX */
+        .phase-container:not(.card-flipped):hover {
+            border-color: rgba(66, 153, 225, 0.8);
+        }
+
+        /* Floating action hint */
+        .floating-hint {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: clamp(8px, 1vw, 12px) clamp(12px, 1.5vw, 16px);
+            border-radius: clamp(8px, 1vw, 12px);
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            font-weight: 500;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.8);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 10;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .phase-container:hover .floating-hint {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .phase-container.card-flipped .floating-hint {
+            display: none;
         }
 
         /* Phase Colors */
@@ -452,242 +730,396 @@
         
         <div class="main-content">
             <!-- Phase 1: Contextualize & Frame -->
-        <div class="phase-container phase-1">
-            <div class="phase-header">FASE 1: CONTEXTUALIZE & FRAME</div>
-            <div class="phase-content">
-                <h4>🎯 Entrada via CDL Regional</h4>
-                <ul>
-                    <li>Workshop alinhamento CDL (2 dias)</li>
-                    <li>Identificação 5-7 empresários-chave</li>
-                    <li>Protocolo apresentação pesquisa</li>
-                </ul>
-                
-                <h4>🗺️ Mapeamento Contextual</h4>
-                <ul>
-                    <li>Entrevistas agentes indicados (1h30)</li>
-                    <li>Análise infraestrutura figital</li>
-                    <li>Redes sociais/organizacionais</li>
-                </ul>
-                
-                <h4>📊 Objetivos SMART-er</h4>
-                <ul>
-                    <li>20-30 insights validados</li>
-                    <li>15-20 agentes-chave engajados</li>
-                    <li>12 meses de cronograma</li>
-                </ul>
-                
-                <h4>📋 Outputs</h4>
-                <ul>
-                    <li>Mapa agentes validado</li>
-                    <li>Análise contextual co-construída</li>
-                    <li>Protocolo ético aprovado</li>
-                </ul>
+        <div class="phase-container phase-1" data-card-id="phase-1">
+            <div class="comment-indicator">0</div>
+            <div class="click-hint">💬 Clique para comentar</div>
+            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="phase-header">FASE 1: CONTEXTUALIZE & FRAME</div>
+                    <div class="phase-content">
+                        <h4>🎯 Entrada via CDL Regional</h4>
+                        <ul>
+                            <li>Workshop alinhamento CDL (2 dias)</li>
+                            <li>Identificação 5-7 empresários-chave</li>
+                            <li>Protocolo apresentação pesquisa</li>
+                        </ul>
+                        
+                        <h4>🗺️ Mapeamento Contextual</h4>
+                        <ul>
+                            <li>Entrevistas agentes indicados (1h30)</li>
+                            <li>Análise infraestrutura figital</li>
+                            <li>Redes sociais/organizacionais</li>
+                        </ul>
+                        
+                        <h4>📊 Objetivos SMART-er</h4>
+                        <ul>
+                            <li>20-30 insights validados</li>
+                            <li>15-20 agentes-chave engajados</li>
+                            <li>12 meses de cronograma</li>
+                        </ul>
+                        
+                        <h4>📋 Outputs</h4>
+                        <ul>
+                            <li>Mapa agentes validado</li>
+                            <li>Análise contextual co-construída</li>
+                            <li>Protocolo ético aprovado</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="comments-section">
+                        <div class="comments-header">
+                            <h3 class="comments-title">💬 Comentários - Fase 1</h3>
+                            <button class="close-comments">✕ Fechar</button>
+                        </div>
+                        <div class="comments-list" id="comments-phase-1">
+                            <div class="no-comments">Nenhum comentário ainda. Seja o primeiro!</div>
+                        </div>
+                        <div class="comment-form">
+                            <textarea class="comment-input" placeholder="Adicione seu comentário sobre esta fase..."></textarea>
+                            <button class="comment-submit">Adicionar Comentário</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Phase 2: Model & Hypothesize -->
-        <div class="phase-container phase-2">
-            <div class="phase-header">FASE 2: MODEL & HYPOTHESIZE</div>
-            <div class="phase-content">
-                <h4>🕸️ Modelo de Rede</h4>
-                <ul>
-                    <li>Mapeamento relações agentes</li>
-                    <li>Fluxos informação/influência</li>
-                    <li>Gatekeepers e conectores</li>
-                </ul>
-                
-                <h4>💡 Modelo de Insights</h4>
-                <ul>
-                    <li>Framework captura via workshops</li>
-                    <li>Sistema categorização temática</li>
-                    <li>Validação colaborativa</li>
-                </ul>
-                
-                <h4>🔬 Hipóteses Focadas</h4>
-                <ul>
-                    <li>H1: Workshops → insights acionáveis</li>
-                    <li>H2: Validação cruzada (+40% qualidade)</li>
-                    <li>H3: Co-criação (>70% endorsement)</li>
-                    <li>H4: CDL → acesso agentes-chave</li>
-                </ul>
-                
-                <h4>📋 Outputs</h4>
-                <ul>
-                    <li>Modelos conceituais validados</li>
-                    <li>Hipóteses testáveis</li>
-                    <li>Métricas específicas</li>
-                </ul>
+        <div class="phase-container phase-2" data-card-id="phase-2">
+            <div class="comment-indicator">0</div>
+            <div class="click-hint">💬 Clique para comentar</div>
+            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="phase-header">FASE 2: MODEL & HYPOTHESIZE</div>
+                    <div class="phase-content">
+                        <h4>🕸️ Modelo de Rede</h4>
+                        <ul>
+                            <li>Mapeamento relações agentes</li>
+                            <li>Fluxos informação/influência</li>
+                            <li>Gatekeepers e conectores</li>
+                        </ul>
+                        
+                        <h4>💡 Modelo de Insights</h4>
+                        <ul>
+                            <li>Framework captura via workshops</li>
+                            <li>Sistema categorização temática</li>
+                            <li>Validação colaborativa</li>
+                        </ul>
+                        
+                        <h4>🔬 Hipóteses Focadas</h4>
+                        <ul>
+                            <li>H1: Workshops → insights acionáveis</li>
+                            <li>H2: Validação cruzada (+40% qualidade)</li>
+                            <li>H3: Co-criação (>70% endorsement)</li>
+                            <li>H4: CDL → acesso agentes-chave</li>
+                        </ul>
+                        
+                        <h4>📋 Outputs</h4>
+                        <ul>
+                            <li>Modelos conceituais validados</li>
+                            <li>Hipóteses testáveis</li>
+                            <li>Métricas específicas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="comments-section">
+                        <div class="comments-header">
+                            <h3 class="comments-title">💬 Comentários - Fase 2</h3>
+                            <button class="close-comments">✕ Fechar</button>
+                        </div>
+                        <div class="comments-list" id="comments-phase-2">
+                            <div class="no-comments">Nenhum comentário ainda. Seja o primeiro!</div>
+                        </div>
+                        <div class="comment-form">
+                            <textarea class="comment-input" placeholder="Adicione seu comentário sobre esta fase..."></textarea>
+                            <button class="comment-submit">Adicionar Comentário</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Phase 3: Design & Plan -->
-        <div class="phase-container phase-3">
-            <div class="phase-header">FASE 3: DESIGN & PLAN</div>
-            <div class="phase-content">
-                <h4>🛠️ Plataforma Organic Lens</h4>
-                <ul>
-                    <li>Discover: Workshops + digital</li>
-                    <li>Define: Priorização IFV</li>
-                    <li>Develop: Co-criação insights</li>
-                    <li>Deliver: Validação participativa</li>
-                </ul>
-                
-                <h4>🎪 Metodologia Workshops</h4>
-                <ul>
-                    <li>Presencial + ferramentas digitais</li>
-                    <li>Roteiros por stakeholder</li>
-                    <li>Facilitação adaptada</li>
-                </ul>
-                
-                <h4>📊 KPIs de Insights</h4>
-                <ul>
-                    <li>Qualidade: Novidade, Acionabilidade</li>
-                    <li>Processo: Eficiência, Diversidade</li>
-                    <li>Validação: Endorsement, Consenso</li>
-                </ul>
-                
-                <h4>📋 Outputs</h4>
-                <ul>
-                    <li>Metodologia detalhada</li>
-                    <li>KPIs específicos</li>
-                    <li>Protocolo ético adaptado</li>
-                </ul>
+        <div class="phase-container phase-3" data-card-id="phase-3">
+            <div class="comment-indicator">0</div>
+            <div class="click-hint">💬 Clique para comentar</div>
+            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="phase-header">FASE 3: DESIGN & PLAN</div>
+                    <div class="phase-content">
+                        <h4>🛠️ Plataforma Organic Lens</h4>
+                        <ul>
+                            <li>Discover: Workshops + digital</li>
+                            <li>Define: Priorização IFV</li>
+                            <li>Develop: Co-criação insights</li>
+                            <li>Deliver: Validação participativa</li>
+                        </ul>
+                        
+                        <h4>🎪 Metodologia Workshops</h4>
+                        <ul>
+                            <li>Presencial + ferramentas digitais</li>
+                            <li>Roteiros por stakeholder</li>
+                            <li>Facilitação adaptada</li>
+                        </ul>
+                        
+                        <h4>📊 KPIs de Insights</h4>
+                        <ul>
+                            <li>Qualidade: Novidade, Acionabilidade</li>
+                            <li>Processo: Eficiência, Diversidade</li>
+                            <li>Validação: Endorsement, Consenso</li>
+                        </ul>
+                        
+                        <h4>📋 Outputs</h4>
+                        <ul>
+                            <li>Metodologia detalhada</li>
+                            <li>KPIs específicos</li>
+                            <li>Protocolo ético adaptado</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="comments-section">
+                        <div class="comments-header">
+                            <h3 class="comments-title">💬 Comentários - Fase 3</h3>
+                            <button class="close-comments">✕ Fechar</button>
+                        </div>
+                        <div class="comments-list" id="comments-phase-3">
+                            <div class="no-comments">Nenhum comentário ainda. Seja o primeiro!</div>
+                        </div>
+                        <div class="comment-form">
+                            <textarea class="comment-input" placeholder="Adicione seu comentário sobre esta fase..."></textarea>
+                            <button class="comment-submit">Adicionar Comentário</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Phase 4: Intervene & Observe -->
-        <div class="phase-container phase-4">
-            <div class="phase-header">FASE 4: INTERVENE & OBSERVE</div>
-            <div class="phase-content">
-                <h4>🚀 Implementação Faseada</h4>
-                <ul>
-                    <li>Piloto (1-4m): 3 workshops CDL</li>
-                    <li>Expansão (5-8m): 6 workshops rede</li>
-                    <li>Teste e refinamento contínuo</li>
-                </ul>
-                
-                <h4>👁️ Observação Estruturada</h4>
-                <ul>
-                    <li>Logs participação/engajamento</li>
-                    <li>Dinâmicas de grupo</li>
-                    <li>Feedback facilitadores</li>
-                </ul>
-                
-                <h4>📊 Dados de Qualidade</h4>
-                <ul>
-                    <li>Painéis especialistas</li>
-                    <li>Consistência validadores</li>
-                    <li>Evolução insights</li>
-                </ul>
-                
-                <h4>📋 Outputs</h4>
-                <ul>
-                    <li>20-30 insights validados</li>
-                    <li>Dataset rico processo</li>
-                    <li>Avaliação metodológica</li>
-                </ul>
+        <div class="phase-container phase-4" data-card-id="phase-4">
+            <div class="comment-indicator">0</div>
+            <div class="click-hint">💬 Clique para comentar</div>
+            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="phase-header">FASE 4: INTERVENE & OBSERVE</div>
+                    <div class="phase-content">
+                        <h4>🚀 Implementação Faseada</h4>
+                        <ul>
+                            <li>Piloto (1-4m): 3 workshops CDL</li>
+                            <li>Expansão (5-8m): 6 workshops rede</li>
+                            <li>Teste e refinamento contínuo</li>
+                        </ul>
+                        
+                        <h4>👁️ Observação Estruturada</h4>
+                        <ul>
+                            <li>Logs participação/engajamento</li>
+                            <li>Dinâmicas de grupo</li>
+                            <li>Feedback facilitadores</li>
+                        </ul>
+                        
+                        <h4>📊 Dados de Qualidade</h4>
+                        <ul>
+                            <li>Painéis especialistas</li>
+                            <li>Consistência validadores</li>
+                            <li>Evolução insights</li>
+                        </ul>
+                        
+                        <h4>📋 Outputs</h4>
+                        <ul>
+                            <li>20-30 insights validados</li>
+                            <li>Dataset rico processo</li>
+                            <li>Avaliação metodológica</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="comments-section">
+                        <div class="comments-header">
+                            <h3 class="comments-title">💬 Comentários - Fase 4</h3>
+                            <button class="close-comments">✕ Fechar</button>
+                        </div>
+                        <div class="comments-list" id="comments-phase-4">
+                            <div class="no-comments">Nenhum comentário ainda. Seja o primeiro!</div>
+                        </div>
+                        <div class="comment-form">
+                            <textarea class="comment-input" placeholder="Adicione seu comentário sobre esta fase..."></textarea>
+                            <button class="comment-submit">Adicionar Comentário</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Phase 5: Analyze & Evaluate -->
-        <div class="phase-container phase-5">
-            <div class="phase-header">FASE 5: ANALYZE & EVALUATE</div>
-            <div class="phase-content">
-                <h4>🎯 Eficácia Metodológica</h4>
-                <ul>
-                    <li>Taxa geração vs. meta</li>
-                    <li>Score qualidade média</li>
-                    <li>Diversidade temática</li>
-                </ul>
-                
-                <h4>⚡ Eficiência Processo</h4>
-                <ul>
-                    <li>Custo por insight</li>
-                    <li>Tempo geração/validação</li>
-                    <li>Taxa aproveitamento</li>
-                </ul>
-                
-                <h4>👥 Impacto nos Agentes</h4>
-                <ul>
-                    <li>Satisfação participantes</li>
-                    <li>Percepção de valor</li>
-                    <li>Intenção uso futuro</li>
-                </ul>
-                
-                <h4>📋 Outputs</h4>
-                <ul>
-                    <li>Relatório vs. hipóteses</li>
-                    <li>Avaliação eficácia</li>
-                    <li>Síntese achados</li>
-                </ul>
+        <div class="phase-container phase-5" data-card-id="phase-5">
+            <div class="comment-indicator">0</div>
+            <div class="click-hint">💬 Clique para comentar</div>
+            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="phase-header">FASE 5: ANALYZE & EVALUATE</div>
+                    <div class="phase-content">
+                        <h4>🎯 Eficácia Metodológica</h4>
+                        <ul>
+                            <li>Taxa geração vs. meta</li>
+                            <li>Score qualidade média</li>
+                            <li>Diversidade temática</li>
+                        </ul>
+                        
+                        <h4>⚡ Eficiência Processo</h4>
+                        <ul>
+                            <li>Custo por insight</li>
+                            <li>Tempo geração/validação</li>
+                            <li>Taxa aproveitamento</li>
+                        </ul>
+                        
+                        <h4>👥 Impacto nos Agentes</h4>
+                        <ul>
+                            <li>Satisfação participantes</li>
+                            <li>Percepção de valor</li>
+                            <li>Intenção uso futuro</li>
+                        </ul>
+                        
+                        <h4>📋 Outputs</h4>
+                        <ul>
+                            <li>Relatório vs. hipóteses</li>
+                            <li>Avaliação eficácia</li>
+                            <li>Síntese achados</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="comments-section">
+                        <div class="comments-header">
+                            <h3 class="comments-title">💬 Comentários - Fase 5</h3>
+                            <button class="close-comments">✕ Fechar</button>
+                        </div>
+                        <div class="comments-list" id="comments-phase-5">
+                            <div class="no-comments">Nenhum comentário ainda. Seja o primeiro!</div>
+                        </div>
+                        <div class="comment-form">
+                            <textarea class="comment-input" placeholder="Adicione seu comentário sobre esta fase..."></textarea>
+                            <button class="comment-submit">Adicionar Comentário</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Phase 6: Adapt & Theorize -->
-        <div class="phase-container phase-6">
-            <div class="phase-header">FASE 6: ADAPT & THEORIZE</div>
-            <div class="phase-content">
-                <h4>🔧 Refinamento</h4>
-                <ul>
-                    <li>Calibração metodológica</li>
-                    <li>Padrões de sucesso</li>
-                    <li>Heurísticas aplicação</li>
-                </ul>
-                
-                <h4>🧠 Contribuições</h4>
-                <ul>
-                    <li>Princípios design workshops</li>
-                    <li>Modelo validação participativa</li>
-                    <li>Framework KPIs colaborativos</li>
-                </ul>
-                
-                <h4>🔍 Insights Meta-Nível</h4>
-                <ul>
-                    <li>Padrões por stakeholder</li>
-                    <li>Dinâmicas apropriação</li>
-                    <li>Fatores críticos sucesso</li>
-                </ul>
-                
-                <h4>📋 Outputs</h4>
-                <ul>
-                    <li>Metodologia refinada</li>
-                    <li>Framework teórico</li>
-                    <li>Diretrizes replicação</li>
-                </ul>
+        <div class="phase-container phase-6" data-card-id="phase-6">
+            <div class="comment-indicator">0</div>
+            <div class="click-hint">💬 Clique para comentar</div>
+            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="phase-header">FASE 6: ADAPT & THEORIZE</div>
+                    <div class="phase-content">
+                        <h4>🔧 Refinamento</h4>
+                        <ul>
+                            <li>Calibração metodológica</li>
+                            <li>Padrões de sucesso</li>
+                            <li>Heurísticas aplicação</li>
+                        </ul>
+                        
+                        <h4>🧠 Contribuições</h4>
+                        <ul>
+                            <li>Princípios design workshops</li>
+                            <li>Modelo validação participativa</li>
+                            <li>Framework KPIs colaborativos</li>
+                        </ul>
+                        
+                        <h4>🔍 Insights Meta-Nível</h4>
+                        <ul>
+                            <li>Padrões por stakeholder</li>
+                            <li>Dinâmicas apropriação</li>
+                            <li>Fatores críticos sucesso</li>
+                        </ul>
+                        
+                        <h4>📋 Outputs</h4>
+                        <ul>
+                            <li>Metodologia refinada</li>
+                            <li>Framework teórico</li>
+                            <li>Diretrizes replicação</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="comments-section">
+                        <div class="comments-header">
+                            <h3 class="comments-title">💬 Comentários - Fase 6</h3>
+                            <button class="close-comments">✕ Fechar</button>
+                        </div>
+                        <div class="comments-list" id="comments-phase-6">
+                            <div class="no-comments">Nenhum comentário ainda. Seja o primeiro!</div>
+                        </div>
+                        <div class="comment-form">
+                            <textarea class="comment-input" placeholder="Adicione seu comentário sobre esta fase..."></textarea>
+                            <button class="comment-submit">Adicionar Comentário</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Phase 7: Iterate or Conclude -->
-        <div class="phase-container phase-7">
-            <div class="phase-header">FASE 7: ITERATE OR CONCLUDE</div>
-            <div class="phase-content">
-                <h4>🎯 Decisão Estratégica</h4>
-                <ul>
-                    <li>Cenário 1: Iterar implementação</li>
-                    <li>Cenário 2: Concluir + disseminar</li>
-                    <li>Baseada em evidências</li>
-                </ul>
-                
-                <h4>📚 Atividades Conclusão</h4>
-                <ul>
-                    <li>Workshop síntese agentes</li>
-                    <li>Relatório executivo CDL</li>
-                    <li>Artigos científicos</li>
-                </ul>
-                
-                <h4>🔄 Sustentabilidade</h4>
-                <ul>
-                    <li>Transferência agentes locais</li>
-                    <li>Preparação replicação</li>
-                    <li>Rede engajada continuidade</li>
-                </ul>
-                
-                <h4>📋 Outputs</h4>
-                <ul>
-                    <li>Decisão fundamentada</li>
-                    <li>Banco insights validados</li>
-                    <li>Metodologia replicável</li>
-                </ul>
+        <div class="phase-container phase-7" data-card-id="phase-7">
+            <div class="comment-indicator">0</div>
+            <div class="click-hint">💬 Clique para comentar</div>
+            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="phase-header">FASE 7: ITERATE OR CONCLUDE</div>
+                    <div class="phase-content">
+                        <h4>🎯 Decisão Estratégica</h4>
+                        <ul>
+                            <li>Cenário 1: Iterar implementação</li>
+                            <li>Cenário 2: Concluir + disseminar</li>
+                            <li>Baseada em evidências</li>
+                        </ul>
+                        
+                        <h4>📚 Atividades Conclusão</h4>
+                        <ul>
+                            <li>Workshop síntese agentes</li>
+                            <li>Relatório executivo CDL</li>
+                            <li>Artigos científicos</li>
+                        </ul>
+                        
+                        <h4>🔄 Sustentabilidade</h4>
+                        <ul>
+                            <li>Transferência agentes locais</li>
+                            <li>Preparação replicação</li>
+                            <li>Rede engajada continuidade</li>
+                        </ul>
+                        
+                        <h4>📋 Outputs</h4>
+                        <ul>
+                            <li>Decisão fundamentada</li>
+                            <li>Banco insights validados</li>
+                            <li>Metodologia replicável</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="comments-section">
+                        <div class="comments-header">
+                            <h3 class="comments-title">💬 Comentários - Fase 7</h3>
+                            <button class="close-comments">✕ Fechar</button>
+                        </div>
+                        <div class="comments-list" id="comments-phase-7">
+                            <div class="no-comments">Nenhum comentário ainda. Seja o primeiro!</div>
+                        </div>
+                        <div class="comment-form">
+                            <textarea class="comment-input" placeholder="Adicione seu comentário sobre esta fase..."></textarea>
+                            <button class="comment-submit">Adicionar Comentário</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         </div>
@@ -884,52 +1316,225 @@
                 </div>
             </div>
         </div>
+    </div>
+<script type="application/javascript">
+        // Comments data storage
+        let commentsData = {};
 
-        <script>
-            // Add interactive hover effects
-            document.addEventListener('DOMContentLoaded', function() {
-                const phases = document.querySelectorAll('.phase-container');
-                
-                phases.forEach(phase => {
-                    phase.addEventListener('mouseenter', function() {
-                        this.style.zIndex = '10';
-                    });
-                    
-                    phase.addEventListener('mouseleave', function() {
-                        this.style.zIndex = '1';
-                    });
-                });
+        // Initialize comments system
+        document.addEventListener('DOMContentLoaded', function() {
+            const phases = document.querySelectorAll('.phase-container');
 
-                // Add click to focus functionality
-                phases.forEach(phase => {
-                    phase.addEventListener('click', function() {
-                        phases.forEach(p => p.style.opacity = '0.3');
-                        this.style.opacity = '1';
-                        this.style.transform = 'translateY(-8px) scale(1.05)';
-                        
-                        setTimeout(() => {
-                            phases.forEach(p => p.style.opacity = '1');
-                            this.style.transform = 'translateY(-4px) scale(1.02)';
-                        }, 3000);
-                    });
-                });
+            // Load comments from localStorage
+            loadCommentsFromStorage();
 
-                // Responsive timeline adjustment
-                function adjustTimeline() {
-                    const timeline = document.querySelector('.timeline-track');
-                    if (timeline) {
-                        if (window.innerWidth <= 768) {
-                            timeline.style.flexDirection = 'column';
-                        } else {
-                            timeline.style.flexDirection = 'row';
-                        }
-                    }
+            // Initialize each card
+            phases.forEach(phase => {
+                const cardId = phase.getAttribute('data-card-id');
+                if (cardId) {
+                    initializeCard(phase, cardId);
+                    updateCommentIndicator(phase, cardId);
                 }
 
-                window.addEventListener('resize', adjustTimeline);
-                adjustTimeline();
+                // Hover effects
+                phase.addEventListener('mouseenter', function() {
+                    if (!this.classList.contains('card-flipped')) {
+                        this.style.zIndex = '10';
+                    }
+                });
+
+                phase.addEventListener('mouseleave', function() {
+                    if (!this.classList.contains('card-flipped')) {
+                        this.style.zIndex = '1';
+                    }
+                });
             });
-        </script>
-    </div>
+
+            // Responsive timeline adjustment
+            function adjustTimeline() {
+                const timeline = document.querySelector('.timeline-track');
+                if (timeline) {
+                    if (window.innerWidth <= 768) {
+                        timeline.style.flexDirection = 'column';
+                    } else {
+                        timeline.style.flexDirection = 'row';
+                    }
+                }
+            }
+
+            window.addEventListener('resize', adjustTimeline);
+            adjustTimeline();
+        });
+
+        function initializeCard(cardElement, cardId) {
+            // Card flip functionality
+            cardElement.addEventListener('click', function(e) {
+                // Don't flip if clicking on buttons or form elements
+                if (e.target.tagName === 'BUTTON' || e.target.tagName === 'TEXTAREA') {
+                    return;
+                }
+
+                if (!this.classList.contains('card-flipped')) {
+                    flipCard(this);
+                }
+            });
+
+            // Close comments button
+            const closeBtn = cardElement.querySelector('.close-comments');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    unflipCard(cardElement);
+                });
+            }
+
+            // Comment submission
+            const submitBtn = cardElement.querySelector('.comment-submit');
+            const textarea = cardElement.querySelector('.comment-input');
+
+            if (submitBtn && textarea) {
+                submitBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    addComment(cardId, textarea.value.trim());
+                    textarea.value = '';
+                });
+
+                // Submit on Ctrl+Enter
+                textarea.addEventListener('keydown', function(e) {
+                    if (e.ctrlKey && e.key === 'Enter') {
+                        e.preventDefault();
+                        addComment(cardId, this.value.trim());
+                        this.value = '';
+                    }
+                });
+            }
+
+            // Render existing comments
+            renderComments(cardId);
+        }
+
+        function flipCard(cardElement) {
+            cardElement.classList.add('card-flipped');
+            cardElement.style.zIndex = '100';
+            cardElement.style.transform = 'scale(1.05)';
+
+            // Focus on textarea after flip animation
+            setTimeout(() => {
+                const textarea = cardElement.querySelector('.comment-input');
+                if (textarea) {
+                    textarea.focus();
+                }
+            }, 300);
+        }
+
+        function unflipCard(cardElement) {
+            cardElement.classList.remove('card-flipped');
+            cardElement.style.zIndex = '1';
+            cardElement.style.transform = '';
+        }
+
+        function addComment(cardId, commentText) {
+            if (!commentText) {
+                alert('Por favor, digite um comentário antes de enviar.');
+                return;
+            }
+
+            if (!commentsData[cardId]) {
+                commentsData[cardId] = [];
+            }
+
+            const comment = {
+                id: Date.now(),
+                text: commentText,
+                timestamp: new Date(),
+                author: 'Usuário' // Could be enhanced with user authentication
+            };
+
+            commentsData[cardId].push(comment);
+            saveCommentsToStorage();
+            renderComments(cardId);
+            updateCommentIndicator(document.querySelector(`[data-card-id="${cardId}"]`), cardId);
+        }
+
+        function renderComments(cardId) {
+            const commentsList = document.getElementById(`comments-${cardId}`);
+            if (!commentsList) return;
+
+            const comments = commentsData[cardId] || [];
+
+            if (comments.length === 0) {
+                commentsList.innerHTML = '<div class="no-comments">Nenhum comentário ainda. Seja o primeiro!</div>';
+                return;
+            }
+
+            commentsList.innerHTML = comments.map(comment => `
+                <div class="comment-item">
+                    <div class="comment-meta">
+                        ${comment.author} • ${formatDate(comment.timestamp)}
+                    </div>
+                    <div class="comment-text">${escapeHtml(comment.text)}</div>
+                </div>
+            `).join('');
+
+            // Scroll to bottom
+            commentsList.scrollTop = commentsList.scrollHeight;
+        }
+
+        function updateCommentIndicator(cardElement, cardId) {
+            if (!cardElement) return;
+
+            const indicator = cardElement.querySelector('.comment-indicator');
+            const count = commentsData[cardId] ? commentsData[cardId].length : 0;
+
+            if (indicator) {
+                indicator.textContent = count;
+                if (count > 0) {
+                    cardElement.classList.add('has-comments');
+                } else {
+                    cardElement.classList.remove('has-comments');
+                }
+            }
+        }
+
+        function formatDate(date) {
+            const now = new Date();
+            const diff = now - new Date(date);
+            const minutes = Math.floor(diff / 60000);
+            const hours = Math.floor(diff / 3600000);
+            const days = Math.floor(diff / 86400000);
+
+            if (minutes < 1) return 'agora';
+            if (minutes < 60) return `${minutes}m atrás`;
+            if (hours < 24) return `${hours}h atrás`;
+            return `${days}d atrás`;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function saveCommentsToStorage() {
+            try {
+                localStorage.setItem('aim-framework-comments', JSON.stringify(commentsData));
+            } catch (e) {
+                console.warn('Failed to save comments to localStorage:', e);
+            }
+        }
+
+        function loadCommentsFromStorage() {
+            try {
+                const stored = localStorage.getItem('aim-framework-comments');
+                if (stored) {
+                    commentsData = JSON.parse(stored);
+                }
+            } catch (e) {
+                console.warn('Failed to load comments from localStorage:', e);
+                commentsData = {};
+            }
+        }
+
+    </script>
 </body>
 </html>

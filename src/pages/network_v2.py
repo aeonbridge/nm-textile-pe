@@ -1,6 +1,6 @@
 import streamlit as st
 from typing import Dict, Any
-from src.utils import Page
+from src.utils.page_utils import Page
 from src.state import StateManager
 from src.nm.people_network import EcosystemNetworkRenderer
 

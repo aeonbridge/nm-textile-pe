@@ -7,7 +7,7 @@ from streamlit_folium import st_folium
 from typing import Dict, Any
 import numpy as np
 
-from src.utils import (Page, ChartGenerator, UIComponents, FilterManager, format_number, validate_data,
+from src.utils.page_utils import (Page, ChartGenerator, UIComponents, FilterManager, format_number, validate_data,
                        get_cities_list, filter_data_by_cities)
 from src.nm.analytics import  Analytics
 from src.state import StateManager, DashboardState

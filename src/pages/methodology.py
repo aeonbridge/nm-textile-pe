@@ -1,8 +1,10 @@
 import streamlit as st
+import streamlit.components.v1 as components
 from typing import Dict, Any
 
 from src.nm.analytics import  Analytics
-from src.utils import (Page)
+from src.nm.comments import CommentsManager
+from src.utils.page_utils import (Page)
 from src.state import StateManager
 
 
@@ -15,4 +17,8 @@ class MethodologyPage(Page):
             st.warning("Página indisponível")
             return
 
-        st.html(methodology_content)
+        components.html(methodology_content, height=1000, scrolling=True)
+        
+        # Add comment section
+        st.markdown("---")
+        CommentsManager.render_comment_section("methodology_framework", "methodology")

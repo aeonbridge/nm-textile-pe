@@ -5,6 +5,7 @@ import pandas as pd
 from streamlit import sidebar
 
 from src.pages.methodology import MethodologyPage
+from src.pages.card_demo import CardDemoPage
 
 # Adicionar o diretório src ao path
 sys.path.append(str(Path(__file__).parent / "src"))
@@ -42,6 +43,7 @@ class DashboardApp:
     def __init__(self):
         self.pages = {
             "📋  Methodology": MethodologyPage(),
+            "🃏 Card Demo": CardDemoPage(),
             "🕸️  Rede de Agentes-chave": NetworkPageV2(),
             "⚠️ Análise de Riscos": RisksPage(),
             "💡 Identificação de Oportunidades": OpportunitiesPage(),
@@ -90,7 +92,9 @@ class DashboardApp:
                 break
 
         filepath = f"static/methodology/aim/board_aim_framework-fluid-version.html"
-        data['methodology'] = DataLoader.load_html(filepath)
+        data['methodology'] = DataLoader.load_file(filepath)
+        filepath = f"static/js/controls.js"
+        data['controls'] = DataLoader.load_file(filepath)
 
         return data
 
