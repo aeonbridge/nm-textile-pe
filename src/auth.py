@@ -207,9 +207,9 @@ class AuthManager:
         with col2:
             # Login form side
             st.html("""
-            <div style="padding: 40px 20px;">
+            <div style="padding: 0px 0px;">
                 <!-- Logo -->
-                <div style="text-align: center; margin-bottom: 40px;">
+                <div style="text-align: center; margin-bottom: 50px;">
                     
                     <h1 style="
                         font-family: 'Styrene B', sans-serif;
@@ -218,7 +218,7 @@ class AuthManager:
                         color: #3d3a2a;
                         margin: 0 0 8px 0;
                         letter-spacing: -0.5px;">
-                        Dashboard Têxtil
+                        APL Têxtil - PE 
                     </h1>
                     
                     <div style="
@@ -240,7 +240,7 @@ class AuthManager:
                     border: 1px solid rgba(187, 90, 56, 0.1);
                     border-radius: 0.6rem;
                     padding: 24px;
-                    margin-bottom: 32px;">
+                    margin-bottom: 50px;">
                     
                     <div style="
                         font-family: 'Styrene B', sans-serif;
@@ -256,7 +256,10 @@ class AuthManager:
                         <div style="margin-bottom: 8px;">📊 Análise de indicadores</div>
                         <div style="margin-bottom: 8px;">🕸️ Rede de stakeholders</div>
                         <div style="margin-bottom: 8px;">🗺️ Mapeamento geográfico</div>
-                        <div style="margin-bottom: 0;">⚠️ Riscos e oportunidades</div>
+                        <div style="margin-bottom: 8px;">⚠️ Análise de Riscos</div>
+                        <div style="margin-bottom: 8px;">💡 Identificação de Oportunidades</div>
+                        <div style="margin-bottom: 8px;">🚀 Laboratório Interativo</div>
+                        <div style="margin-bottom: 8px;">📋 Metodologia</div>
                     </div>
                 </div>
             </div>
@@ -286,7 +289,7 @@ def require_authentication():
         )
         
         # Clean and elegant CSS following app theme
-        st.markdown("""
+        st.html("""
         <style>
         /* Textile-inspired background with app theme colors */
         .stApp {
@@ -296,7 +299,7 @@ def require_authentication():
                 radial-gradient(circle at 75% 75%, rgba(61, 58, 42, 0.02) 0%, transparent 50%),
                 linear-gradient(45deg, rgba(211, 210, 202, 0.1) 0%, transparent 100%);
             background-attachment: fixed;
-            min-height: 100vh;
+            min-height: 0vh;
             overflow-x: hidden;
         }
         
@@ -404,7 +407,7 @@ def require_authentication():
             background: #a04d30;
         }
         </style>
-        """, unsafe_allow_html=True)
+        """)
         
         AuthManager.render_login_form()
         st.stop()

@@ -274,6 +274,7 @@ class DashboardApp:
             <div class="insight-box">
             <strong>💡 Sobre este Dashboard:</strong> Ferramenta interativa para apoiar stakeholders 
             na compreensão do ambiente, análise de tendências e tomada de decisão no ecossistema têxtil de Pernambuco.
+            </div>
             """
             st.html(header)
 
@@ -313,7 +314,6 @@ class DashboardApp:
         current_page = getattr(st.session_state, "current_page", None)
         
         st.html("<h2>🎯 Escolha uma Análise </h2>")
-        st.html("<h3>Clique em um card abaixo para acessar a análise desejada:</h3>")
         
         # CSS para cards aesthetic uniformes
         st.html("""
@@ -576,8 +576,8 @@ class DashboardApp:
             self.render_analysis_cards()
             
             # Mostrar informações de boas-vindas
-            st.markdown("---")
-            st.markdown("### 👋 Bem-vindo ao Dashboard Ecossistema Têxtil PE")
+            st.divider()
+            st.html("<h2> 👋 Bem-vindo ao Dashboard Ecossistema Têxtil PE</h2>")
             st.info("Selecione uma análise acima para começar a explorar os dados.")
 
         # Analytics na sidebar para modo admin
