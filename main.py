@@ -240,16 +240,14 @@ class DashboardApp:
 
     def render_header(self):
         """Renderiza o cabeçalho principal"""
-        st.markdown('<h1 class="main-header">📊 Dashboard Ecossistema Têxtil de Pernambuco</h1>',
-                    unsafe_allow_html=True)
+        st.html('<h1 class="main-header">📊 Dashboard Ecossistema Têxtil de Pernambuco</h1>')
 
         # Informações contextuais
-        st.markdown("""
+        st.html("""
         <div class="insight-box">
         <strong>💡 Sobre este Dashboard:</strong> Ferramenta interativa para apoiar stakeholders 
         na compreensão do ambiente, análise de tendências e tomada de decisão no ecossistema têxtil de Pernambuco.
-        </div>
-        """, unsafe_allow_html=True)
+        </div>""")
 
     def render_user_profile(self):
         """Renderiza o perfil do usuário no topo da página"""
@@ -261,6 +259,7 @@ class DashboardApp:
         current_page = getattr(st.session_state, "current_page", None)
         
         if current_page:
+            self.render_header()
             st.markdown('<div class="cards-medium">', unsafe_allow_html=True)
             
             # Cards médios em linha horizontal
