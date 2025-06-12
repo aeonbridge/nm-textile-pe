@@ -154,7 +154,7 @@ class AuthManager:
             # Image side with custom styling
             st.html("""
             <div style="
-                background-image: url('/app/static/imgs/2148527962.jpg');
+                background-image: url('app/static/imgs/2148527962-small.jpg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
