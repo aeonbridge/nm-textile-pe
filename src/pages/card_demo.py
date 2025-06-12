@@ -13,7 +13,7 @@ class CardDemoPage(Page):
         StateManager.increment_page_view("Card Demo")
         
         st.title("🃏 Interactive Cards Demo")
-        st.markdown("Demonstração dos cartões interativos com flip e comentários integrados ao Supabase.")
+        st.markdown("Demonstração dos cartões interativos com **st.dialog** para comentários integrados ao Supabase.")
         
         # Create columns for cards
         col1, col2 = st.columns(2)
@@ -77,17 +77,17 @@ class CardDemoPage(Page):
             content="""
             <h4>📋 Features</h4>
             <ul>
-                <li>Click to flip and see comments</li>
-                <li>Add your own comments</li>
+                <li>Click comment button to open dialog</li>
+                <li>Add your own comments via modal</li>
                 <li>Comments stored in Supabase</li>
                 <li>Session-based authorship</li>
             </ul>
             
             <h4>💡 Usage</h4>
             <ul>
-                <li>Hover to see interaction hints</li>
-                <li>Click anywhere on card to flip</li>
-                <li>Use Ctrl+Enter in textarea for quick submit</li>
+                <li>View card content directly</li>
+                <li>Click "💬 Comentar" button to open st.dialog</li>
+                <li>See existing comments in the modal</li>
                 <li>Comments persist across sessions</li>
             </ul>
             """,
@@ -101,18 +101,18 @@ class CardDemoPage(Page):
         st.markdown("""
         ### 📖 Como usar os cartões:
         
-        1. **Visualizar conteúdo**: O cartão mostra o conteúdo principal na frente
-        2. **Ver comentários**: Clique no cartão para virar e ver os comentários
-        3. **Adicionar comentário**: Digite na caixa de texto e clique em "Adicionar Comentário"
-        4. **Fechar comentários**: Clique no botão "✕ Fechar" para voltar ao conteúdo
+        1. **Visualizar conteúdo**: O cartão mostra o conteúdo principal diretamente
+        2. **Abrir comentários**: Clique no botão "💬 Comentar" para abrir o modal st.dialog
+        3. **Ver comentários existentes**: O modal mostra os últimos 3 comentários para contexto
+        4. **Adicionar comentário**: Digite na caixa de texto e clique em "💾 Adicionar"
         5. **Indicador de comentários**: O número no canto superior direito mostra quantos comentários existem
         
         ### 🔧 Recursos técnicos:
         
-        - ✅ **Flip animation**: Animação suave de rotação 3D
+        - ✅ **st.dialog integration**: Modal nativo do Streamlit para comentários
         - ✅ **Comment system**: Integração completa com Supabase
         - ✅ **Session management**: Identificação por sessão
-        - ✅ **Responsive design**: Adaptável a diferentes tamanhos de tela
-        - ✅ **Keyboard shortcuts**: Ctrl+Enter para envio rápido
-        - ✅ **Visual feedback**: Indicadores visuais e animações
+        - ✅ **Context awareness**: Exibe comentários existentes no modal
+        - ✅ **Clean UX**: Interface limpa e focada
+        - ✅ **Visual feedback**: Indicadores visuais e animações do contador
         """)

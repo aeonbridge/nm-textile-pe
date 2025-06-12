@@ -6,10 +6,43 @@ import json
 from src.nm.comments import CommentsManager
 
 
+@st.dialog("💬 Adicionar Comentário")
+def _add_comment_dialog(card_id: str, title: str):
+    """Dialog for adding comments to cards - simplified to only add new comments"""
+    st.markdown(f"### Comentário para: **{title}**")
+    
+    # Comment form - only for adding new comments
+    with st.form(key=f"dialog_comment_form_{card_id}"):
+        comment_text = st.text_area(
+            "Digite seu comentário:",
+            placeholder="Compartilhe suas ideias, sugestões ou feedback...",
+            height=150,
+            key=f"dialog_comment_input_{card_id}"
+        )
+        
+        col1, col2 = st.columns([1, 1])
+        
+        with col1:
+            submitted = st.form_submit_button("💾 Adicionar", type="primary", use_container_width=True)
+        
+        with col2:
+            if st.form_submit_button("❌ Cancelar", use_container_width=True):
+                st.rerun()
+        
+        if submitted and comment_text.strip():
+            if CommentsManager.save_comment(card_id, comment_text.strip()):
+                st.success("✅ Comentário adicionado com sucesso!")
+                st.rerun()
+            else:
+                st.error("❌ Erro ao salvar comentário.")
+        elif submitted:
+            st.warning("⚠️ Por favor, digite um comentário antes de enviar.")
+
+
 def interactive_card_component(card_id: str, title: str, content: str, comments: List, 
                                color: str = "#3182ce", height: int = 600):
     """
-    Create a custom interactive card component following Streamlit best practices.
+    Create a custom interactive card component with flip functionality and st.dialog for comments.
     
     Args:
         card_id: Unique identifier for the card
@@ -23,17 +56,12 @@ def interactive_card_component(card_id: str, title: str, content: str, comments:
         Dictionary containing component interaction data, or None if no interaction
     """
     
-    # Format comments for JavaScript (display only)
-    comments_js = json.dumps([{
-        'id': comment.id,
-        'text': comment.comment,
-        'author': comment.author[:8] if comment.author else 'Anônimo',
-        'timestamp': comment.created_at
-    } for comment in comments])
-    
     comment_count = len(comments)
     
-    # Generate the HTML for the card (display only - no form)
+    # Format comments for the back of the card
+    comments_html = _render_comments_html(comments)
+    
+    # Create flippable card with HTML and JavaScript
     card_html = f"""
 <!DOCTYPE html>
 <html>
@@ -61,7 +89,7 @@ def interactive_card_component(card_id: str, title: str, content: str, comments:
                     </div>
                 </div>
                 
-                <!-- Back of card (comments display only) -->
+                <!-- Back of card (comments display) -->
                 <div class="card-back">
                     <div class="comments-section">
                         <div class="comments-header">
@@ -69,7 +97,7 @@ def interactive_card_component(card_id: str, title: str, content: str, comments:
                             <button class="close-comments" onclick="closeComments()">✕ Fechar</button>
                         </div>
                         <div class="comments-list" id="comments-list">
-                            {_render_comments_html(comments)}
+                            {comments_html}
                         </div>
                     </div>
                 </div>
@@ -84,8 +112,12 @@ def interactive_card_component(card_id: str, title: str, content: str, comments:
 </html>
     """
     
-    # Render the display-only component
+    # Render the flippable component
     components.html(card_html, height=height + 50, scrolling=False)
+    
+    # Add button to open dialog below the card (simplified dialog for adding only)
+    if st.button(f"💬 Adicionar Comentário - {title}", key=f"comment_btn_{card_id}", use_container_width=True):
+        _add_comment_dialog(card_id, title)
     
     return None
 
@@ -259,352 +291,379 @@ def _render_comments_html(comments) -> str:
 
 
 def _get_card_css() -> str:
-    """Return the CSS styles for the card"""
+    """Return the CSS styles for the card following the reference HTML"""
     return """
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        background: transparent;
-        margin: 0;
-        padding: 10px;
-    }
-    
-    .card-container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    
-    .interactive-card {
-        width: 100%;
-        max-width: 400px;
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-        border: 3px solid;
-        border-color: inherit;
-        transition: all 0.6s ease;
-        cursor: pointer;
-        transform-style: preserve-3d;
-        perspective: 1000px;
-        position: relative;
-        min-height: 500px;
-    }
-    
-    .interactive-card:hover {
-        transform: translateY(-4px) scale(1.02);
-        box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-    }
-    
-    .card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: left;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        min-height: 500px;
-    }
-    
-    .interactive-card.flipped .card-inner {
-        transform: rotateY(180deg);
-    }
-    
-    .card-front, .card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        border-radius: inherit;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .card-back {
-        transform: rotateY(180deg);
-        background: #f8f9fa;
-        padding: 20px;
-    }
-    
-    .card-header {
-        color: white;
-        font-size: 1.1rem;
-        font-weight: 700;
-        padding: 16px;
-        border-radius: 13px 13px 0 0;
-        text-align: center;
-    }
-    
-    .card-content {
-        padding: 20px;
-        flex: 1;
-        overflow-y: auto;
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-    
-    .card-content h4 {
-        font-weight: 600;
-        margin: 12px 0 8px 0;
-        color: #2d3748;
-    }
-    
-    .card-content ul {
-        margin-left: 20px;
-        margin-bottom: 12px;
-    }
-    
-    .card-content li {
-        margin-bottom: 6px;
-        color: #4a5568;
-    }
-    
-    /* Comment indicator */
-    .comment-indicator {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        background: #4299e1;
-        color: white;
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.7rem;
-        font-weight: 600;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        z-index: 10;
-    }
-    
-    .comment-indicator.has-comments {
-        opacity: 1;
-        animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(66, 153, 225, 0.7); }
-        50% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(66, 153, 225, 0.3); }
-        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(66, 153, 225, 0); }
-    }
-    
-    /* Hover hints */
-    .click-hint {
-        position: absolute;
-        bottom: 12px;
-        right: 12px;
-        background: rgba(66, 153, 225, 0.9);
-        color: white;
-        padding: 6px 10px;
-        border-radius: 16px;
-        font-size: 0.7rem;
-        opacity: 0;
-        transform: translateY(10px);
-        transition: all 0.3s ease;
-        pointer-events: none;
-        z-index: 5;
-    }
-    
-    .interactive-card:hover .click-hint {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    .floating-hint {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 12px 16px;
-        border-radius: 12px;
-        font-size: 0.8rem;
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.8);
-        transition: all 0.3s ease;
-        pointer-events: none;
-        z-index: 10;
-        text-align: center;
-    }
-    
-    .interactive-card:hover .floating-hint {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-    
-    .interactive-card.flipped .floating-hint {
-        display: none;
-    }
-    
-    /* Comments section */
-    .comments-section {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-    
-    .comments-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-        padding-bottom: 12px;
-        border-bottom: 2px solid #e2e8f0;
-    }
-    
-    .comments-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #2d3748;
-    }
-    
-    .close-comments {
-        background: #e53e3e;
-        color: white;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 0.8rem;
-        transition: background 0.3s ease;
-    }
-    
-    .close-comments:hover {
-        background: #c53030;
-    }
-    
-    .comments-list {
-        flex: 1;
-        overflow-y: auto;
-        margin-bottom: 16px;
-        max-height: 200px;
-    }
-    
-    .comment-item {
-        background: white;
-        padding: 12px;
-        margin-bottom: 10px;
-        border-radius: 6px;
-        border-left: 3px solid #4299e1;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    
-    .comment-meta {
-        font-size: 0.7rem;
-        color: #718096;
-        margin-bottom: 6px;
-    }
-    
-    .comment-text {
-        font-size: 0.8rem;
-        color: #2d3748;
-        line-height: 1.4;
-    }
-    
-    .no-comments {
-        text-align: center;
-        color: #718096;
-        font-style: italic;
-        padding: 30px;
-    }
-    
-    .comment-form {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-    
-    .comment-input {
-        resize: vertical;
-        min-height: 80px;
-        padding: 12px;
-        border: 2px solid #e2e8f0;
-        border-radius: 6px;
-        font-size: 0.8rem;
-        font-family: inherit;
-        transition: border-color 0.3s ease;
-    }
-    
-    .comment-input:focus {
-        outline: none;
-        border-color: #4299e1;
-    }
-    
-    .comment-submit {
-        background: #38a169;
-        color: white;
-        border: none;
-        padding: 12px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 0.8rem;
-        font-weight: 600;
-        transition: background 0.3s ease;
-    }
-    
-    .comment-submit:hover {
-        background: #2f855a;
-    }
-    
-    .comment-note {
-        text-align: center;
-        padding: 20px;
-        background: #f7fafc;
-        border-radius: 8px;
-        margin-top: 16px;
-    }
-    
-    .comment-note p {
-        color: #4a5568;
-        font-size: 0.9rem;
-        margin: 0;
-        font-style: italic;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: transparent;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .card-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .interactive-card {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            border-radius: clamp(12px, 1vw, 16px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: clamp(2px, 0.3vw, 3px) solid;
+            transition: all 0.6s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 600px;
+            break-inside: avoid;
+            position: relative;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+
+        .interactive-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15), 0 0 20px rgba(66, 153, 225, 0.3);
+        }
+
+        /* Interactive cursor and subtle border animation */
+        .interactive-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(66, 153, 225, 0.1), transparent);
+            transition: left 0.6s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .interactive-card:hover::before {
+            left: 100%;
+        }
+
+        /* Enhanced hover state for better UX */
+        .interactive-card:not(.card-flipped):hover {
+            border-color: rgba(66, 153, 225, 0.8);
+        }
+
+        /* Card flip effect */
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: left;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            min-height: inherit;
+            z-index: 2;
+        }
+
+        .card-flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            background: #f8f9fa;
+            border-radius: clamp(12px, 1vw, 16px);
+            border: clamp(2px, 0.3vw, 3px) solid transparent;
+        }
+
+        .card-header {
+            font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+            font-weight: 700;
+            margin-bottom: clamp(12px, 1.5vw, 20px);
+            text-align: center;
+            padding: clamp(8px, 1vw, 12px);
+            border-radius: clamp(6px, 0.8vw, 10px);
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .card-content {
+            font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+            line-height: 1.5;
+            flex: 1;
+            overflow-y: auto;
+            padding: clamp(16px, 2vw, 20px);
+        }
+
+        .card-content h4 {
+            font-weight: 600;
+            margin: clamp(8px, 1vw, 12px) 0 clamp(6px, 0.8vw, 8px) 0;
+            color: #2d3748;
+            font-size: clamp(0.8rem, 1.3vw, 1rem);
+        }
+
+        .card-content ul {
+            margin-left: clamp(12px, 1.5vw, 20px);
+            margin-bottom: clamp(8px, 1vw, 12px);
+        }
+
+        .card-content li {
+            margin-bottom: clamp(3px, 0.5vw, 6px);
+            color: #4a5568;
+        }
+
+        /* Comment indicator */
+        .comment-indicator {
+            position: absolute;
+            top: clamp(8px, 1vw, 12px);
+            right: clamp(8px, 1vw, 12px);
+            background: #4299e1;
+            color: white;
+            border-radius: 50%;
+            width: clamp(20px, 2.5vw, 24px);
+            height: clamp(20px, 2.5vw, 24px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(0.6rem, 0.8vw, 0.7rem);
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+        }
+
+        .has-comments .comment-indicator {
+            opacity: 1;
+            animation: commentPulse 2s infinite;
+        }
+
+        /* Pulse animation for comment indicator */
+        @keyframes commentPulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(66, 153, 225, 0.7); }
+            50% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(66, 153, 225, 0.3); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(66, 153, 225, 0); }
+        }
+
+        /* Interactive hints and effects */
+        .click-hint {
+            position: absolute;
+            bottom: clamp(8px, 1vw, 12px);
+            right: clamp(8px, 1vw, 12px);
+            background: rgba(66, 153, 225, 0.9);
+            color: white;
+            padding: clamp(4px, 0.6vw, 6px) clamp(8px, 1vw, 10px);
+            border-radius: clamp(12px, 1.5vw, 16px);
+            font-size: clamp(0.6rem, 0.8vw, 0.7rem);
+            font-weight: 500;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 5;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .interactive-card:hover .click-hint {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Floating action hint */
+        .floating-hint {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: clamp(8px, 1vw, 12px) clamp(12px, 1.5vw, 16px);
+            border-radius: clamp(8px, 1vw, 12px);
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            font-weight: 500;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.8);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 10;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .interactive-card:hover .floating-hint {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .interactive-card.card-flipped .floating-hint {
+            display: none;
+        }
+
+        /* Comments system */
+        .comments-section {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: clamp(16px, 2vw, 24px);
+        }
+
+        .comments-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: clamp(16px, 2vw, 20px);
+            padding-bottom: clamp(8px, 1vw, 12px);
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .comments-title {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .close-comments {
+            background: #e53e3e;
+            color: white;
+            border: none;
+            padding: clamp(6px, 1vw, 8px) clamp(12px, 1.5vw, 16px);
+            border-radius: clamp(4px, 0.5vw, 6px);
+            cursor: pointer;
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            transition: background 0.3s ease;
+        }
+
+        .close-comments:hover {
+            background: #c53030;
+        }
+
+        .comments-list {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: clamp(16px, 2vw, 20px);
+            max-height: 200px;
+        }
+
+        .comment-item {
+            background: white;
+            padding: clamp(8px, 1vw, 12px);
+            margin-bottom: clamp(8px, 1vw, 10px);
+            border-radius: clamp(4px, 0.5vw, 6px);
+            border-left: 3px solid #4299e1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comment-meta {
+            font-size: clamp(0.6rem, 0.8vw, 0.7rem);
+            color: #718096;
+            margin-bottom: clamp(4px, 0.5vw, 6px);
+        }
+
+        .comment-text {
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            color: #2d3748;
+            line-height: 1.4;
+        }
+
+        .no-comments {
+            text-align: center;
+            color: #718096;
+            font-style: italic;
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
+            padding: clamp(20px, 3vw, 30px);
+        }
     """
 
 
 def _get_simple_card_javascript() -> str:
-    """Return simplified JavaScript for card display only"""
+    """Return JavaScript for card flip functionality following the reference HTML"""
     return """
-    let isFlipped = false;
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        const card = document.querySelector('.interactive-card');
-        
-        // Card click to flip and show comments
-        card.addEventListener('click', function(e) {
-            // Don't flip if clicking on buttons
-            if (e.target.tagName === 'BUTTON') {
-                return;
-            }
+        // Initialize card functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const card = document.querySelector('.interactive-card');
+            if (!card) return;
             
-            if (!isFlipped) {
-                flipCard();
-            }
+            const cardId = card.getAttribute('data-card-id') || 'card';
+            
+            // Initialize card
+            initializeCard(card, cardId);
+            
+            // Hover effects
+            card.addEventListener('mouseenter', function() {
+                if (!this.classList.contains('card-flipped')) {
+                    this.style.zIndex = '10';
+                }
+            });
+
+            card.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('card-flipped')) {
+                    this.style.zIndex = '1';
+                }
+            });
         });
-    });
-    
-    function flipCard() {
-        const card = document.querySelector('.interactive-card');
-        card.classList.add('flipped');
-        isFlipped = true;
-    }
-    
-    function closeComments() {
-        const card = document.querySelector('.interactive-card');
-        card.classList.remove('flipped');
-        isFlipped = false;
-    }
+
+        function initializeCard(cardElement, cardId) {
+            // Card flip functionality
+            cardElement.addEventListener('click', function(e) {
+                // Don't flip if clicking on buttons or form elements
+                if (e.target.tagName === 'BUTTON' || e.target.tagName === 'TEXTAREA') {
+                    return;
+                }
+
+                if (!this.classList.contains('card-flipped')) {
+                    flipCard(this);
+                }
+            });
+
+            // Close comments button
+            const closeBtn = cardElement.querySelector('.close-comments');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    unflipCard(cardElement);
+                });
+            }
+        }
+
+        function flipCard(cardElement) {
+            cardElement.classList.add('card-flipped');
+            cardElement.style.zIndex = '100';
+            cardElement.style.transform = 'scale(1.05)';
+        }
+
+        function unflipCard(cardElement) {
+            cardElement.classList.remove('card-flipped');
+            cardElement.style.zIndex = '1';
+            cardElement.style.transform = '';
+        }
+
+        // Global function for close button
+        function closeComments() {
+            const card = document.querySelector('.interactive-card.card-flipped');
+            if (card) {
+                unflipCard(card);
+            }
+        }
     """
 
 
