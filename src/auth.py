@@ -232,24 +232,7 @@ class AuthManager:
                 </div>
                 
                 <!-- Login card -->
-                <div style="
-                    background: #ecebe3;
-                    border: 2px solid #d3d2ca;
-                    border-radius: 0.6rem;
-                    padding: 32px;
-                    margin-bottom: 32px;">
-                    
-                   
-                    <p style="
-                        color: #3d3a2a;
-                        font-size: 0.9rem;
-                        line-height: 1.6;
-                        margin-bottom: 0;
-                        text-align: center;
-                        opacity: 0.8;">
-                        O login permitirá uma melhor experiência no uso do dashboard
-                    </p>
-                </div>
+                
                 
                 <!-- Features list -->
                 <div style="
@@ -303,41 +286,25 @@ class AuthManager:
                 if user_picture and user_picture.strip():
                     # Show profile picture with name - complete HTML in one block
                     profile_html = f"""
-                    <div style="display: flex; align-items: center; justify-content: flex-end; 
-                               background: rgba(255, 255, 255, 0.9); padding: 5px 10px; 
-                               border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-                               margin-bottom: 10px; gap: 8px;">
+                    <div style="display: flex; align: right;">
                         <img src="{user_picture}" 
-                             style="width: 30px; height: 30px; border-radius: 50%; 
+                             style="width: 80px; height: 80px; border-radius: 50%; 
                                     object-fit: cover; border: 1px solid #ddd;" 
                              alt="Profile"/>
-                        <span style="font-size: 14px; font-weight: 500; color: #333;">{user_display}</span>
                     </div>
                     """
-                    st.markdown(profile_html, unsafe_allow_html=True)
+                    st.html(profile_html)
                 else:
                     # Show fallback - complete HTML in one block
                     profile_html = f"""
-                    <div style="display: flex; align-items: center; justify-content: flex-end; 
-                               background: rgba(255, 255, 255, 0.9); padding: 5px 10px; 
-                               border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-                               margin-bottom: 10px; gap: 8px;">
+                    <div style="display: flex; align-items: right>
                         <div style="width: 30px; height: 30px; border-radius: 50%; 
                                    background: #f0f0f0; display: flex; align-items: center; 
                                    justify-content: center; font-size: 14px; border: 1px solid #ddd;">👤</div>
                         <span style="font-size: 14px; font-weight: 500; color: #333;">{user_display}</span>
                     </div>
                     """
-                    st.markdown(profile_html, unsafe_allow_html=True)
-                
-                # Logout button
-                if st.button("🚪 Sair", key="logout_btn", 
-                           help=f"Sair ({user_display})", 
-                           type="secondary", 
-                           use_container_width=True):
-                    AuthManager.logout()
-                    st.rerun()
-
+                    st.html(profile_html)
 
 def require_authentication():
     """Decorator function to require authentication for dashboard access using native Streamlit auth"""

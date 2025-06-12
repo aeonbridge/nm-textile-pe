@@ -48,3 +48,7 @@ class MethodologyPage(Page):
             }
             
             render_comments_section(methodology_items, "methodology")
+
+        st.link_button(url="static/kb/methodology/The_Phygital_Scientist_AIM.pdf", label="AIM", type="secondary")
+        st.link_button(url="static/kb/methodology/SPA_15.pdf", label="SPA")
+        st.link_button(url="static/kb/methodology/SPA_15_refs.pdf", label="SPA Refs", )

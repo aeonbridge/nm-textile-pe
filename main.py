@@ -496,8 +496,15 @@ class DashboardApp:
                 st.session_state.current_page = None
                 st.rerun()
             
+            # Logout button
+            if st.button("🚪 Sair", key="logout_btn",
+                         help=f"Sair",
+                         type="secondary",
+                         use_container_width=True):
+                AuthManager.logout()
+                st.rerun()
             st.divider()
-            
+
             # Show current page if any
             current_page = getattr(st.session_state, "current_page", None)
             if current_page and current_page in self.page_configs:

@@ -732,8 +732,6 @@
             <!-- Phase 1: Contextualize & Frame -->
         <div class="phase-container phase-1" data-card-id="phase-1">
             <div class="comment-indicator">0</div>
-            <div class="click-hint">💬 Clique para comentar</div>
-            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
             <div class="card-inner">
                 <div class="card-front">
                     <div class="phase-header">FASE 1: CONTEXTUALIZE & FRAME</div>
@@ -788,8 +786,6 @@
         <!-- Phase 2: Model & Hypothesize -->
         <div class="phase-container phase-2" data-card-id="phase-2">
             <div class="comment-indicator">0</div>
-            <div class="click-hint">💬 Clique para comentar</div>
-            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
             <div class="card-inner">
                 <div class="card-front">
                     <div class="phase-header">FASE 2: MODEL & HYPOTHESIZE</div>
@@ -845,8 +841,6 @@
         <!-- Phase 3: Design & Plan -->
         <div class="phase-container phase-3" data-card-id="phase-3">
             <div class="comment-indicator">0</div>
-            <div class="click-hint">💬 Clique para comentar</div>
-            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
             <div class="card-inner">
                 <div class="card-front">
                     <div class="phase-header">FASE 3: DESIGN & PLAN</div>
@@ -902,8 +896,6 @@
         <!-- Phase 4: Intervene & Observe -->
         <div class="phase-container phase-4" data-card-id="phase-4">
             <div class="comment-indicator">0</div>
-            <div class="click-hint">💬 Clique para comentar</div>
-            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
             <div class="card-inner">
                 <div class="card-front">
                     <div class="phase-header">FASE 4: INTERVENE & OBSERVE</div>
@@ -958,8 +950,6 @@
         <!-- Phase 5: Analyze & Evaluate -->
         <div class="phase-container phase-5" data-card-id="phase-5">
             <div class="comment-indicator">0</div>
-            <div class="click-hint">💬 Clique para comentar</div>
-            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
             <div class="card-inner">
                 <div class="card-front">
                     <div class="phase-header">FASE 5: ANALYZE & EVALUATE</div>
@@ -1014,8 +1004,6 @@
         <!-- Phase 6: Adapt & Theorize -->
         <div class="phase-container phase-6" data-card-id="phase-6">
             <div class="comment-indicator">0</div>
-            <div class="click-hint">💬 Clique para comentar</div>
-            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
             <div class="card-inner">
                 <div class="card-front">
                     <div class="phase-header">FASE 6: ADAPT & THEORIZE</div>
@@ -1070,8 +1058,6 @@
         <!-- Phase 7: Iterate or Conclude -->
         <div class="phase-container phase-7" data-card-id="phase-7">
             <div class="comment-indicator">0</div>
-            <div class="click-hint">💬 Clique para comentar</div>
-            <div class="floating-hint">👆 Clique para ver/adicionar comentários</div>
             <div class="card-inner">
                 <div class="card-front">
                     <div class="phase-header">FASE 7: ITERATE OR CONCLUDE</div>
@@ -1338,9 +1324,9 @@
 
                 // Hover effects
                 phase.addEventListener('mouseenter', function() {
-                    if (!this.classList.contains('card-flipped')) {
-                        this.style.zIndex = '10';
-                    }
+                    // if (!this.classList.contains('card-flipped')) {
+                    //     this.style.zIndex = '10';
+                    // }
                 });
 
                 phase.addEventListener('mouseleave', function() {
@@ -1375,7 +1361,7 @@
                 }
 
                 if (!this.classList.contains('card-flipped')) {
-                    flipCard(this);
+                   // flipCard(this);
                 }
             });
 
@@ -1384,7 +1370,7 @@
             if (closeBtn) {
                 closeBtn.addEventListener('click', function(e) {
                     e.stopPropagation();
-                    unflipCard(cardElement);
+                    //unflipCard(cardElement);
                 });
             }
 

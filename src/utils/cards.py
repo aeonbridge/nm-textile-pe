@@ -204,61 +204,57 @@ def render_comments_section(available_items: Dict[str, any], page_key: str = "")
     
     # Display existing comments for selected item
     comments = CommentsManager.load_comments(selected_item_id)
-    
-    col1, col2 = st.columns([2, 1])
-    
-    with col1:
-        st.markdown(f"### 📝 Comentários: {selected_item_name}")
-        
-        if comments:
-            for comment in comments:
-                with st.container():
-                    # Format timestamp
-                    if comment.created_at:
-                        try:
-                            from datetime import datetime
-                            dt = datetime.fromisoformat(comment.created_at.replace('Z', '+00:00'))
-                            formatted_time = dt.strftime("%d/%m/%Y %H:%M")
-                        except:
-                            formatted_time = "Data não disponível"
-                    else:
+
+    st.markdown("### ➕ Adicionar Comentário")
+
+    # Comment form
+    form_key = f"comment_form_{page_key}_{selected_item_id}"
+    input_key = f"comment_input_{page_key}_{selected_item_id}"
+
+    with st.form(key=form_key):
+        comment_text = st.text_area(
+            f"Comentário sobre **{selected_item_name}**:",
+            placeholder="Digite seu comentário aqui...",
+            height=150,
+            key=input_key
+        )
+
+        submitted = st.form_submit_button("💾 Adicionar Comentário")
+
+        if submitted and comment_text.strip():
+            if CommentsManager.save_comment(selected_item_id, comment_text.strip()):
+                st.success("Comentário adicionado com sucesso!")
+                st.rerun()
+            else:
+                st.error("Erro ao salvar comentário.")
+        elif submitted:
+            st.warning("Por favor, digite um comentário antes de enviar.")
+
+    st.markdown(f"### 📝 Comentários: {selected_item_name}")
+
+    if comments:
+        for comment in comments:
+            with st.container():
+                # Format timestamp
+                if comment.created_at:
+                    try:
+                        from datetime import datetime
+                        dt = datetime.fromisoformat(comment.created_at.replace('Z', '+00:00'))
+                        formatted_time = dt.strftime("%d/%m/%Y %H:%M")
+                    except:
                         formatted_time = "Data não disponível"
-                    
-                    # Show author (first 8 chars of session ID)
-                    author_short = comment.author[:8] if comment.author else "Anônimo"
-                    
-                    # Comment display
-                    st.markdown(f"**👤 {author_short}** • 📅 {formatted_time}")
-                    st.markdown(f"> {comment.comment}")
-                    st.markdown("---")
-        else:
-            st.info("Nenhum comentário ainda. Seja o primeiro a comentar!")
-    
-    with col2:
-        st.markdown("### ➕ Adicionar Comentário")
-        
-        # Comment form
-        form_key = f"comment_form_{page_key}_{selected_item_id}"
-        input_key = f"comment_input_{page_key}_{selected_item_id}"
-        
-        with st.form(key=form_key):
-            comment_text = st.text_area(
-                f"Comentário sobre **{selected_item_name}**:",
-                placeholder="Digite seu comentário aqui...",
-                height=150,
-                key=input_key
-            )
-            
-            submitted = st.form_submit_button("💾 Adicionar Comentário")
-            
-            if submitted and comment_text.strip():
-                if CommentsManager.save_comment(selected_item_id, comment_text.strip()):
-                    st.success("Comentário adicionado com sucesso!")
-                    st.rerun()
                 else:
-                    st.error("Erro ao salvar comentário.")
-            elif submitted:
-                st.warning("Por favor, digite um comentário antes de enviar.")
+                    formatted_time = "Data não disponível"
+
+                # Show author (first 8 chars of session ID)
+                author_short = comment.author[:8] if comment.author else "Anônimo"
+
+                # Comment display
+                st.markdown(f"**👤 {author_short}** • 📅 {formatted_time}")
+                st.markdown(f"> {comment.comment}")
+                st.markdown("---")
+    else:
+        st.info("Nenhum comentário ainda. Seja o primeiro a comentar!")
 
 
 def _render_comments_html(comments) -> str:
