@@ -239,15 +239,43 @@ class DashboardApp:
         self.pages["card_demo"].render(data)
 
     def render_header(self):
-        """Renderiza o cabeçalho principal"""
-        st.html('<h1 class="main-header">📊 Dashboard Ecossistema Têxtil de Pernambuco</h1>')
+        user_info = AuthManager.get_user_info()
+        if user_info["is_logged_in"]:
+            # Get user display name and picture
+            user_display = AuthManager.get_user_display_name()
+            user_picture = user_info.get("picture")
 
-        # Informações contextuais
-        st.html("""
-        <div class="insight-box">
-        <strong>💡 Sobre este Dashboard:</strong> Ferramenta interativa para apoiar stakeholders 
-        na compreensão do ambiente, análise de tendências e tomada de decisão no ecossistema têxtil de Pernambuco.
-        </div>""")
+            profile_html = ""
+            if user_picture and user_picture.strip():
+                # Show profile picture with name - complete HTML in one block
+                profile_html = f"""
+                                <img src="{user_picture}" 
+                                     style="width: 80px; height: 80px; border-radius: 50%; 
+                                            object-fit: cover; border: 1px solid #ddd;" 
+                                     alt="Profile"/>
+                            """
+            else:
+                # Show fallback - complete HTML in one block
+                profile_html = f"""
+                                <div style="width: 30px; height: 30px; border-radius: 50%; 
+                                           background: #f0f0f0; display: flex; align-items: center; 
+                                           justify-content: center; font-size: 14px; border: 1px solid #ddd;">👤</div>
+                                <span style="font-size: 14px; font-weight: 500; color: #333;">{user_display}</span>
+                            """
+
+            #"""Renderiza o cabeçalho principal"""
+            st.html(f"""
+            
+            <h1 class="main-header">{profile_html} 📊 Dashboard Ecossistema Têxtil de Pernambuco</h1>
+            """)
+
+            # Informações contextuais
+            header = f"""
+            <div class="insight-box">
+            <strong>💡 Sobre este Dashboard:</strong> Ferramenta interativa para apoiar stakeholders 
+            na compreensão do ambiente, análise de tendências e tomada de decisão no ecossistema têxtil de Pernambuco.
+            """
+            st.html(header)
 
     def render_user_profile(self):
         """Renderiza o perfil do usuário no topo da página"""
@@ -260,7 +288,7 @@ class DashboardApp:
         
         if current_page:
             self.render_header()
-            st.markdown('<div class="cards-medium">', unsafe_allow_html=True)
+            st.html('<div class="cards-medium">')
             
             # Cards médios em linha horizontal
             cols = st.columns(len(self.page_configs))
@@ -276,19 +304,19 @@ class DashboardApp:
                         st.session_state.current_page = page_key
                         st.rerun()
             
-            st.markdown('</div>', unsafe_allow_html=True)
-            st.markdown("---")
+            st.html('</div>')
+            st.divider()
 
     def render_analysis_cards(self):
         """Renderiza cards para seleção das análises usando st.navigation"""
         # Verificar se já temos uma página ativa via navigation
         current_page = getattr(st.session_state, "current_page", None)
         
-        st.markdown("## 🎯 Escolha uma Análise")
-        st.markdown("Clique em um card abaixo para acessar a análise desejada:")
+        st.html("<h2>🎯 Escolha uma Análise </h2>")
+        st.html("<h3>Clique em um card abaixo para acessar a análise desejada:</h3>")
         
         # CSS para cards aesthetic uniformes
-        st.markdown("""
+        st.html("""
         <style>
         /* Estilo para cards grandes (formato carta de baralho vertical aesthetic) */
         .cards-large .stButton > button {
@@ -443,14 +471,14 @@ class DashboardApp:
             gap: 8px !important;
         }
         </style>
-        """, unsafe_allow_html=True)
+        """)
         
         # Determinar se deve mostrar cards minimizados
         show_minimized = current_page is not None
         
         # Container com classe CSS apropriada
         container_class = "cards-medium" if show_minimized else "cards-large"
-        st.markdown(f'<div class="{container_class}">', unsafe_allow_html=True)
+        st.html(f'<div class="{container_class}">')
         
         # Configurar colunas baseado no estado
         if show_minimized:
@@ -461,7 +489,7 @@ class DashboardApp:
             # Cards grandes em grid 4x2 (4 colunas, 2 linhas) formato carta de baralho vertical
             cols = st.columns(4)
             # Adicionar espaçamento extra para cards retangulares verticais
-            st.markdown('<div style="margin-bottom: 2rem;"></div>', unsafe_allow_html=True)
+            st.html('<div style="margin-bottom: 2rem;"></div>')
         
         # Renderizar cards como botões estilizados
         for i, (page_key, config) in enumerate(self.page_configs.items()):
@@ -472,18 +500,18 @@ class DashboardApp:
                 if show_minimized:
                     button_label = f"{config['icon']} {config['title']}"
                 else:
-                    button_label = f"{config['icon']}\n{config['title']}\n{config['description']}"
+                    button_label = f"{config['icon']}\n{config['title']}"
                 
                 # Botão clicável estilizado como card
                 if st.button(button_label, key=f"card_{page_key}", 
                            type="primary" if current_page == page_key else "secondary",
-                           help=f"Acessar {config['title']}",
+                           help=f"Acessar {config['description']}",
                            use_container_width=True):
                     st.session_state.current_page = page_key
                     st.rerun()
         
         # Fechar container
-        st.markdown('</div>', unsafe_allow_html=True)
+        st.html('</div>')
 
     def render_sidebar(self):
         """Render simplified sidebar with feedback only"""

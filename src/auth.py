@@ -273,38 +273,7 @@ class AuthManager:
     def render_logout_button():
         """Render user profile as circular photo in top right corner"""
         user_info = AuthManager.get_user_info()
-        
-        if user_info["is_logged_in"]:
-            # Get user display name and picture
-            user_display = AuthManager.get_user_display_name()
-            user_picture = user_info.get("picture")
-            
-            # Use columns to position in top right
-            col1, col2, col3 = st.columns([6, 2, 2])
-            
-            with col3:
-                if user_picture and user_picture.strip():
-                    # Show profile picture with name - complete HTML in one block
-                    profile_html = f"""
-                    <div style="display: flex; align: right;">
-                        <img src="{user_picture}" 
-                             style="width: 80px; height: 80px; border-radius: 50%; 
-                                    object-fit: cover; border: 1px solid #ddd;" 
-                             alt="Profile"/>
-                    </div>
-                    """
-                    st.html(profile_html)
-                else:
-                    # Show fallback - complete HTML in one block
-                    profile_html = f"""
-                    <div style="display: flex; align-items: right>
-                        <div style="width: 30px; height: 30px; border-radius: 50%; 
-                                   background: #f0f0f0; display: flex; align-items: center; 
-                                   justify-content: center; font-size: 14px; border: 1px solid #ddd;">👤</div>
-                        <span style="font-size: 14px; font-weight: 500; color: #333;">{user_display}</span>
-                    </div>
-                    """
-                    st.html(profile_html)
+
 
 def require_authentication():
     """Decorator function to require authentication for dashboard access using native Streamlit auth"""
