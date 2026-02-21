@@ -43,8 +43,45 @@ pip install streamlit pandas plotly networkx numpy
 streamlit run main.py
 ```
 
-### 3. Acessar
+### 3. Configurar Secrets (Opcional)
+```bash
+# Copiar arquivo de exemplo
+cp .streamlit/secrets.toml.example .streamlit/secrets.toml
+
+# Editar com suas configurações
+# nano .streamlit/secrets.toml
+```
+
+### 4. Acessar
 O dashboard estará disponível em `http://localhost:8501`
+
+## Configuração de Autenticação
+
+O dashboard usa autenticação nativa do Streamlit (Google OAuth). Para desenvolvimento e testes, você pode desabilitar temporariamente a autenticação:
+
+### Desabilitar Autenticação (Desenvolvimento)
+
+**⚠️ ATENÇÃO: Nunca desabilite autenticação em produção!**
+
+1. Edite o arquivo `.streamlit/secrets.toml`:
+```toml
+DISABLE_AUTH = true
+```
+
+2. Salve o arquivo e reinicie o aplicativo
+
+3. Para reabilitar, volte o valor para `false`:
+```toml
+DISABLE_AUTH = false
+```
+
+### Configurar Autenticação Google OAuth (Produção)
+
+Para configurar autenticação em produção:
+
+1. Configure o Google OAuth no [Google Cloud Console](https://console.cloud.google.com/)
+2. Configure as credenciais no Streamlit Community Cloud ou em seu `.streamlit/secrets.toml`
+3. Consulte a [documentação oficial do Streamlit](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management) para mais detalhes
 
 ## Funcionalidades Implementadas
 

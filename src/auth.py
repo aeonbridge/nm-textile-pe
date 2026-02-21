@@ -280,6 +280,16 @@ class AuthManager:
 
 def require_authentication():
     """Decorator function to require authentication for dashboard access using native Streamlit auth"""
+    # Check if authentication is disabled via secrets
+    try:
+        disable_auth = st.secrets.get("DISABLE_AUTH", True)
+        if disable_auth:
+            # Skip authentication when disabled
+            return True
+    except Exception:
+        # If secrets can't be read, proceed with normal authentication
+        pass
+
     if not AuthManager.is_authenticated():
         st.set_page_config(
             page_title="Login - Dashboard Têxtil PE",
